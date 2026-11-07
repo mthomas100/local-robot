@@ -17,8 +17,8 @@ machine: a Unitree Go1 on the CPU (MuJoCo's new batch API, PPO, about two minute
 repository, failures included; the "what went wrong" notes also quote development observations from the build log, which
 is not published, and say so.
 
-> [!WARNING]
-> **🚧 Work in progress.** Phases **F0 to F7 are done**: each passed an acceptance test that was written down before
+> [!NOTE]
+> **Status.** Phases **F0 to F7 are done**: each passed an acceptance test that was written down before
 > its evaluation ran (protocols in `factory/*/results/*-protocol*.md`). **Not built yet:** F8, a second arm on the same
 > belt; F9, a grasp learned at speed with a coding agent designing the reward; F10, a 30-minute shift with everything
 > on, bit-exact replay and a scorecard of all fifteen disciplines. See [What's next](#whats-next). Simulation only: no
