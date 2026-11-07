@@ -1,0 +1,93 @@
+{
+ "video": "runs/go1-clean/eval.mp4",
+ "frames": 725,
+ "fps": 50,
+ "falls": 0,
+ "segments": [
+  {
+   "seconds": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.016,
+   "err_vy": 0.018,
+   "err_wz": 0.021,
+   "height": 0.277
+  },
+  {
+   "seconds": 3.0,
+   "cmd": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.109,
+   "err_vy": 0.062,
+   "err_wz": 0.038,
+   "height": 0.32
+  },
+  {
+   "seconds": 2.5,
+   "cmd": [
+    1.0,
+    0.0,
+    1.0
+   ],
+   "err_vx": 0.035,
+   "err_vy": 0.071,
+   "err_wz": 0.127,
+   "height": 0.325
+  },
+  {
+   "seconds": 2.0,
+   "cmd": [
+    0.0,
+    0.6,
+    0.0
+   ],
+   "err_vx": 0.203,
+   "err_vy": 0.225,
+   "err_wz": 0.058,
+   "height": 0.32
+  },
+  {
+   "seconds": 2.5,
+   "cmd": [
+    1.5,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.285,
+   "err_vy": 0.125,
+   "err_wz": 0.059,
+   "height": 0.325
+  },
+  {
+   "seconds": 2.0,
+   "cmd": [
+    -0.6,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.37,
+   "err_vy": 0.087,
+   "err_wz": 0.044,
+   "height": 0.312
+  },
+  {
+   "seconds": 1.5,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.064,
+   "err_vy": 0.007,
+   "err_wz": 0.01,
+   "height": 0.277
+  }
+ ],
+ "mean_err_vx": 0.155
+}

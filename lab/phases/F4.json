@@ -1,0 +1,172 @@
+{
+ "id": "F4",
+ "title": "F4 · Seeing",
+ "summary": "Accepted. The cell stops being told where things are: an overhead depth camera finds, identifies and tracks every item, and the carry does without the held item's true pose (teacher-student). Vision-only sorts within 2.5 and 4.4 points of the privileged cell (bar: 10).",
+ "disciplines": [
+  "7 · Perception",
+  "8 · State estimation and tracking",
+  "10 · Learning (teacher-student)",
+  "14 · Sim-to-real (what a real camera would give)"
+ ],
+ "highlight": [
+  "camera",
+  "perception",
+  "tracking",
+  "policy"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "Until now the simulator told the robot the exact position, angle and name of every item (plus a little noise): <b>privileged information</b> no real cell has. F4 takes it away. The only source is now the <b>overhead camera</b>, a simulated Intel RealSense D435i looking down at the belt from 1 m, giving a colour picture and a <b>depth image</b> (how far away every pixel is) 30 times a second.",
+    "<b>The perception pipeline</b>, all classical: turn every depth pixel into a 3-D point (the camera's intrinsics); keep the points more than 8 mm above the belt; group touching pixels into <i>blobs</i>; for each blob measure its top face, the smallest rectangle around its footprint (that gives the angle), its height and a colour histogram; name it by asking which of 720 labelled examples it most resembles (3 nearest neighbours). The examples come from synthetic renders labelled automatically by the simulator's segmentation image: <b>synthetic labelled data</b>, no human labelling.",
+    "<b>Tracking on estimates</b>: each blob joins the nearest existing track (predicted along the belt by the belt's speed); a track votes on its identity over frames and only reports once three frames agree. The reports feed the same Kalman filter as F2, which predicts where the item will be when the gripper arrives.",
+    "<b>Teacher-student</b>: F3's carry policy reads the held item's true swing every 20 ms. The <i>student</i> runs the same controller assuming the item is rigid in the hand, so it never needs that. We tried to distil the teacher into it (DAgger: run the student, ask the teacher what it would do in each state, fit), then fine-tuned it by reinforcement learning on its own observations."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>Perception is where most real cells fail.</b> Everything downstream (tracking, the intercept, the grasp) silently assumes the pose is right. A 2 cm error is a missed grasp; a wrong name is an item in the wrong chute.",
+    "<b>The bugs were in the details, not the algorithm.</b> Three things broke the first version, all found by comparing reports with the simulator's ground truth: a thin marker line drawn across the belt (for people watching) cut every item that crossed it into two blobs, so tracks slowed to 60% of the belt speed and grasps missed by 20 cm; items entering the picture at its edge were half-visible and got the wrong name, which then stuck; and the gripper descending onto an item hid part of it and dragged its centre. The fixes are standard practice: hide what a real depth camera would not see, distrust blobs cut by the image edge or by the robot's own silhouette (a real cell knows where its arm is from the joint encoders and masks it out), and let the tracker coast on the belt speed meanwhile.",
+    "<b>Privileged information is a trap in learning.</b> A policy trained with the simulator's truth can depend on it in ways you only see when it is gone. Distillation can only copy what the student can observe: here the swing was not observable, so copying the teacher did not help, and the student had to be re-tuned on what it can see."
+   ]
+  },
+  {
+   "h": "What did we measure?",
+   "p": [
+    "Perception against ground truth on fresh scenes (belt at 0.3 m/s, items apart): identity right in 100% of 1,662 reports, position error 2.4 mm on average (9 mm for the worst 5%), 23-28 ms per frame for render plus perception. Box angle: cracker 0.5°, sugar 3° (the boxes the fingers pick); bottles 9-33° and the flat boxes 13-28° (round caps and near-square footprints make the angle ambiguous; flat boxes go on the suction cup, which does not need it).",
+    "The carry on the 483 recorded grasps: teacher 97.5% sorted (training items) / 98.4% (held-out items); student with the teacher's weights 93.5 / 92.1%; DAgger distillation no better; RL fine-tuning of the student (shipped, iteration 20) 94.1 / 92.1%.",
+    "The acceptance test (fixed before the run): L4 (vision + student) vs L2 (privileged poses + teacher), 16 fresh seeds x 180 s, 16 arrivals per minute of all 11 items. Sort rate 74.7% vs 77.2% at 0.15 m/s and 48.3% vs 52.7% at 0.3 m/s: gaps of 2.5 [-0.2, 5.3] and 4.4 [1.8, 7.0] points, both upper ends below the 10-point bar. Accepted. At 0.3 m/s the gap is mostly perception; at 0.15 m/s mostly the student carry dropping items it cannot see swing."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Watch the live line with <i>perception: vision</i>: the inset shows what the camera sees, with a box and a name for every track (grey boxes: blobs perception does not trust yet).",
+    "Run the perception check at belt speed 0 and 0.5 and compare the errors. Try the evaluation with fewer seeds and see how wide the interval gets: that is the noise floor.",
+    "Harder: give the student an estimate of the swing from a pendulum model driven by the tool's acceleration (it knows how far the item hangs), and see whether distillation then works."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8803",
+  "job": "live-line",
+  "kind": "line",
+  "note": "The line in real time. Choose perception: vision and carry: student for the vision-only cell (L4); the inset is the overhead camera with perception's boxes and names."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F4-results.png",
+   "caption": "L2 (privileged) vs L4 (vision) sort rate at both belt speeds, the verdict interval, and perception's position error per item."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f4-vision-line.gif",
+   "caption": "The vision-only cell at 0.3 m/s: the pick camera (left) and what the overhead camera sees with every track boxed and named (right). (In the repository: an excerpt as a GIF.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F4-camera-view.png",
+   "caption": "One overhead frame: green boxes are tracks perception reports (with their names), grey ones blobs it does not trust (cut by the image edge or the robot's silhouette)."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F4-vision-line-0.30-sheet.png",
+   "caption": "Contact sheet of the vision-only line video."
+  }
+ ],
+ "numbers": [
+  {
+   "label": "The acceptance test: L2 vs L4 and the F2-carry versions (16 seeds x 180 s, 16 arrivals/min)",
+   "file": "factory/vision/results/f4-eval.json",
+   "table": "table",
+   "rowLabel": "belt · cell",
+   "cols": [
+    "sort_rate",
+    "sorted_per_min",
+    "attempt_success",
+    "grasp_err_mm",
+    "knocked",
+    "dropped",
+    "wrong_chute",
+    "ms_per_frame"
+   ],
+   "colLabels": {
+    "sort_rate": "sort rate",
+    "sorted_per_min": "sorted/min",
+    "attempt_success": "attempt success",
+    "grasp_err_mm": "grasp error mm",
+    "wrong_chute": "wrong chute",
+    "ms_per_frame": "vision ms/frame"
+   }
+  },
+  {
+   "label": "The verdict: L2 minus L4 sort rate (95% interval; passes below 0.10)",
+   "file": "factory/vision/results/f4-eval.json",
+   "table": "verdict",
+   "rowLabel": "belt"
+  },
+  {
+   "label": "Perception vs ground truth, per item (fresh scenes, belt 0.3 m/s)",
+   "file": "factory/vision/results/f4-vision-static.json",
+   "table": "per_item",
+   "rowLabel": "item"
+  },
+  {
+   "label": "The carry on the recorded grasps: teacher, zero-shot student, DAgger rounds",
+   "file": "factory/learned/results/f4-distil.json",
+   "table": "table",
+   "rowLabel": "policy"
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f4-measure",
+   "label": "Perception check",
+   "help": "Random scenes on the belt; every detector report compared with the simulator's truth (identity, position, angle per item). About 20 s. Writes factory/vision/results/f4-vision-lab.json.",
+   "button": "Measure",
+   "knobs": [
+    {
+     "name": "scenes",
+     "type": "number",
+     "default": 30,
+     "min": 5,
+     "max": 200
+    },
+    {
+     "name": "speed",
+     "label": "belt m/s",
+     "type": "number",
+     "default": 0.3,
+     "min": 0,
+     "max": 0.6,
+     "step": 0.05
+    }
+   ]
+  },
+  {
+   "id": "f4-eval",
+   "label": "L2 vs L4 on the line",
+   "help": "Privileged vs vision-only cell (and both with F2's carry) on the same seeds; writes factory/vision/results/f4-eval-lab.json. Vision runs render 30 frames per simulated second: a few minutes per run.",
+   "button": "Evaluate",
+   "knobs": [
+    {
+     "name": "seeds",
+     "type": "number",
+     "default": 3,
+     "min": 2,
+     "max": 16
+    },
+    {
+     "name": "seconds",
+     "type": "number",
+     "default": 120,
+     "min": 30,
+     "max": 600
+    }
+   ]
+  }
+ ]
+}

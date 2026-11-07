@@ -1,0 +1,284 @@
+{
+ "id": "F0",
+ "title": "F0 · The cell exists",
+ "summary": "The robot, gripper, belt, chutes, camera and 11 real-world objects, modelled and simulated in two physics engines; the reach map says the layout works.",
+ "disciplines": [
+  "1 · Cell design and layout",
+  "2 · Modelling and simulation"
+ ],
+ "highlight": [
+  "belt",
+  "camera",
+  "robot",
+  "chutes",
+  "layout",
+  "sim"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "A <b>work cell</b> is the physical unit of a factory line: one robot, the equipment around it, and the space it can reach. Before any robot picks anything, an engineer decides where everything goes: how high the robot stands, how far away the belt runs, where the bins sit. The UR5e here stands on a 0.6 m pedestal; the belt runs 0.55 m in front of it with its surface at 0.78 m; three chutes (plastic, metal, cardboard) sit between the robot and the belt; a RealSense D435i depth camera looks down from 1 m above the belt.",
+    "A <b>simulation model</b> is that cell written down for a physics engine: every part's shape, mass, inertia and friction, every joint and motor, and the rules for contact. The robot and gripper come from MuJoCo Menagerie (models of the real UR5e and Robotiq 2F-85). The objects are scans of real products from the YCB benchmark set (mustard, bleach and Windex bottles; soup, tuna, coffee and meat cans; cracker, sugar, pudding and gelatin boxes), the standard stand-ins robotics papers use."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>Layout decides everything downstream.</b> If the belt sits at the edge of the robot's reach, every pick is slow and near a singularity; if the chutes are far, every cycle wastes a second. The <b>reach map</b> samples the arm's joint space and plots where the gripper can be while pointing straight down; the reach zone and the chutes must sit well inside it. From the belt speed and the zone length comes the <b>cycle-time budget</b>: at 0.3 m/s an item spends 3.3 s in the 1 m zone, so the whole pick has to fit in that.",
+    "<b>The model decides whether anything learned in simulation transfers.</b> Scanned meshes are not ready to simulate: physics engines collide convex shapes, so each object is split into convex pieces (CoACD); masses come from the real products; inertia from the pieces. Two engines (MuJoCo on the CPU, Genesis on the Metal GPU) run the same scene from one definition: if they disagree, the model, not the robot, is the problem."
+   ]
+  },
+  {
+   "h": "What did we measure?",
+   "p": [
+    "<b>Items ride the belt in both engines.</b> Every one of the 11 items, at four orientations and three belt speeds (0.15, 0.3, 0.5 m/s), rides from the upstream end through the reach zone: no tipping, no slipping, no drifting sideways, no sinking into the belt. The table below has the numbers for each engine.",
+    "<b>The reach map</b> shows 94% of the reach zone reachable with the gripper pointing down at belt-pick heights, and 99-100% of each chute's opening (the 6% missing are the zone's far corners, more than 0.75 m from the shoulder).",
+    "<b>Three things went wrong on the way, and each taught something.</b> (1) The arm's default home pose parked the gripper 14 cm above the belt, and the tall cracker box hit it and fell over: the home pose now holds the gripper over the chutes, above the tallest item. (2) The YCB scans' origins are not on the objects (the soup can's is 8 cm off), and the Windex scan was tilted 8 degrees: every item now gets a canonical frame, upright on its most stable resting pose with the origin at its bottom centre. (3) The Windex bottle is transparent and scanned badly (its trigger head floats, its bottom is cut off diagonally) so it balanced on a 14 cm² patch and toppled: each item now stands on a thin flat pad shaped like its bottom outline, the way a real bottle stands on its rim."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Start the live view and change the belt speed: items keep up with the belt at every speed because the drive ramps (1 m/s²); a sudden jump would tip the tall boxes. Toggle the <b>collision shapes</b> to see what the physics actually collides (the red convex pieces), not the textured scan.",
+    "Run the belt test in Genesis instead of MuJoCo and compare. Raise the speed to 0.8 m/s. Run the reach map with more samples and see the coverage numbers settle."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8801",
+  "note": "MuJoCo stepping in real time on the CPU, rendered at 20 fps; items recycle from the end of the belt to its start."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F0-cell.png",
+   "caption": "The cell in MuJoCo: UR5e on its pedestal, the belt with the reach zone between the yellow lines, the three chutes, the camera mast."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F0-cell-genesis.png",
+   "caption": "The same cell in Genesis, loaded from the same files."
+  },
+  {
+   "kind": "video",
+   "src": "docs/media/F0-belt-0.30-cell.mp4",
+   "caption": "Items riding the belt at 0.3 m/s (MuJoCo)."
+  },
+  {
+   "kind": "video",
+   "src": "docs/media/F0-belt-0.30-overhead.mp4",
+   "caption": "What the overhead D435i sees: 848x480, 69 x 42 degree field of view."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F0-reach-map.png",
+   "caption": "The reach map and the cycle-time budget."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f0-gripper-in-the-way.gif",
+   "caption": "Instructive failure: the default home pose leaves the gripper over the belt and the cracker box walks into it. (In the repository: an excerpt as a GIF.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F0-items.png",
+   "caption": "All 11 items in their canonical frames, textured and as collision pieces."
+  }
+ ],
+ "numbers": [
+  {
+   "label": "Belt test, MuJoCo (pass = on the belt, tilt < 15°, slip < 2%, drift < 2 cm, penetration < 3 mm)",
+   "file": "factory/cell/results/belt-test-mujoco.json",
+   "table": "per_speed",
+   "rowLabel": "belt m/s",
+   "cols": [
+    "passed",
+    "rides",
+    "worst_tilt_deg",
+    "worst_slip_frac",
+    "worst_drift_m",
+    "worst_penetration_mm"
+   ],
+   "colLabels": {
+    "worst_tilt_deg": "worst tilt °",
+    "worst_slip_frac": "worst slip",
+    "worst_drift_m": "worst drift m",
+    "worst_penetration_mm": "worst penetration mm"
+   }
+  },
+  {
+   "label": "Belt test, Genesis (CPU backend)",
+   "file": "factory/cell/results/belt-test-genesis.json",
+   "table": "per_speed",
+   "rowLabel": "belt m/s",
+   "cols": [
+    "passed",
+    "rides",
+    "worst_tilt_deg",
+    "worst_slip_frac",
+    "worst_drift_m",
+    "worst_penetration_mm"
+   ],
+   "colLabels": {
+    "worst_tilt_deg": "worst tilt °",
+    "worst_slip_frac": "worst slip",
+    "worst_drift_m": "worst drift m",
+    "worst_penetration_mm": "worst penetration mm"
+   }
+  },
+  {
+   "label": "Reach map",
+   "file": "factory/cell/results/reach-map.json",
+   "keys": [
+    "samples",
+    "zone_coverage",
+    "belt_coverage",
+    "chute_coverage",
+    "max_horizontal_reach_m",
+    "topdown_fraction"
+   ],
+   "keyLabels": {
+    "zone_coverage": "reach zone covered (gripper down)",
+    "belt_coverage": "whole visible belt covered",
+    "chute_coverage": "chute openings covered",
+    "max_horizontal_reach_m": "max horizontal reach (m)",
+    "topdown_fraction": "samples pointing down"
+   }
+  },
+  {
+   "label": "Cycle-time budget",
+   "file": "factory/cell/results/reach-map.json",
+   "table": "cycle_budget",
+   "rowLabel": "belt m/s",
+   "colLabels": {
+    "zone_seconds": "seconds in the zone",
+    "items_per_minute_at_0_3m_spacing": "items/min at 0.3 m spacing"
+   }
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f0-belt-test",
+   "label": "Belt test",
+   "help": "Each item rides the belt at each speed and orientation; the log prints a pass count per speed.",
+   "button": "Run the belt test",
+   "knobs": [
+    {
+     "name": "engine",
+     "type": "select",
+     "options": [
+      "mujoco",
+      "genesis"
+     ],
+     "default": "mujoco"
+    },
+    {
+     "name": "speeds",
+     "label": "belt speeds m/s",
+     "default": "0.15,0.3,0.5"
+    },
+    {
+     "name": "yaws",
+     "label": "orientations per item",
+     "type": "number",
+     "default": 2,
+     "min": 1,
+     "max": 8
+    },
+    {
+     "name": "items",
+     "label": "items (all or names)",
+     "default": "all"
+    }
+   ]
+  },
+  {
+   "id": "f0-chute-test",
+   "label": "Chute test",
+   "help": "Drop an item into each chute; it must land on the chute floor in both engines.",
+   "button": "Drop it",
+   "knobs": [
+    {
+     "name": "engine",
+     "type": "select",
+     "options": [
+      "mujoco",
+      "genesis"
+     ],
+     "default": "mujoco"
+    },
+    {
+     "name": "item",
+     "type": "select",
+     "options": [
+      "tomato_soup_can",
+      "mustard_bottle",
+      "cracker_box",
+      "tuna_fish_can",
+      "bleach_cleanser",
+      "windex_bottle"
+     ],
+     "default": "tomato_soup_can"
+    }
+   ]
+  },
+  {
+   "id": "f0-reach-map",
+   "label": "Reach map",
+   "help": "Writes factory/cell/results/reach-map-lab.png.",
+   "button": "Compute",
+   "knobs": [
+    {
+     "name": "samples",
+     "type": "number",
+     "default": 100000,
+     "min": 10000,
+     "max": 2000000,
+     "step": 10000
+    }
+   ]
+  },
+  {
+   "id": "f0-belt-video",
+   "label": "Belt video",
+   "help": "Records items riding the belt to factory/cell/results/belt-<speed>-<camera>.mp4.",
+   "button": "Record",
+   "knobs": [
+    {
+     "name": "speed",
+     "label": "belt m/s",
+     "type": "number",
+     "default": 0.3,
+     "min": 0.05,
+     "max": 0.8,
+     "step": 0.05
+    },
+    {
+     "name": "seconds",
+     "type": "number",
+     "default": 8,
+     "min": 2,
+     "max": 30
+    },
+    {
+     "name": "cam",
+     "label": "camera",
+     "type": "select",
+     "options": [
+      "cell",
+      "overhead",
+      "belt",
+      "end"
+     ],
+     "default": "cell"
+    },
+    {
+     "name": "seed",
+     "type": "number",
+     "default": 0
+    }
+   ]
+  }
+ ]
+}

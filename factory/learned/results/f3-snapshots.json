@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-02 20:40",
+ "runs": 24,
+ "seconds": 180.0,
+ "snapshots": 483,
+ "held_out_snapshots": 127,
+ "per_item": {
+  "bleach_cleanser": 34,
+  "tuna_fish_can": 47,
+  "windex_bottle": 34,
+  "gelatin_box": 44,
+  "tomato_soup_can": 45,
+  "cracker_box": 52,
+  "potted_meat_can": 46,
+  "mustard_bottle": 45,
+  "sugar_box": 46,
+  "pudding_box": 43,
+  "master_chef_can": 47
+ },
+ "f2_carry_free_s": {
+  "mean": 2.663,
+  "p95": 3.636
+ },
+ "f2_item_outcomes": {
+  "sorted": 466,
+  "null": 9,
+  "dropped": 7,
+  "late": 1
+ },
+ "wall_s": 112.0
+}

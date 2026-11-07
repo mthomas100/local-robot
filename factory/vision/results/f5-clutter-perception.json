@@ -1,0 +1,35 @@
+{
+ "date": "2026-11-02 22:55",
+ "scenes": 60,
+ "seed": 11,
+ "note": "two items touching side by side on a stopped belt",
+ "split": {
+  "both_named": 59,
+  "wrong_names": 0,
+  "unknown": 0
+ },
+ "no_split": {
+  "both_named": 41,
+  "wrong_names": 1
+ },
+ "failures": [
+  {
+   "pair": [
+    "bleach_cleanser",
+    "mustard_bottle"
+   ],
+   "split": {
+    "both": false,
+    "wrong": 0,
+    "blobs": 3,
+    "unknown": 0
+   },
+   "no_split": {
+    "both": false,
+    "wrong": 0,
+    "blobs": 1,
+    "unknown": 0
+   }
+  }
+ ]
+}

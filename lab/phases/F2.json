@@ -1,0 +1,219 @@
+{
+ "id": "F2",
+ "title": "F2 · Classical pick, belt moving",
+ "summary": "The belt never stops: a tracker follows each item from late, noisy camera reports, a planner times the arm to meet it, the tool rides along with the belt while it grasps, and a scheduler chooses the next item. Baseline to beat: 7.8 sorted/min at 0.15 m/s and 6.5 at 0.3 m/s.",
+ "disciplines": [
+  "8 · State estimation and tracking",
+  "9 · Scheduling and task planning",
+  "12 · Safety and reliability"
+ ],
+ "highlight": [
+  "tracking",
+  "scheduler",
+  "ops",
+  "motion"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "A real sorting line does not stop for the robot. So the robot cannot reach to where the item <i>is</i>: by the time the gripper arrives, the item has moved on. It has to reach to where the item <i>will be</i>, and that needs three new pieces.",
+    "<b>Tracking</b> (state estimation): the overhead camera reports each item 30 times a second, but every report is 60 ms old and a few millimetres off. A <b>Kalman filter</b> per item blends the reports into a best estimate of position and velocity and how sure it is; it knows each report's timestamp, so it moves the estimate forward by the latency instead of trusting stale positions. <b>Intercept planning</b>: the arm's approach is timed to arrive above the item exactly when the item gets there, already moving at belt speed; then the tool rides along with the belt while it descends, closes and lifts (inverse kinematics every 20 ms on the predicted position), and while it does that it keeps correcting with the newest estimate (<i>conveyor tracking</i>, as real robot controllers do). <b>Scheduling</b>: when several items are in reach, which one first? Three rules are compared: the one finished soonest (greedy), the one about to leave (earliest deadline first), and one that looks ahead at which choice leaves the most other items catchable.",
+    "<b>Safety</b>: every item ends in exactly one outcome (sorted, missed, late, wrong chute, dropped, knocked off), every robot fault is detected (a slip while carrying, a knocked item, a contact with the cell, a joint far behind its reference, the way a UR controller's protective stop works), and the robot recovers: open, rise, return, re-plan, try again if the item is still on the belt. The tests plant faults on purpose (the gripper lets go mid-carry, the item is shoved as the fingers arrive, a bad command drives the tool into the belt) and check that each is caught."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>Latency is a position error.</b> At 0.3 m/s an item moves 18 mm in 60 ms. Treating reports as fresh gave 24-67 mm of error predicting 1.5 s ahead at 0.3-0.5 m/s; time-stamping them kept it at 7-10 mm at 0.15 and 0.3 m/s (it grows to 26 mm only at 0.5 m/s with 120 ms of latency). The first moving picks missed by 5-15 cm for a related reason: young tracks started at zero velocity. Starting them at the belt encoder's speed (the line knows how fast its own belt runs) fixed it. Closing the loop during the approach then brought the grasp error from 23 mm to 2-4 mm.",
+    "<b>Throughput is limited by the robot, not by the clever part.</b> The three schedulers score the same within the noise. When the robot becomes free, there is usually only one item it can still reach, so there is nothing to choose. The lever is the cycle time (5.4 s per pick, half of it carrying the item to the chute and coming back) or a second arm. That is exactly what F3 attacks.",
+    "<b>Watchdogs catch what the physics check misses.</b> In the planted dive, the gripper pushes into the belt plate, which the robot-versus-fixture contact check did not count; the joint-tracking watchdog did (the joint fell 0.15 rad behind its command). The same watchdog also tripped twice in 32 configurations with no contact at all, on a fast approach to the 1.1 kg bleach bottle: a <i>nuisance stop</i>, the classic price of a sensitive threshold."
+   ]
+  },
+  {
+   "h": "What did we measure?",
+   "p": [
+    "180 s of line per configuration, 2 seeds, belt at 0.15 and 0.3 m/s, items arriving at 4 to 16 per minute: <b>at 0.15 m/s the line sorts 3.2, 6.0, 7.0 and 7.8 items per minute</b> at 4, 8, 12 and 16 arriving (0 to 35% missed); <b>at 0.3 m/s 2.7, 5.0, 5.8 and 6.5</b> (24 to 51% missed: an item crosses the reach zone in about 4 s and the robot is often mid-cycle). Grasp error 2-3 mm, attempt success 92-100%, cycle 5.3-5.8 s, no contact with the cell.",
+    "These are the numbers F3 must beat on objects it never trained on."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Start the live line and watch the robot meet items on the move. Run the evaluation at 0.5 m/s, or with 24 items per minute, and see where the misses go. Record a video with the greedy scheduler and with lookahead on the same seed and compare. Run the tracking study and look at the dashed lines: that is what forgetting the camera's latency costs."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8803",
+  "job": "live-line",
+  "kind": "line",
+  "note": "The line running in real time: the belt moves, items arrive at random, the robot tracks, intercepts and sorts them, with the running tally."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F2-results.png",
+   "caption": "The evaluation: throughput saturates near 8 per minute at 0.15 m/s and 6.5 at 0.3 m/s; the schedulers coincide; latency compensation keeps the 1.5 s prediction within about 1 cm; what happened to each item."
+  },
+  {
+   "kind": "video",
+   "src": "docs/media/F2-line-0.15.mp4",
+   "caption": "90 s of the line at 0.15 m/s, 8 items per minute: 10 sorted, 1 missed."
+  },
+  {
+   "kind": "video",
+   "src": "docs/media/F2-line-0.30.mp4",
+   "caption": "90 s at 0.3 m/s, 8 items per minute: 7 sorted, 4 missed; items cross the zone in about 4 s."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F2-line-0.30-sheet.png",
+   "caption": "Contact sheet of the 0.3 m/s run."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f2-tracking-overhead.gif",
+   "caption": "The overhead camera's view with the tracker drawn on it: green rings are where each track believes the item is now; the red cross is the planned grasp point. (In the repository: an excerpt as a GIF.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f2-fault-drop.gif",
+   "caption": "A planted fault: the suction lets go of the tuna can mid-carry; the line detects the drop, recovers and picks the can again. (In the repository: an excerpt as a GIF.)"
+  }
+ ],
+ "numbers": [
+  {
+   "label": "Line evaluation (180 s x 2 seeds per row)",
+   "file": "factory/line/results/f2-eval.json",
+   "table": "rows",
+   "rowLabel": "belt · arrivals · scheduler",
+   "cols": [
+    "sorted_per_min",
+    "sorted_per_min_sd",
+    "miss_rate",
+    "attempt_success",
+    "cycle_s",
+    "grasp_err_mm",
+    "collisions"
+   ],
+   "colLabels": {
+    "sorted_per_min": "sorted/min",
+    "sorted_per_min_sd": "± sd",
+    "miss_rate": "miss rate",
+    "attempt_success": "attempt success",
+    "cycle_s": "cycle s",
+    "grasp_err_mm": "grasp error mm",
+    "collisions": "protective stops"
+   }
+  },
+  {
+   "label": "Best per belt speed (the baseline for F3)",
+   "file": "factory/line/results/f2-eval.json",
+   "table": "best_rows",
+   "rowLabel": "belt"
+  },
+  {
+   "label": "Tracking: error predicting 1.5 s ahead",
+   "file": "factory/line/results/f2-tracking.json",
+   "table": "table",
+   "rowLabel": "belt · latency · timestamps",
+   "colLabels": {
+    "err_mean_mm": "mean mm",
+    "err_max_mm": "max mm",
+    "v_est_err_pct": "speed error %"
+   }
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f2-eval",
+   "label": "Line evaluation",
+   "help": "Belt speeds x arrival rates x schedulers x seeds in parallel; writes factory/line/results/f2-eval-lab.json and runs/f2-eval-lab/.",
+   "button": "Run the evaluation",
+   "knobs": [
+    {
+     "name": "seconds",
+     "label": "seconds per run",
+     "type": "number",
+     "default": 120,
+     "min": 30,
+     "max": 900
+    },
+    {
+     "name": "seeds",
+     "type": "number",
+     "default": 1,
+     "min": 1,
+     "max": 5
+    },
+    {
+     "name": "speeds",
+     "label": "belt speeds m/s",
+     "type": "text",
+     "default": "0.15,0.3"
+    },
+    {
+     "name": "rates",
+     "label": "items per minute",
+     "type": "text",
+     "default": "4,8,12"
+    },
+    {
+     "name": "schedulers",
+     "type": "text",
+     "default": "greedy,lookahead"
+    }
+   ]
+  },
+  {
+   "id": "f2-video",
+   "label": "Line video",
+   "help": "Records the line from the pick camera with the score burned in.",
+   "button": "Record",
+   "knobs": [
+    {
+     "name": "seconds",
+     "type": "number",
+     "default": 60,
+     "min": 10,
+     "max": 300
+    },
+    {
+     "name": "speed",
+     "label": "belt m/s",
+     "type": "number",
+     "default": 0.3,
+     "min": 0.05,
+     "max": 0.6,
+     "step": 0.05
+    },
+    {
+     "name": "rate",
+     "label": "items per minute",
+     "type": "number",
+     "default": 8,
+     "min": 1,
+     "max": 30
+    },
+    {
+     "name": "scheduler",
+     "type": "select",
+     "options": [
+      "lookahead",
+      "edf",
+      "greedy"
+     ],
+     "default": "lookahead"
+    }
+   ]
+  },
+  {
+   "id": "f2-tracking",
+   "label": "Tracking study",
+   "help": "Intercept prediction error vs belt speed and camera latency, with and without time-stamped reports.",
+   "button": "Run",
+   "knobs": []
+  }
+ ]
+}

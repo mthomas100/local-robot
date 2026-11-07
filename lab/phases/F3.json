@@ -1,0 +1,217 @@
+{
+ "id": "F3",
+ "title": "F3 · A learned carry",
+ "summary": "Accepted (attempt 3, 40 seeds). The robot learns, by reinforcement learning, how to carry each item to its chute and when to let go in flight. The grasp stays classical. On three objects it never trained on it beats F2 in all four line conditions beyond the noise.",
+ "disciplines": [
+  "10 · Learning",
+  "13 · Testing and evaluation",
+  "12 · Safety (the shield)"
+ ],
+ "highlight": [
+  "policy",
+  "control",
+  "ops"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "<b>Reinforcement learning</b> (RL) improves a controller by trial and error: try something, score the result with a <i>return</i> (here: a sorted item is worth 25, minus the seconds until the robot is free again), and change the controller toward what scored better. The controller here is a <b>policy</b>: a function that, 50 times a second, reads 16 numbers about the situation (where the drop point is, how fast the tool moves, how far the held item has swung in the hand and how fast, where the item would land if let go now, its mass, how far it hangs, which tool holds it) and answers with 4 numbers: how to accelerate the tool, and whether to let go.",
+    "It is a <b>residual policy</b>: it starts from a hand-written controller (move toward the drop point, let go when the landing point is safely inside the chute) and learns corrections on top. That is the <i>warm start</i>: learning never starts from flailing. Training uses <b>Augmented Random Search</b>: nudge the policy's 66 numbers in 16 random directions, try each nudge both ways on the same 10 real grasps, and move toward the directions that helped most. No gradients, no neural network; it runs on 14 CPU cores in about 12 minutes.",
+    "Two classic RL tools make it robust: <b>domain randomisation</b> (every training carry gets a slightly different item mass and friction, so the policy cannot rely on exact numbers) and a <b>curriculum</b> (light items first). And one classic engineering tool makes it safe: a <b>shield</b>, plain code around the policy that it cannot override: rise before crossing the belt rail, never let go over the belt, stay inside a corridor around the straight path, respect every speed limit."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>Learning where it wins.</b> F2's carry was half of every cycle. The new controller lets go <i>in flight</i> over the chute instead of stopping, lowering, opening and waiting; from the same 483 grasps it frees the robot after about 1.0 s instead of 2.7 s.",
+    "<b>But be honest about where the win comes from.</b> Most of it comes from the reformulation, not the learning: the hand-written starting point alone is already that fast and sorts every held-out item. What learning added: it fixed the tall cracker box (48% to about 90%: it learned to handle the box that tips when dropped from height) and shaved the carry by 15% on the items it trained on. On the three items it never saw, it is about as good as the starting point. That is the most common honest result in robot learning, and the reason to always keep the baseline that learning started from.",
+    "<b>Generalisation can fail in surprising ways.</b> The first training run looked great on its own items and got worse on the held-out Windex bottle: reading swing values it had never seen from such a tall item, it drove the tool past the chute toward the robot's own base. A tighter shield and a smaller learned correction fixed it. Held-out objects are how you find out."
+   ]
+  },
+  {
+   "h": "What did we measure?",
+   "p": [
+    "<b>On the line, attempt 2</b> (10 seeds x 180 s): with all 11 items arriving at 16 per minute (L2), the learned carry sorts <b>10.7 per minute at 0.15 m/s and 8.2 at 0.3 m/s</b>, against F2's 8.0 and 6.5, beyond the noise. On the three held-out items alone it beats F2 beyond the noise in two of four conditions (+1.0 per minute in the held-out stream at 0.3 m/s, +0.8 in L2 at 0.15 m/s) and not in the other two (positive, inside the noise). <b>So attempt 2 did not pass</b>: the bar is all four (attempt 3 below did). Learning's clearest gain over the hand-written prior on the line: it loses far fewer thrown items (8 against 22).",
+    "On the 483 recorded grasps: training items sorted 97.5% (the starting point 90.7%, F2's carry 96.1%), held-out items 98.4% (starting point 100%, F2 97.6%); robot free after 0.91 s on training items and 1.04 s on held-out ones (F2: 2.63 and 2.75 s).",
+    "<b>The verdict</b> (attempt 3, fixed in advance: 40 fresh seeds x 360 s): held-out items sorted per minute, learned minus F2: +0.67 [0.44, 0.90] and +0.71 [0.55, 0.87] in the held-out stream at 0.15 and 0.3 m/s, +0.65 [0.47, 0.83] and +0.32 [0.19, 0.44] in the mixed L2 stream. All four intervals are above zero: accepted. Attempt 2 (10 seeds x 180 s) had passed two of four: it was too small to see a gain this size, which is why attempt 3 was sized by a power calculation before it ran."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Watch the live line and switch the carry between f2, prior and learned: the learned carry throws. Run the check job on the prior and on the learned policy and compare the per-item table. Train again with more noise or a bigger step and watch the learning curve; then check whether the held-out items got better or worse. The timeline video shows the same three held-out carries by checkpoints of the training."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8803",
+  "job": "live-line",
+  "kind": "line",
+  "note": "The line in real time; choose the carry (f2, prior, learned) in the controls below the picture."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F3-results.png",
+   "caption": "Learning curve (return on training and held-out start states), reliability against F2's carry from the same grasps, the carry time per item, and the line: held-out items sorted per minute for F2, the prior and the learned carry."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f3-timeline.gif",
+   "caption": "The learning timeline: the same carries (three held-out items, then the cracker box and the mustard bottle) by checkpoints 0 (the prior), 20, 40 and 60 of training. (In the repository: an excerpt as a GIF.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F3-carry-compare.png",
+   "caption": "A still from the timeline: one carry per row, checkpoints left to right."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f3-f2-vs-learned.gif",
+   "caption": "The same seed with the learned carry: it lets go in flight and is back for the next item sooner. (In the repository: a 12 s excerpt, the F2 carry left and the learned carry right.)"
+  }
+ ],
+ "numbers": [
+  {
+   "label": "Line: F2 vs prior vs learned (360 s per run, 40 seeds, attempt 3)",
+   "file": "factory/learned/results/f3-eval.json",
+   "table": "table",
+   "rowLabel": "stream · belt · arrivals · carry",
+   "cols": [
+    "sorted_per_min",
+    "sorted_per_min_sd",
+    "held_out_sorted_per_min",
+    "held_out_sort_rate",
+    "attempt_success",
+    "cycle_s",
+    "protective_stops",
+    "dropped"
+   ],
+   "colLabels": {
+    "sorted_per_min": "sorted/min",
+    "sorted_per_min_sd": "± sd",
+    "held_out_sorted_per_min": "held-out sorted/min",
+    "held_out_sort_rate": "held-out sort rate",
+    "attempt_success": "attempt success",
+    "cycle_s": "cycle s",
+    "protective_stops": "protective stops"
+   }
+  },
+  {
+   "label": "The verdict: learned minus F2, held-out items sorted per minute (95% interval)",
+   "file": "factory/learned/results/f3-eval.json",
+   "table": "verdict",
+   "rowLabel": "condition"
+  },
+  {
+   "label": "Training (ARS)",
+   "file": "factory/learned/results/f3-train.json",
+   "keys": [
+    "iters",
+    "best_iter",
+    "episodes",
+    "wall_s",
+    "config"
+   ],
+   "keyLabels": {
+    "best_iter": "chosen iteration",
+    "wall_s": "seconds"
+   }
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f3-check",
+   "label": "Check a policy on every recorded grasp",
+   "help": "Runs the learned policy (or the hand-written prior) from all 483 start states; success and seconds until the robot is free, per item. About 30 s.",
+   "button": "Check",
+   "knobs": [
+    {
+     "name": "policy",
+     "type": "select",
+     "options": [
+      "learned",
+      "prior"
+     ],
+     "default": "learned"
+    }
+   ]
+  },
+  {
+   "id": "f3-train",
+   "label": "Train",
+   "help": "Augmented Random Search from the prior; writes runs/f3-ars-lab/ (metrics.jsonl, checkpoints). It does not replace the shipped policy.",
+   "button": "Train",
+   "knobs": [
+    {
+     "name": "iters",
+     "type": "number",
+     "default": 40,
+     "min": 5,
+     "max": 1000
+    },
+    {
+     "name": "noise",
+     "label": "exploration noise",
+     "type": "number",
+     "default": 0.05,
+     "min": 0.005,
+     "max": 0.5,
+     "step": 0.005
+    },
+    {
+     "name": "step",
+     "label": "step size",
+     "type": "number",
+     "default": 0.03,
+     "min": 0.001,
+     "max": 0.5,
+     "step": 0.005
+    },
+    {
+     "name": "seed",
+     "type": "number",
+     "default": 0
+    }
+   ]
+  },
+  {
+   "id": "f3-eval",
+   "label": "Line evaluation",
+   "help": "F2 vs prior vs learned carry on the line with held-out items, paired seeds; writes factory/learned/results/f3-eval-lab.json.",
+   "button": "Evaluate",
+   "knobs": [
+    {
+     "name": "seeds",
+     "type": "number",
+     "default": 3,
+     "min": 2,
+     "max": 10
+    },
+    {
+     "name": "seconds",
+     "type": "number",
+     "default": 120,
+     "min": 30,
+     "max": 600
+    }
+   ]
+  },
+  {
+   "id": "f3-snapshots",
+   "label": "Record start states",
+   "help": "Runs the F2 line and saves the simulator state at the end of every lift (the training episodes).",
+   "button": "Record",
+   "knobs": [
+    {
+     "name": "runs",
+     "type": "number",
+     "default": 24,
+     "min": 2,
+     "max": 96
+    }
+   ]
+  }
+ ]
+}

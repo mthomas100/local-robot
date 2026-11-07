@@ -1,0 +1,12 @@
+local-robot
+Copyright (c) 2026 mthomas100. This repository's own code is under the MIT License (LICENSE).
+
+Exceptions: modified copies of Apache-2.0 works, which remain under the Apache License 2.0 (LICENSES/Apache-2.0.txt).
+Each file's header says what was changed.
+
+- lib/go1_joystick.py, lib/go1_batch317.py: derived from examples/go1_joystick.py of mjbatch
+  (https://github.com/kevinzakka/mjbatch), Apache-2.0.
+- lib/genesis_go2/go2_env.py, train.py, record.py: derived from examples/locomotion of Genesis
+  (https://github.com/Genesis-Embodied-AI/Genesis), Apache-2.0.
+
+Third-party models and data are not redistributed here; see "Credits and licences" in README.md.

@@ -1,0 +1,121 @@
+{"iter": 0, "wall_s": 0.0, "eval": {"train": {"n": 120, "success": 0.9083, "t_free": 1.043, "reward": 12.311, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 11}}, "held_out": {"n": 127, "success": 0.9843, "t_free": 1.081, "reward": 13.637, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"ik": 2}}}}
+{"iter": 1, "wall_s": 17.4, "reward": 8.399, "reward_top": 10.96, "success": 0.693, "t_free": 1.1, "stage": "light", "gain": 6.175, "a_scale": 1.003}
+{"iter": 2, "wall_s": 21.5, "reward": 12.436, "reward_top": 14.117, "success": 0.906, "t_free": 0.864, "stage": "light", "gain": 6.346, "a_scale": 0.989}
+{"iter": 3, "wall_s": 26.3, "reward": 12.692, "reward_top": 13.987, "success": 0.932, "t_free": 1.096, "stage": "light", "gain": 6.456, "a_scale": 0.984}
+{"iter": 4, "wall_s": 30.9, "reward": 13.815, "reward_top": 14.18, "success": 0.984, "t_free": 0.903, "stage": "light", "gain": 6.371, "a_scale": 0.963}
+{"iter": 5, "wall_s": 34.5, "reward": 13.565, "reward_top": 14.25, "success": 0.964, "t_free": 0.771, "stage": "light", "gain": 6.429, "a_scale": 0.973}
+{"iter": 6, "wall_s": 38.0, "reward": 14.078, "reward_top": 14.32, "success": 0.99, "t_free": 0.731, "stage": "light", "gain": 6.651, "a_scale": 1.005}
+{"iter": 7, "wall_s": 42.2, "reward": 12.184, "reward_top": 14.04, "success": 0.896, "t_free": 0.934, "stage": "light", "gain": 6.754, "a_scale": 1.019}
+{"iter": 8, "wall_s": 46.8, "reward": 10.963, "reward_top": 13.983, "success": 0.833, "t_free": 1.044, "stage": "light", "gain": 6.883, "a_scale": 1.039}
+{"iter": 9, "wall_s": 50.7, "reward": 10.76, "reward_top": 14.15, "success": 0.812, "t_free": 0.834, "stage": "light", "gain": 6.959, "a_scale": 1.037}
+{"iter": 10, "wall_s": 55.4, "reward": 11.29, "reward_top": 14.037, "success": 0.849, "t_free": 0.99, "stage": "light", "gain": 6.899, "a_scale": 1.022, "eval": {"train": {"n": 120, "success": 0.9667, "t_free": 0.983, "reward": 13.417, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 4}}, "held_out": {"n": 127, "success": 0.9685, "t_free": 1.05, "reward": 13.385, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 1, "ik": 3}}}}
+{"iter": 11, "wall_s": 64.8, "reward": 13.872, "reward_top": 13.947, "success": 1.0, "t_free": 1.128, "stage": "light", "gain": 7.256, "a_scale": 1.06}
+{"iter": 12, "wall_s": 68.6, "reward": 13.234, "reward_top": 14.113, "success": 0.953, "t_free": 0.919, "stage": "light", "gain": 7.336, "a_scale": 1.053}
+{"iter": 13, "wall_s": 72.9, "reward": 11.513, "reward_top": 14.123, "success": 0.859, "t_free": 0.948, "stage": "light", "gain": 7.521, "a_scale": 1.063}
+{"iter": 14, "wall_s": 76.7, "reward": 11.465, "reward_top": 14.087, "success": 0.854, "t_free": 0.894, "stage": "light", "gain": 7.405, "a_scale": 1.013}
+{"iter": 15, "wall_s": 80.5, "reward": 14.045, "reward_top": 14.097, "success": 1.0, "t_free": 0.955, "stage": "light", "gain": 7.331, "a_scale": 1.034}
+{"iter": 16, "wall_s": 84.3, "reward": 12.441, "reward_top": 14.083, "success": 0.911, "t_free": 0.962, "stage": "light", "gain": 7.632, "a_scale": 1.105}
+{"iter": 17, "wall_s": 88.9, "reward": 9.449, "reward_top": 13.997, "success": 0.75, "t_free": 1.068, "stage": "light", "gain": 7.896, "a_scale": 1.078}
+{"iter": 18, "wall_s": 93.2, "reward": 12.999, "reward_top": 14.047, "success": 0.943, "t_free": 0.968, "stage": "light", "gain": 8.115, "a_scale": 1.064}
+{"iter": 19, "wall_s": 97.0, "reward": 12.818, "reward_top": 14.18, "success": 0.927, "t_free": 0.859, "stage": "light", "gain": 8.229, "a_scale": 1.09}
+{"iter": 20, "wall_s": 100.9, "reward": 10.302, "reward_top": 14.117, "success": 0.786, "t_free": 0.815, "stage": "light", "gain": 8.236, "a_scale": 1.096, "eval": {"train": {"n": 120, "success": 0.9667, "t_free": 0.941, "reward": 13.457, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 3, "ik": 1}}, "held_out": {"n": 127, "success": 0.9528, "t_free": 1.021, "reward": 13.13, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"ik": 4, "off_target": 2}}}}
+{"iter": 21, "wall_s": 110.3, "reward": 13.769, "reward_top": 14.093, "success": 0.984, "t_free": 0.949, "stage": "light", "gain": 8.994, "a_scale": 1.108}
+{"iter": 22, "wall_s": 114.4, "reward": 13.554, "reward_top": 14.043, "success": 0.974, "t_free": 0.977, "stage": "light", "gain": 9.069, "a_scale": 1.124}
+{"iter": 23, "wall_s": 118.2, "reward": 13.286, "reward_top": 14.167, "success": 0.953, "t_free": 0.864, "stage": "light", "gain": 9.079, "a_scale": 1.105}
+{"iter": 24, "wall_s": 122.5, "reward": 12.618, "reward_top": 14.087, "success": 0.922, "t_free": 0.974, "stage": "light", "gain": 9.161, "a_scale": 1.075}
+{"iter": 25, "wall_s": 125.8, "reward": 14.001, "reward_top": 14.253, "success": 0.99, "t_free": 0.81, "stage": "all", "gain": 9.402, "a_scale": 1.122}
+{"iter": 26, "wall_s": 129.2, "reward": 13.332, "reward_top": 14.23, "success": 0.953, "t_free": 0.815, "stage": "all", "gain": 9.437, "a_scale": 1.099}
+{"iter": 27, "wall_s": 132.8, "reward": 9.072, "reward_top": 14.2, "success": 0.719, "t_free": 0.813, "stage": "all", "gain": 9.614, "a_scale": 1.094}
+{"iter": 28, "wall_s": 136.2, "reward": 14.177, "reward_top": 14.227, "success": 1.0, "t_free": 0.823, "stage": "all", "gain": 10.137, "a_scale": 1.17}
+{"iter": 29, "wall_s": 140.2, "reward": 12.62, "reward_top": 14.17, "success": 0.917, "t_free": 0.87, "stage": "all", "gain": 10.345, "a_scale": 1.159}
+{"iter": 30, "wall_s": 144.7, "reward": 12.55, "reward_top": 13.973, "success": 0.922, "t_free": 1.048, "stage": "all", "gain": 10.667, "a_scale": 1.119, "eval": {"train": {"n": 120, "success": 0.9583, "t_free": 0.925, "reward": 13.322, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 3, "ik": 2}}, "held_out": {"n": 127, "success": 0.9449, "t_free": 1.051, "reward": 12.96, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 3, "ik": 4}}}}
+{"iter": 31, "wall_s": 153.3, "reward": 12.827, "reward_top": 14.193, "success": 0.927, "t_free": 0.85, "stage": "all", "gain": 10.79, "a_scale": 1.109}
+{"iter": 32, "wall_s": 157.1, "reward": 13.199, "reward_top": 14.097, "success": 0.953, "t_free": 0.955, "stage": "all", "gain": 10.831, "a_scale": 1.123}
+{"iter": 33, "wall_s": 160.7, "reward": 14.05, "reward_top": 14.183, "success": 0.995, "t_free": 0.855, "stage": "all", "gain": 11.044, "a_scale": 1.122}
+{"iter": 34, "wall_s": 164.1, "reward": 13.447, "reward_top": 14.233, "success": 0.958, "t_free": 0.794, "stage": "all", "gain": 11.051, "a_scale": 1.117}
+{"iter": 35, "wall_s": 167.6, "reward": 12.509, "reward_top": 14.133, "success": 0.911, "t_free": 0.887, "stage": "all", "gain": 10.906, "a_scale": 1.103}
+{"iter": 36, "wall_s": 171.2, "reward": 11.258, "reward_top": 14.143, "success": 0.839, "t_free": 0.804, "stage": "all", "gain": 10.845, "a_scale": 1.107}
+{"iter": 37, "wall_s": 175.4, "reward": 13.566, "reward_top": 13.97, "success": 0.979, "t_free": 1.061, "stage": "all", "gain": 10.982, "a_scale": 1.134}
+{"iter": 38, "wall_s": 178.9, "reward": 14.123, "reward_top": 14.163, "success": 1.0, "t_free": 0.877, "stage": "all", "gain": 10.927, "a_scale": 1.222}
+{"iter": 39, "wall_s": 182.7, "reward": 12.298, "reward_top": 14.123, "success": 0.901, "t_free": 0.912, "stage": "all", "gain": 11.211, "a_scale": 1.178}
+{"iter": 40, "wall_s": 186.2, "reward": 13.612, "reward_top": 14.217, "success": 0.969, "t_free": 0.819, "stage": "all", "gain": 11.302, "a_scale": 1.16, "eval": {"train": {"n": 120, "success": 0.9667, "t_free": 0.92, "reward": 13.477, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 2, "ik": 1, "timeout": 1}}, "held_out": {"n": 127, "success": 0.9291, "t_free": 1.028, "reward": 12.699, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"ik": 7, "off_target": 2}}}}
+{"iter": 41, "wall_s": 195.9, "reward": 13.489, "reward_top": 13.91, "success": 0.979, "t_free": 1.139, "stage": "all", "gain": 11.633, "a_scale": 1.155}
+{"iter": 42, "wall_s": 199.8, "reward": 13.959, "reward_top": 13.997, "success": 1.0, "t_free": 1.041, "stage": "all", "gain": 11.346, "a_scale": 1.226}
+{"iter": 43, "wall_s": 203.3, "reward": 13.023, "reward_top": 14.197, "success": 0.938, "t_free": 0.842, "stage": "all", "gain": 11.405, "a_scale": 1.236}
+{"iter": 44, "wall_s": 207.2, "reward": 12.484, "reward_top": 14.093, "success": 0.911, "t_free": 0.915, "stage": "all", "gain": 11.074, "a_scale": 1.235}
+{"iter": 45, "wall_s": 211.0, "reward": 12.841, "reward_top": 14.08, "success": 0.932, "t_free": 0.936, "stage": "all", "gain": 11.537, "a_scale": 1.213}
+{"iter": 46, "wall_s": 214.6, "reward": 13.051, "reward_top": 14.093, "success": 0.943, "t_free": 0.912, "stage": "all", "gain": 11.081, "a_scale": 1.25}
+{"iter": 47, "wall_s": 218.3, "reward": 13.139, "reward_top": 14.093, "success": 0.948, "t_free": 0.919, "stage": "all", "gain": 10.958, "a_scale": 1.283}
+{"iter": 48, "wall_s": 221.7, "reward": 12.886, "reward_top": 14.14, "success": 0.932, "t_free": 0.887, "stage": "all", "gain": 10.982, "a_scale": 1.28}
+{"iter": 49, "wall_s": 225.4, "reward": 14.147, "reward_top": 14.19, "success": 1.0, "t_free": 0.853, "stage": "all", "gain": 11.04, "a_scale": 1.268}
+{"iter": 50, "wall_s": 229.6, "reward": 14.096, "reward_top": 14.13, "success": 1.0, "t_free": 0.904, "stage": "all", "gain": 11.442, "a_scale": 1.324, "eval": {"train": {"n": 120, "success": 0.9417, "t_free": 0.854, "reward": 13.087, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 3, "ik": 4}}, "held_out": {"n": 127, "success": 0.9055, "t_free": 0.957, "reward": 12.338, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 5, "ik": 6, "drop": 1}}}}
+{"iter": 51, "wall_s": 239.0, "reward": 12.508, "reward_top": 14.173, "success": 0.911, "t_free": 0.889, "stage": "all", "gain": 11.396, "a_scale": 1.331}
+{"iter": 52, "wall_s": 242.8, "reward": 12.827, "reward_top": 14.01, "success": 0.938, "t_free": 1.051, "stage": "all", "gain": 11.613, "a_scale": 1.343}
+{"iter": 53, "wall_s": 246.4, "reward": 11.95, "reward_top": 14.18, "success": 0.88, "t_free": 0.879, "stage": "all", "gain": 11.718, "a_scale": 1.388}
+{"iter": 54, "wall_s": 250.5, "reward": 9.168, "reward_top": 13.967, "success": 0.729, "t_free": 0.94, "stage": "all", "gain": 12.065, "a_scale": 1.35}
+{"iter": 55, "wall_s": 254.9, "reward": 11.421, "reward_top": 14.02, "success": 0.859, "t_free": 1.056, "stage": "all", "gain": 11.769, "a_scale": 1.329}
+{"iter": 56, "wall_s": 258.1, "reward": 13.649, "reward_top": 14.34, "success": 0.964, "t_free": 0.684, "stage": "all", "gain": 11.892, "a_scale": 1.302}
+{"iter": 57, "wall_s": 262.3, "reward": 12.212, "reward_top": 14.087, "success": 0.896, "t_free": 0.903, "stage": "all", "gain": 11.954, "a_scale": 1.325}
+{"iter": 58, "wall_s": 266.6, "reward": 12.127, "reward_top": 14.203, "success": 0.885, "t_free": 0.786, "stage": "all", "gain": 12.2, "a_scale": 1.312}
+{"iter": 59, "wall_s": 270.8, "reward": 13.976, "reward_top": 14.213, "success": 0.99, "t_free": 0.835, "stage": "all", "gain": 11.758, "a_scale": 1.332}
+{"iter": 60, "wall_s": 274.8, "reward": 11.061, "reward_top": 11.087, "success": 0.833, "t_free": 0.927, "stage": "all", "gain": 11.558, "a_scale": 1.397, "eval": {"train": {"n": 120, "success": 0.925, "t_free": 0.854, "reward": 12.785, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 4, "ik": 1, "timeout": 4}}, "held_out": {"n": 127, "success": 0.9134, "t_free": 0.966, "reward": 12.472, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 5, "ik": 4, "drop": 1, "timeout": 1}}}}
+{"iter": 61, "wall_s": 284.9, "reward": 13.392, "reward_top": 14.01, "success": 0.969, "t_free": 1.047, "stage": "all", "gain": 11.331, "a_scale": 1.423}
+{"iter": 62, "wall_s": 288.7, "reward": 10.563, "reward_top": 14.137, "success": 0.807, "t_free": 0.961, "stage": "all", "gain": 11.463, "a_scale": 1.415}
+{"iter": 63, "wall_s": 293.0, "reward": 13.217, "reward_top": 14.103, "success": 0.953, "t_free": 0.936, "stage": "all", "gain": 11.493, "a_scale": 1.426}
+{"iter": 64, "wall_s": 296.8, "reward": 13.148, "reward_top": 14.317, "success": 0.938, "t_free": 0.708, "stage": "all", "gain": 11.409, "a_scale": 1.409}
+{"iter": 65, "wall_s": 299.9, "reward": 13.768, "reward_top": 14.367, "success": 0.969, "t_free": 0.659, "stage": "all", "gain": 11.503, "a_scale": 1.419}
+{"iter": 66, "wall_s": 304.2, "reward": 13.927, "reward_top": 13.973, "success": 1.0, "t_free": 1.073, "stage": "all", "gain": 11.452, "a_scale": 1.515}
+{"iter": 67, "wall_s": 308.5, "reward": 10.188, "reward_top": 14.163, "success": 0.781, "t_free": 0.839, "stage": "all", "gain": 11.674, "a_scale": 1.415}
+{"iter": 68, "wall_s": 312.2, "reward": 10.955, "reward_top": 14.14, "success": 0.828, "t_free": 0.941, "stage": "all", "gain": 12.034, "a_scale": 1.426}
+{"iter": 69, "wall_s": 316.1, "reward": 13.011, "reward_top": 14.213, "success": 0.938, "t_free": 0.855, "stage": "all", "gain": 11.956, "a_scale": 1.439}
+{"iter": 70, "wall_s": 320.2, "reward": 12.081, "reward_top": 14.067, "success": 0.891, "t_free": 0.945, "stage": "all", "gain": 12.333, "a_scale": 1.451, "eval": {"train": {"n": 120, "success": 0.95, "t_free": 0.878, "reward": 13.216, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 4, "ik": 1, "timeout": 1}}, "held_out": {"n": 127, "success": 0.9449, "t_free": 1.003, "reward": 13.005, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 3, "ik": 4}}}}
+{"iter": 71, "wall_s": 329.5, "reward": 12.236, "reward_top": 14.08, "success": 0.901, "t_free": 0.98, "stage": "all", "gain": 12.608, "a_scale": 1.414}
+{"iter": 72, "wall_s": 333.5, "reward": 12.227, "reward_top": 14.027, "success": 0.901, "t_free": 0.991, "stage": "all", "gain": 13.208, "a_scale": 1.392}
+{"iter": 73, "wall_s": 338.0, "reward": 13.756, "reward_top": 13.913, "success": 0.995, "t_free": 1.151, "stage": "all", "gain": 13.512, "a_scale": 1.382}
+{"iter": 74, "wall_s": 342.1, "reward": 13.632, "reward_top": 14.127, "success": 0.974, "t_free": 0.897, "stage": "all", "gain": 13.833, "a_scale": 1.377}
+{"iter": 75, "wall_s": 345.6, "reward": 14.028, "reward_top": 14.063, "success": 1.0, "t_free": 0.972, "stage": "all", "gain": 13.536, "a_scale": 1.408}
+{"iter": 76, "wall_s": 348.9, "reward": 11.747, "reward_top": 14.21, "success": 0.87, "t_free": 0.896, "stage": "all", "gain": 13.279, "a_scale": 1.405}
+{"iter": 77, "wall_s": 352.5, "reward": 13.585, "reward_top": 14.3, "success": 0.964, "t_free": 0.749, "stage": "all", "gain": 13.747, "a_scale": 1.401}
+{"iter": 78, "wall_s": 355.5, "reward": 13.796, "reward_top": 14.403, "success": 0.969, "t_free": 0.63, "stage": "all", "gain": 13.417, "a_scale": 1.421}
+{"iter": 79, "wall_s": 361.6, "reward": 11.939, "reward_top": 13.953, "success": 0.891, "t_free": 1.104, "stage": "all", "gain": 12.549, "a_scale": 1.453}
+{"iter": 80, "wall_s": 366.0, "reward": 13.374, "reward_top": 14.163, "success": 0.958, "t_free": 0.87, "stage": "all", "gain": 12.712, "a_scale": 1.477, "eval": {"train": {"n": 120, "success": 0.9167, "t_free": 0.854, "reward": 12.634, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"off_target": 7, "ik": 2, "timeout": 1}}, "held_out": {"n": 127, "success": 0.9449, "t_free": 0.985, "reward": 13.023, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 4, "ik": 3}}}}
+{"iter": 81, "wall_s": 374.8, "reward": 14.215, "reward_top": 14.273, "success": 1.0, "t_free": 0.785, "stage": "all", "gain": 12.906, "a_scale": 1.55}
+{"iter": 82, "wall_s": 378.7, "reward": 12.996, "reward_top": 14.19, "success": 0.938, "t_free": 0.871, "stage": "all", "gain": 12.855, "a_scale": 1.557}
+{"iter": 83, "wall_s": 382.3, "reward": 12.638, "reward_top": 14.183, "success": 0.917, "t_free": 0.849, "stage": "all", "gain": 13.152, "a_scale": 1.601}
+{"iter": 84, "wall_s": 385.6, "reward": 13.057, "reward_top": 14.19, "success": 0.938, "t_free": 0.806, "stage": "all", "gain": 13.534, "a_scale": 1.55}
+{"iter": 85, "wall_s": 389.7, "reward": 14.152, "reward_top": 14.183, "success": 1.0, "t_free": 0.848, "stage": "all", "gain": 14.173, "a_scale": 1.601}
+{"iter": 86, "wall_s": 393.1, "reward": 14.217, "reward_top": 14.263, "success": 1.0, "t_free": 0.783, "stage": "all", "gain": 14.313, "a_scale": 1.639}
+{"iter": 87, "wall_s": 398.6, "reward": 8.736, "reward_top": 13.953, "success": 0.708, "t_free": 1.02, "stage": "all", "gain": 14.258, "a_scale": 1.637}
+{"iter": 88, "wall_s": 401.9, "reward": 7.585, "reward_top": 10.967, "success": 0.641, "t_free": 0.915, "stage": "all", "gain": 14.359, "a_scale": 1.7}
+{"iter": 89, "wall_s": 406.1, "reward": 12.768, "reward_top": 14.183, "success": 0.922, "t_free": 0.811, "stage": "all", "gain": 14.27, "a_scale": 1.732}
+{"iter": 90, "wall_s": 409.9, "reward": 12.417, "reward_top": 14.22, "success": 0.906, "t_free": 0.884, "stage": "all", "gain": 13.838, "a_scale": 1.76, "eval": {"train": {"n": 120, "success": 0.8667, "t_free": 0.815, "reward": 11.76, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"ik": 3, "off_target": 6, "timeout": 6, "drop": 1}}, "held_out": {"n": 127, "success": 0.8898, "t_free": 0.893, "reward": 12.111, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 10, "ik": 3, "timeout": 1}}}}
+{"iter": 91, "wall_s": 419.0, "reward": 14.116, "reward_top": 14.157, "success": 1.0, "t_free": 0.884, "stage": "all", "gain": 14.467, "a_scale": 1.774}
+{"iter": 92, "wall_s": 422.3, "reward": 14.229, "reward_top": 14.253, "success": 1.0, "t_free": 0.771, "stage": "all", "gain": 14.429, "a_scale": 1.767}
+{"iter": 93, "wall_s": 426.0, "reward": 8.48, "reward_top": 11.283, "success": 0.682, "t_free": 0.708, "stage": "all", "gain": 15.693, "a_scale": 1.778}
+{"iter": 94, "wall_s": 429.6, "reward": 13.588, "reward_top": 14.377, "success": 0.958, "t_free": 0.647, "stage": "all", "gain": 15.834, "a_scale": 1.77}
+{"iter": 95, "wall_s": 433.0, "reward": 14.147, "reward_top": 14.277, "success": 0.995, "t_free": 0.758, "stage": "all", "gain": 16.288, "a_scale": 1.8}
+{"iter": 96, "wall_s": 437.3, "reward": 14.122, "reward_top": 14.157, "success": 1.0, "t_free": 0.878, "stage": "all", "gain": 16.071, "a_scale": 1.873}
+{"iter": 97, "wall_s": 442.0, "reward": 10.147, "reward_top": 14.197, "success": 0.776, "t_free": 0.771, "stage": "all", "gain": 16.134, "a_scale": 1.859}
+{"iter": 98, "wall_s": 446.3, "reward": 7.305, "reward_top": 13.793, "success": 0.63, "t_free": 1.061, "stage": "all", "gain": 16.31, "a_scale": 1.83}
+{"iter": 99, "wall_s": 449.8, "reward": 12.056, "reward_top": 14.207, "success": 0.88, "t_free": 0.758, "stage": "all", "gain": 16.31, "a_scale": 1.725}
+{"iter": 100, "wall_s": 453.4, "reward": 14.05, "reward_top": 14.267, "success": 0.99, "t_free": 0.76, "stage": "all", "gain": 16.31, "a_scale": 1.75, "eval": {"train": {"n": 120, "success": 0.875, "t_free": 0.818, "reward": 11.909, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"ik": 3, "off_target": 11, "timeout": 1}}, "held_out": {"n": 127, "success": 0.9055, "t_free": 0.902, "reward": 12.388, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 6, "ik": 5, "timeout": 1}}}}
+{"iter": 101, "wall_s": 462.1, "reward": 14.313, "reward_top": 14.34, "success": 1.0, "t_free": 0.687, "stage": "all", "gain": 16.298, "a_scale": 1.813}
+{"iter": 102, "wall_s": 465.7, "reward": 13.767, "reward_top": 14.263, "success": 0.974, "t_free": 0.758, "stage": "all", "gain": 16.31, "a_scale": 1.917}
+{"iter": 103, "wall_s": 469.7, "reward": 9.882, "reward_top": 14.07, "success": 0.76, "t_free": 0.744, "stage": "all", "gain": 16.31, "a_scale": 1.882}
+{"iter": 104, "wall_s": 473.1, "reward": 14.021, "reward_top": 14.26, "success": 0.99, "t_free": 0.789, "stage": "all", "gain": 16.31, "a_scale": 1.951}
+{"iter": 105, "wall_s": 476.5, "reward": 10.726, "reward_top": 14.267, "success": 0.807, "t_free": 0.759, "stage": "all", "gain": 16.31, "a_scale": 1.925}
+{"iter": 106, "wall_s": 479.8, "reward": 14.32, "reward_top": 14.35, "success": 1.0, "t_free": 0.68, "stage": "all", "gain": 16.31, "a_scale": 1.921}
+{"iter": 107, "wall_s": 483.7, "reward": 13.234, "reward_top": 14.397, "success": 0.938, "t_free": 0.617, "stage": "all", "gain": 16.31, "a_scale": 1.947}
+{"iter": 108, "wall_s": 488.7, "reward": 9.88, "reward_top": 14.31, "success": 0.76, "t_free": 0.747, "stage": "all", "gain": 16.31, "a_scale": 1.921}
+{"iter": 109, "wall_s": 492.7, "reward": 12.875, "reward_top": 14.233, "success": 0.927, "t_free": 0.798, "stage": "all", "gain": 16.31, "a_scale": 1.926}
+{"iter": 110, "wall_s": 496.9, "reward": 13.988, "reward_top": 14.027, "success": 1.0, "t_free": 1.012, "stage": "all", "gain": 16.31, "a_scale": 2.05, "eval": {"train": {"n": 120, "success": 0.8417, "t_free": 0.766, "reward": 11.347, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"drop": 3, "off_target": 13, "ik": 2, "timeout": 1}}, "held_out": {"n": 127, "success": 0.874, "t_free": 0.832, "reward": 11.879, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 11, "ik": 3, "timeout": 2}}}}
+{"iter": 111, "wall_s": 505.4, "reward": 13.619, "reward_top": 14.33, "success": 0.964, "t_free": 0.715, "stage": "all", "gain": 16.31, "a_scale": 2.05}
+{"iter": 112, "wall_s": 508.8, "reward": 11.236, "reward_top": 14.227, "success": 0.833, "t_free": 0.716, "stage": "all", "gain": 16.31, "a_scale": 2.022}
+{"iter": 113, "wall_s": 512.4, "reward": 8.042, "reward_top": 11.3, "success": 0.656, "t_free": 0.65, "stage": "all", "gain": 16.31, "a_scale": 1.96}
+{"iter": 114, "wall_s": 515.8, "reward": 13.081, "reward_top": 14.22, "success": 0.938, "t_free": 0.78, "stage": "all", "gain": 16.31, "a_scale": 1.977}
+{"iter": 115, "wall_s": 519.6, "reward": 8.866, "reward_top": 14.103, "success": 0.708, "t_free": 0.836, "stage": "all", "gain": 16.31, "a_scale": 2.011}
+{"iter": 116, "wall_s": 522.7, "reward": 11.089, "reward_top": 11.3, "success": 0.823, "t_free": 0.664, "stage": "all", "gain": 16.31, "a_scale": 2.128}
+{"iter": 117, "wall_s": 526.6, "reward": 12.011, "reward_top": 14.327, "success": 0.875, "t_free": 0.702, "stage": "all", "gain": 16.31, "a_scale": 1.986}
+{"iter": 118, "wall_s": 530.3, "reward": 14.273, "reward_top": 14.303, "success": 1.0, "t_free": 0.727, "stage": "all", "gain": 16.31, "a_scale": 1.981}
+{"iter": 119, "wall_s": 533.7, "reward": 14.183, "reward_top": 14.287, "success": 0.995, "t_free": 0.722, "stage": "all", "gain": 16.31, "a_scale": 1.992}
+{"iter": 120, "wall_s": 537.6, "reward": 8.215, "reward_top": 11.183, "success": 0.672, "t_free": 0.82, "stage": "all", "gain": 16.31, "a_scale": 1.959, "eval": {"train": {"n": 120, "success": 0.85, "t_free": 0.769, "reward": 11.496, "f2_t_free": 2.587, "f2_success": 0.9583, "failures": {"drop": 3, "off_target": 13, "ik": 2}}, "held_out": {"n": 127, "success": 0.8898, "t_free": 0.855, "reward": 12.145, "f2_t_free": 2.746, "f2_success": 0.9764, "failures": {"off_target": 7, "ik": 4, "timeout": 3}}}}

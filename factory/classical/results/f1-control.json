@@ -1,0 +1,76 @@
+{
+ "date": "2026-11-02",
+ "kp": [
+  2000.0,
+  2000.0,
+  2000.0,
+  500.0,
+  500.0,
+  500.0
+ ],
+ "kv": [
+  400.0,
+  400.0,
+  400.0,
+  100.0,
+  100.0,
+  100.0
+ ],
+ "gravity_compensation": true,
+ "steps": [
+  {
+   "joint": "shoulder_pan_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.434,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.772,
+   "steady_state_err_rad": 5e-05,
+   "zero_crossings": 0
+  },
+  {
+   "joint": "shoulder_lift_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.422,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.754,
+   "steady_state_err_rad": 4e-05,
+   "zero_crossings": 0
+  },
+  {
+   "joint": "elbow_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.432,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.77,
+   "steady_state_err_rad": 5e-05,
+   "zero_crossings": 0
+  },
+  {
+   "joint": "wrist_1_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.434,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.772,
+   "steady_state_err_rad": 5e-05,
+   "zero_crossings": 0
+  },
+  {
+   "joint": "wrist_2_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.434,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.772,
+   "steady_state_err_rad": 5e-05,
+   "zero_crossings": 0
+  },
+  {
+   "joint": "wrist_3_joint",
+   "step_rad": 0.1,
+   "rise_s": 0.434,
+   "overshoot_pct": 0.0,
+   "settling_s": 0.774,
+   "steady_state_err_rad": 5e-05,
+   "zero_crossings": 0
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "F1",
+ "title": "F1 · Classical pick, belt stopped",
+ "summary": "Inverse kinematics, a grasp library, a motion planner and joint control pick one item from the stopped belt and drop it in its chute: 99% over 200 trials, with no learning at all.",
+ "disciplines": ["3 · Kinematics", "4 · Grasp planning", "5 · Motion planning", "6 · Control", "11 · Software architecture"],
+ "highlight": ["robot", "grasp", "motion", "control"],
+ "blurb": [
+  {"h": "What is this?", "p": [
+   "Picking an object is a chain of small, classical problems. <b>Kinematics</b>: the arm's six joint angles decide where the gripper is (<i>forward</i> kinematics, easy); the job needs the reverse, the joint angles that put the gripper at a given pose (<i>inverse</i> kinematics, solved here by repeatedly nudging the joints along the Jacobian, the matrix that says how each joint moves the gripper). <b>Grasp planning</b>: where to put the fingers on this particular object so it cannot slip; for a two-finger gripper that means two contact points whose surfaces face each other inside the <i>friction cone</i> (an antipodal grasp). <b>Motion planning</b>: a path from here to there that hits nothing, timed so no joint goes faster or accelerates harder than it can. <b>Control</b>: motors that follow that timed path closely without shaking.",
+   "The gripper is a <b>hybrid</b>: the Robotiq 2F-85's two fingers open to 85 mm, and four of the eleven objects (the coffee can, the tuna can, two flat boxes) are wider, so a small suction cup on a slide sits between the fingers and pushes out 3 cm past them for those, as on real bin-picking grippers."
+  ]},
+  {"h": "Why does a robotics engineer care?", "p": [
+   "<b>Classical first, learning where it wins.</b> This pipeline uses no learning at all, and it already sorts 99% of single items from a stopped belt. Every learned module later (F3) has to beat it, on the same tests. A clear baseline is what makes the learning honest.",
+   "<b>The failures are the lessons.</b> The first full run scored 93%, and each failure had a physical cause worth knowing: the suction model yanked a 97 g box into the cup with 80 N and flipped it; a 1.1 kg bottle held by its neck swung out of the fingers like a pendulum when the arm accelerated too hard; tall bottles on the far side of the belt were out of reach with the gripper pointing straight down. The fixes are the textbook ones: a vacuum that seals only on a square face, an acceleration limit that depends on the load, and a tilted approach. A <i>failure taxonomy</i> (no grasp, IK failure, collision, knocked, miss, drop, wrong chute, off target, timeout) makes every failure a counted class, the way a factory's FMEA does.",
+   "<b>Checking without physics finds what simulation misses.</b> Planning 1000 picks and checking every path for collisions, with no physics at all, found the open fingers sweeping through the belt rail in 182 of them on the way home, which the simulated picks had slipped past. One retreat move fixed all of them."
+  ]},
+  {"h": "What did we measure?", "p": [
+   "<b>198 of 200 picks succeeded</b> (99%, 95% confidence interval 96.4-99.7%) over all 11 items at random places and angles on the stopped belt; a second set of 200 gave 199. A pick takes 7.3 s on average. Inverse kinematics solved 910 of 1000 random poses within 1 mm and 1 degree and correctly reported the other 90 unreachable. The joints' servos settle in 0.77 s with no overshoot. Every item stays in the gripper through a shake test.",
+   "<b>The number that matters next:</b> at 0.3 m/s an item spends 3.3 s in the reach zone, less than half a pick. That is F2's problem."
+  ]},
+  {"h": "What could you try?", "p": [
+   "Start the live view and watch it pick; choose one item (the bleach bottle shows the slow, careful carry; the coffee can shows the suction cup). Run the evaluation with a wider zone (x half-width 0.5, y half-width 0.15) and see which failures appear at the edges of the reach. Run the planning sweep and the servo step response. Replay any failed trial from the command line with <code>rl pick replay &lt;index&gt;</code>."
+  ]}
+ ],
+ "live": {"base": "http://127.0.0.1:8802", "job": "live-pick", "kind": "pick", "note": "The classical pipeline picking one random item after another on the stopped belt, simulated and rendered in real time.",
+          "items": ["master_chef_can", "cracker_box", "sugar_box", "tomato_soup_can", "mustard_bottle", "tuna_fish_can", "pudding_box", "gelatin_box", "potted_meat_can", "bleach_cleanser", "windex_bottle"]},
+ "media": [
+  {"kind": "image", "src": "docs/media/F1-grasp-fingers.png", "caption": "A finger grasp: the cracker box held between the 2F-85's pads, 2 cm below its top."},
+  {"kind": "image", "src": "docs/media/F1-grasp-suction.png", "caption": "The hybrid gripper's suction cup, extended past the fingers, holding the 104 mm coffee can the fingers cannot span."},
+  {"kind": "video", "src": "docs/media/F1-pick-fingers.mp4", "caption": "The first success clip: approach, descend, close, lift, carry, turn, drop in the cardboard chute, retreat, home."},
+  {"kind": "video", "src": "docs/media/F1-pick-suction.mp4", "caption": "A suction pick: the cup extends, seals on the lid, carries the can to the metal chute."},
+  {"kind": "image", "src": "docs/media/F1-results.png", "caption": "The evaluation: success per item, cycle times against the 3.3 s an item spends in the zone at 0.3 m/s, failure classes, and the servo step response."},
+  {"kind": "video", "src": "docs/media/F1-eval.mp4", "caption": "Seven evaluation trials back to back (the first is one of the two failures)."},
+  {"kind": "video", "src": "docs/media/F1-fail-adhesion-flip.mp4", "caption": "Instructive failure: the first suction model yanks the light gelatin box into the cup and flips it."},
+  {"kind": "video", "src": "docs/media/F1-fail-bleach-swing.mp4", "caption": "Instructive failure: the bleach bottle, held by its neck, swings out of the fingers on a fast short transfer."},
+  {"kind": "video", "src": "docs/media/F1-fail-tilted-swing.mp4", "caption": "The failure that remains: a tall bottle on a tilted grasp swings into the chute wall on the way down."}
+ ],
+ "numbers": [
+  {"label": "L0 evaluation (200 trials, all items)", "file": "factory/classical/results/f1-eval.json", "keys": ["trials", "successes", "success_rate", "wilson95", "failures", "cycle_s", "plan_ms", "max_track_err_rad", "collisions"],
+   "keyLabels": {"success_rate": "success rate", "wilson95": "95% interval", "cycle_s": "cycle time (s)", "plan_ms": "planning time (ms)", "max_track_err_rad": "max tracking error (rad)"}},
+  {"label": "Per item", "file": "factory/classical/results/f1-eval.json", "table": "per_item", "rowLabel": "item", "cols": ["n", "success", "rate"]},
+  {"label": "Planning sweep (1000 planned picks, no physics)", "file": "factory/classical/results/f1-plan-sweep.json", "keys": ["plans", "planned", "unplanned", "robot_collisions", "item_hits", "plan_ms", "path_s", "tilted"],
+   "keyLabels": {"robot_collisions": "robot-fixture collisions", "item_hits": "carried item hits a fixture", "path_s": "planned path time (s)", "tilted": "tilted approaches"}},
+  {"label": "Servo step responses (0.1 rad)", "file": "factory/classical/results/f1-control.json", "table": "steps", "rowLabel": "joint"}
+ ],
+ "jobs": [
+  {"id": "f1-eval", "label": "Pick evaluation", "help": "Seeded L0 trials over all 11 items in parallel; writes factory/classical/results/f1-eval-lab.json and runs/f1-eval-lab/ (eval.mp4, eval-sheet.png).", "button": "Run the evaluation",
+   "knobs": [{"name": "trials", "type": "number", "default": 88, "min": 11, "max": 1000}, {"name": "seed", "type": "number", "default": 0},
+             {"name": "x_half", "label": "zone half-length m", "type": "number", "default": 0.4, "min": 0, "max": 0.5, "step": 0.05},
+             {"name": "y_half", "label": "off-centre m", "type": "number", "default": 0.08, "min": 0, "max": 0.15, "step": 0.01},
+             {"name": "video", "label": "trials to film", "type": "number", "default": 4, "min": 0, "max": 12}]},
+  {"id": "f1-plan-sweep", "label": "Planning sweep", "help": "Plans picks and checks every path for collisions without physics (seconds).", "button": "Sweep",
+   "knobs": [{"name": "plans", "type": "number", "default": 1000, "min": 50, "max": 5000, "step": 50}]},
+  {"id": "f1-control", "label": "Servo step response", "help": "Steps each joint by 0.1 rad and reports rise time, overshoot and settling.", "button": "Measure", "knobs": []}
+ ]
+}

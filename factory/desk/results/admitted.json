@@ -1,0 +1,14 @@
+{
+ "date": "2026-11-03",
+ "admitted": [
+  "tomato_soup_can",
+  "potted_meat_can",
+  "standin_pet_bottle",
+  "standin_tea_box"
+ ],
+ "standins_because": {
+  "standin_pet_bottle": "no YCB plastic item passes the table",
+  "standin_tea_box": "no YCB cardboard item passes the table"
+ },
+ "source": "factory/desk/payload.py"
+}

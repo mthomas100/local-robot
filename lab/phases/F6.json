@@ -1,0 +1,180 @@
+{
+ "id": "F6",
+ "title": "F6 · The desk arm (SO-101, in simulation)",
+ "summary": "Accepted (2026-11-03). The sorting job scaled down to a hobby arm you could own: the SO-101 (six hobby servos, a hinged jaw) on a desk with a short belt and three bins, every part of a real desk modelled (servos, encoder, bus, camera noise and latency, a camera that is not where the drawing says), and a learned pick shipped as an ONNX file run at 30 Hz. With the whole real-device kit on: the classical pick 200/200 and the behaviour-cloned ONNX policy 189/200 of 200 seeded picks, the camera's planted 8 mm / 2.5° error calibrated away to at most 1.46 mm / 0.27°, the 30 Hz loop 0 late ticks of 6,300, and system identification recovering every planted plant parameter within 3.2%.",
+ "disciplines": [
+  "1 · Cell design (payload and reach)",
+  "2 · Modelling",
+  "3 · Kinematics (5 DoF)",
+  "4 · Grasps for a hinged jaw",
+  "6 · Control (the servo's own loop)",
+  "10a · Behaviour cloning",
+  "14 · Sim-to-real engineering"
+ ],
+ "highlight": [
+  "robot",
+  "control",
+  "camera",
+  "layout",
+  "policy"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "The UR5e of F0-F5 is a 20 kg industrial arm; the <b>SO-101</b> is a 3D-printed desk arm with six <b>hobby serial-bus servos</b> (Feetech STS3215, stall torque 2.94 N·m) that people build for a few hundred dollars and drive with LeRobot. F6 puts it in a desk-scale copy of the sorting cell: a short belt section, three bins (metal, plastic, cardboard), an overhead depth camera.",
+    "<b>What it can handle</b> is the first question, answered with a <b>payload-and-jaw table</b>: for every object, does the jaw close on its faces, can the arm reach the grasp and lift it clear, does every servo hold the load under half its stall torque, does friction hold it? Only 2 of the 11 YCB objects pass (the tomato soup can and the potted meat can, both metal), so a PET bottle and a tea box stand in for plastic and cardboard. The table's predictions were tested by trying the rejected objects anyway: the tuna can, the pudding and gelatin boxes all fail as predicted.",
+    "<b>Five joints, not six</b>: a 5-DoF arm cannot reach every gripper pose, but it can reach every <i>top-down</i> pose in its workspace (straight down at a position, turned about the vertical). With the tool pointing down its grasp point cannot rise more than 9 cm above its own base (the reach map), so the arm sits on a 10 cm riser above the belt: a layout decision made from a measurement."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>Sim-to-real</b> is where most robot learning projects die: a policy that works in a perfect simulator meets a real robot whose motors lag, whose sensors are noisy and late, and whose camera is a few millimetres and degrees from where the drawing says. The cure is to put those imperfections <i>into</i> the simulator, measured, and to build the routines that remove the ones you can remove. That is the <b>real-device kit</b>.",
+    "<b>The servo</b>: the host never commands torque; it writes a goal position to each servo 30 times a second over a serial bus, and a microcontroller <i>inside</i> the servo runs the position loop. The model has the loop (a PD controller with the gains of Menagerie's SO-101), a 12-bit encoder (4096 steps per turn), a 1-count deadband, 4 ms of bus delay, the DC motor's torque-speed line and 0.5° of play between the servo shaft and the printed link. Two instructive failures: without the servo's D term the arm buzzed in a ±2° limit cycle, and with the encoder placed beyond the play the unloaded base joint hunted back and forth.",
+    "<b>The camera</b>: stereo depth noise that grows with distance squared, missing pixels, colour noise, 45 ± 10 ms of latency, and a planted mounting error of 8 mm and 2.5°, which shifts every item by about 2 cm on the belt. <b>Hand-eye calibration</b> removes it: the arm shows a magenta ball on its wrist to the camera at 96 poses; the camera finds the ball (a sphere fitted to its depth pixels), the arm says where the ball is (forward kinematics, with the play pushed one way by gravity), and the camera pose that makes the two agree is solved in closed form (Kabsch), then refined with one unknown play angle per pose for the base joint, which gravity does not load. The first acceptance run missed the 2 mm bar by a fraction of a millimetre. The cause was found by splitting the error with the simulator's ground truth: the camera side was right to 0.2 mm, and the robot side assumed the wrist's play was centred when gravity actually held it at one end.",
+    "<b>System identification</b>: the plant's hidden numbers (rotor inertia, friction, damping, bus delay, back-EMF) are planted at random, then recovered from recorded step and chirp responses by fitting a simulation to the recording, which is how you would tune a simulator to a real arm."
+   ]
+  },
+  {
+   "h": "The learned pick: behaviour cloning, ONNX, 30 Hz",
+   "p": [
+    "<b>Behaviour cloning</b> (discipline 10a) is the simplest robot learning: record an expert, then train a network to do what the expert did in each situation. The expert is the classical pipeline with the whole kit on; the network (a 3-layer MLP) maps what the task says (the camera's item estimate and class, and the time since the pick began) to the six servo goals, the shape of a LeRobot policy. A first version also read the servo positions back over the bus and failed closed-loop (6 of 40): it learned to copy the reading plus a small offset, the classic <i>copycat</i> problem of behaviour cloning, and its gripper goal ran away. Without them it picks 40 of 40. Half the demonstrations had noise added to the goals actually sent (DART), so the data covers states slightly off the expert's path.",
+    "The trained network is exported to <b>ONNX</b>, the format robots deploy, and run by onnxruntime in a fixed-rate loop at 30 Hz (LeRobot's rate for the SO-101). The rate is a requirement, not a hope: the acceptance run paces the loop against the wall clock and counts late ticks."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Start the live view and switch between the classical pipeline and the ONNX policy. Run the calibration job and look at how far off the camera was before. Run the payload table and see which objects fail which check. Things to change in the code: the servo's gains (servo.py), the planted hand-eye error (camera.py), the number of demonstrations (bc.py collect --demos)."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8805",
+  "job": "live-desk",
+  "kind": "desk",
+  "note": "The desk cell in real time with the real-device kit on: first the camera calibration (the arm shows the marker), then picks, alternating the classical pipeline and the ONNX policy. Right: what the overhead camera sees."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F6-desk-desk.png",
+   "caption": "The desk cell: the SO-101 on its riser, the belt section with the four admitted items, the metal, plastic and cardboard bins."
+  },
+  {
+   "kind": "video",
+   "src": "docs/media/F6-pick-potted_meat_can-real.mp4",
+   "caption": "A camera-guided classical pick with the whole real-device kit on (after calibration); right: the side view and the overhead camera."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F6-reach-map.png",
+   "caption": "Where the SO-101 can point its tool straight down (left: height against radius; right: the plan view with the belt, bins and annuli)."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F6-camera-rgbd.png",
+   "caption": "The overhead camera with the kit on: RGB with noise, depth with z-squared noise and holes."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F6-sysid.png",
+   "caption": "System identification: recorded vs fitted responses, planted vs recovered parameters."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/f6-onnx-pick.gif",
+   "caption": "The ONNX policy picking at 30 Hz with the kit on. (In the repository: an excerpt as a GIF.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F6-results.png",
+   "caption": "The acceptance results: classical and ONNX success per item, calibration errors, loop timing."
+  }
+ ],
+ "numbers": [
+  {
+   "label": "The payload-and-jaw table (every item; picks with the real-device kit)",
+   "file": "factory/desk/results/payload.json",
+   "table": "table",
+   "rowLabel": "item"
+  },
+  {
+   "label": "Acceptance: 200 L0 trials with the real-device kit on (bars: classical 90%, ONNX 80%)",
+   "file": "factory/desk/results/f6-eval.json",
+   "table": "picks.table",
+   "rowLabel": "pipeline"
+  },
+  {
+   "label": "Acceptance: hand-eye calibration on five planted errors (bar: 2 mm, 1 deg)",
+   "file": "factory/desk/results/f6-eval.json",
+   "table": "calib.table",
+   "rowLabel": "planted error"
+  },
+  {
+   "label": "Acceptance: the 30 Hz loop against the wall clock",
+   "file": "factory/desk/results/f6-eval.json",
+   "keys": [
+    "rate.summary.period_ms_mean",
+    "rate.summary.period_ms_max",
+    "rate.summary.late_ticks",
+    "rate.summary.infer_ms_p99_max",
+    "rate.summary.passed"
+   ]
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f6-calib",
+   "label": "Hand-eye calibration",
+   "help": "Five cameras each mounted 8 mm and 2.5° off, then the marker routine on each; writes factory/desk/results/f6-eval.json (calib). About a minute.",
+   "button": "Calibrate",
+   "knobs": []
+  },
+  {
+   "id": "f6-check",
+   "label": "ONNX policy check",
+   "help": "The behaviour-cloned policy on fresh L0 trials, whole real-device kit on (after a calibration).",
+   "button": "Check",
+   "knobs": [
+    {
+     "name": "trials",
+     "type": "number",
+     "default": 20,
+     "min": 4,
+     "max": 200
+    }
+   ]
+  },
+  {
+   "id": "f6-payload",
+   "label": "Payload-and-jaw table",
+   "help": "Every item against the jaw, reach, torque and grip limits, then 6 real-kit picks each. About 2 minutes.",
+   "button": "Build table",
+   "knobs": []
+  },
+  {
+   "id": "f6-reach",
+   "label": "Reach map",
+   "help": "Sample the arm's pitch joints and draw where the tool can point straight down.",
+   "button": "Draw",
+   "knobs": []
+  },
+  {
+   "id": "f6-sysid",
+   "label": "System identification",
+   "help": "Plant hidden servo and plant parameters, record steps and chirps, fit a simulation to them, compare.",
+   "button": "Identify",
+   "knobs": [
+    {
+     "name": "seed",
+     "type": "number",
+     "default": 1,
+     "min": 0,
+     "max": 1000000
+    }
+   ]
+  }
+ ]
+}

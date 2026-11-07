@@ -1,0 +1,47 @@
+{
+ "date": "2026-11-02 19:44",
+ "plans": 1000,
+ "planned": 996,
+ "unplanned": {
+  "ik_fail": 4
+ },
+ "robot_collisions": 0,
+ "item_hits": 0,
+ "worst_item_penetration_mm": 0.0,
+ "plan_ms": {
+  "mean": 22.26,
+  "p95": 17.6
+ },
+ "path_s": {
+  "mean": 7.35,
+  "max": 16.95
+ },
+ "tilted": 55,
+ "examples": [
+  {
+   "index": 242,
+   "item": "master_chef_can",
+   "planned": false,
+   "failure": "ik_fail"
+  },
+  {
+   "index": 528,
+   "item": "master_chef_can",
+   "planned": false,
+   "failure": "ik_fail"
+  },
+  {
+   "index": 968,
+   "item": "master_chef_can",
+   "planned": false,
+   "failure": "ik_fail"
+  },
+  {
+   "index": 979,
+   "item": "master_chef_can",
+   "planned": false,
+   "failure": "ik_fail"
+  }
+ ],
+ "wall_s": 8.9
+}

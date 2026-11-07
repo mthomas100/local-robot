@@ -1,0 +1,7077 @@
+{
+ "calib": {
+  "planted": "8 mm, 2.5 deg in seeded random directions (CameraKit.real_kit)",
+  "rows": [
+   {
+    "ok": true,
+    "n": 91,
+    "kept": 86,
+    "skipped": {
+     "ik": 0,
+     "unseen": 5
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.5,
+    "after_mm": 1.46,
+    "after_deg": 0.272,
+    "residual_before_mm": 15.89,
+    "residual_after_mm": 1.51,
+    "seed": 4300,
+    "seconds": 11.9,
+    "ok_2mm_1deg": true
+   },
+   {
+    "ok": true,
+    "n": 90,
+    "kept": 83,
+    "skipped": {
+     "ik": 0,
+     "unseen": 6
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.498,
+    "after_mm": 0.19,
+    "after_deg": 0.018,
+    "residual_before_mm": 13.08,
+    "residual_after_mm": 1.28,
+    "seed": 4301,
+    "seconds": 11.6,
+    "ok_2mm_1deg": true
+   },
+   {
+    "ok": true,
+    "n": 86,
+    "kept": 79,
+    "skipped": {
+     "ik": 0,
+     "unseen": 10
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.504,
+    "after_mm": 0.41,
+    "after_deg": 0.1,
+    "residual_before_mm": 18.0,
+    "residual_after_mm": 1.36,
+    "seed": 4302,
+    "seconds": 12.0,
+    "ok_2mm_1deg": true
+   },
+   {
+    "ok": true,
+    "n": 89,
+    "kept": 82,
+    "skipped": {
+     "ik": 0,
+     "unseen": 7
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.51,
+    "after_mm": 0.62,
+    "after_deg": 0.175,
+    "residual_before_mm": 11.71,
+    "residual_after_mm": 1.31,
+    "seed": 4303,
+    "seconds": 11.7,
+    "ok_2mm_1deg": true
+   },
+   {
+    "ok": true,
+    "n": 88,
+    "kept": 81,
+    "skipped": {
+     "ik": 0,
+     "unseen": 8
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.507,
+    "after_mm": 0.25,
+    "after_deg": 0.068,
+    "residual_before_mm": 16.61,
+    "residual_after_mm": 1.4,
+    "seed": 4304,
+    "seconds": 12.1,
+    "ok_2mm_1deg": true
+   }
+  ],
+  "table": {
+   "seed 4300": {
+    "before_mm": 8.0,
+    "before_deg": 2.5,
+    "after_mm": 1.46,
+    "after_deg": 0.272,
+    "poses": 91,
+    "passed": true
+   },
+   "seed 4301": {
+    "before_mm": 8.0,
+    "before_deg": 2.498,
+    "after_mm": 0.19,
+    "after_deg": 0.018,
+    "poses": 90,
+    "passed": true
+   },
+   "seed 4302": {
+    "before_mm": 8.0,
+    "before_deg": 2.504,
+    "after_mm": 0.41,
+    "after_deg": 0.1,
+    "poses": 86,
+    "passed": true
+   },
+   "seed 4303": {
+    "before_mm": 8.0,
+    "before_deg": 2.51,
+    "after_mm": 0.62,
+    "after_deg": 0.175,
+    "poses": 89,
+    "passed": true
+   },
+   "seed 4304": {
+    "before_mm": 8.0,
+    "before_deg": 2.507,
+    "after_mm": 0.25,
+    "after_deg": 0.068,
+    "poses": 88,
+    "passed": true
+   }
+  },
+  "passed": true
+ },
+ "date": "2026-11-03",
+ "picks": {
+  "seeds": [
+   21000,
+   21199
+  ],
+  "cam_seed": 4300,
+  "table": {
+   "classical": {
+    "sorted": "200/200",
+    "rate": 1.0,
+    "wilson95": [
+     0.9812,
+     1.0
+    ],
+    "bar": 0.9,
+    "tomato_soup_can": "50/50",
+    "potted_meat_can": "50/50",
+    "standin_pet_bottle": "50/50",
+    "standin_tea_box": "50/50",
+    "failures": {}
+   },
+   "onnx": {
+    "sorted": "189/200",
+    "rate": 0.945,
+    "wilson95": [
+     0.9042,
+     0.969
+    ],
+    "bar": 0.8,
+    "tomato_soup_can": "50/50",
+    "potted_meat_can": "50/50",
+    "standin_pet_bottle": "49/50",
+    "standin_tea_box": "40/50",
+    "failures": {
+     "off_target": 2,
+     "miss": 1,
+     "knocked": 8
+    }
+   }
+  },
+  "calibration": {
+   "ok": true,
+   "n": 91,
+   "kept": 86,
+   "skipped": {
+    "ik": 0,
+    "unseen": 5
+   },
+   "before_mm": 8.0,
+   "before_deg": 2.5,
+   "after_mm": 1.46,
+   "after_deg": 0.272,
+   "residual_before_mm": 15.89,
+   "residual_after_mm": 1.51
+  },
+  "seconds": 46.7,
+  "classical": {
+   "ok": 200,
+   "n": 200,
+   "rate": 1.0,
+   "wilson95": [
+    0.9812,
+    1.0
+   ],
+   "outcomes": {
+    "ok": 200
+   },
+   "per_item": {
+    "tomato_soup_can": "50/50",
+    "potted_meat_can": "50/50",
+    "standin_pet_bottle": "50/50",
+    "standin_tea_box": "50/50"
+   },
+   "wrong_class": 0
+  },
+  "onnx": {
+   "ok": 189,
+   "n": 200,
+   "rate": 0.945,
+   "wilson95": [
+    0.9042,
+    0.969
+   ],
+   "outcomes": {
+    "ok": 189,
+    "off_target": 2,
+    "miss": 1,
+    "knocked": 8
+   },
+   "per_item": {
+    "tomato_soup_can": "50/50",
+    "potted_meat_can": "50/50",
+    "standin_pet_bottle": "49/50",
+    "standin_tea_box": "40/50"
+   },
+   "wrong_class": 0
+  },
+  "passed": true,
+  "infer_ms_p99_max": 0.16438713646493872,
+  "trials": [
+   {
+    "seed": 21000,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21000,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2357,
+     "y": 0.0544,
+     "yaw": -0.141,
+     "T": 7.01,
+     "collision": null,
+     "est": [
+      0.2359,
+      0.055,
+      -1.1323
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21000,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2357,
+     "y": 0.0544,
+     "yaw": -0.141,
+     "collision": null
+    },
+    "infer_ms_p99": 0.08185560465790336
+   },
+   {
+    "seed": 21001,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21001,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2414,
+     "y": -0.0001,
+     "yaw": 0.036,
+     "T": 7.36,
+     "collision": null,
+     "est": [
+      0.2416,
+      -0.0001,
+      0.0812
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21001,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2414,
+     "y": -0.0001,
+     "yaw": 0.036,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10472789173945786
+   },
+   {
+    "seed": 21002,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21002,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2385,
+     "y": -0.0182,
+     "yaw": -1.922,
+     "T": 8.75,
+     "collision": null,
+     "est": [
+      0.2387,
+      -0.0182,
+      -1.0763
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21002,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2385,
+     "y": -0.0182,
+     "yaw": -1.922,
+     "collision": null
+    },
+    "infer_ms_p99": 0.14001561095938092
+   },
+   {
+    "seed": 21003,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21003,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2148,
+     "y": -0.05,
+     "yaw": 0.282,
+     "T": 7.11,
+     "collision": null,
+     "est": [
+      0.2152,
+      -0.0497,
+      0.2806
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21003,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2148,
+     "y": -0.05,
+     "yaw": 0.282,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1348099869210274
+   },
+   {
+    "seed": 21004,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21004,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2451,
+     "y": 0.0696,
+     "yaw": -1.649,
+     "T": 7.05,
+     "collision": null,
+     "est": [
+      0.2453,
+      0.0702,
+      1.4189
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21004,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2451,
+     "y": 0.0696,
+     "yaw": -1.649,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10416277335025372
+   },
+   {
+    "seed": 21005,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21005,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2411,
+     "y": 0.0551,
+     "yaw": 1.819,
+     "T": 6.71,
+     "collision": null,
+     "est": [
+      0.2415,
+      0.0554,
+      -1.2785
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21005,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2411,
+     "y": 0.0551,
+     "yaw": 1.819,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1039538392797113
+   },
+   {
+    "seed": 21006,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21006,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2536,
+     "y": 0.0079,
+     "yaw": 2.959,
+     "T": 8.71,
+     "collision": null,
+     "est": [
+      0.2538,
+      0.0079,
+      -1.2238
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21006,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2536,
+     "y": 0.0079,
+     "yaw": 2.959,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11847390327602646
+   },
+   {
+    "seed": 21007,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21007,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2107,
+     "y": 0.066,
+     "yaw": -1.08,
+     "T": 7.48,
+     "collision": null,
+     "est": [
+      0.2112,
+      0.0655,
+      -1.0841
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21007,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2107,
+     "y": 0.066,
+     "yaw": -1.08,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12675476376898595
+   },
+   {
+    "seed": 21008,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21008,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.249,
+     "y": 0.0348,
+     "yaw": 2.97,
+     "T": 7.22,
+     "collision": null,
+     "est": [
+      0.2495,
+      0.0352,
+      -0.1031
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21008,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.249,
+     "y": 0.0348,
+     "yaw": 2.97,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12019452173262847
+   },
+   {
+    "seed": 21009,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21009,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0325,
+     "yaw": 2.276,
+     "T": 7.36,
+     "collision": null,
+     "est": [
+      0.235,
+      -0.0327,
+      -0.8168
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21009,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0325,
+     "yaw": 2.276,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1298097614198923
+   },
+   {
+    "seed": 21010,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21010,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2417,
+     "y": 0.0657,
+     "yaw": 2.807,
+     "T": 8.35,
+     "collision": null,
+     "est": [
+      0.242,
+      0.0652,
+      1.5679
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21010,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2417,
+     "y": 0.0657,
+     "yaw": 2.807,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11367103666998457
+   },
+   {
+    "seed": 21011,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21011,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.212,
+     "y": 0.0268,
+     "yaw": 1.734,
+     "T": 7.17,
+     "collision": null,
+     "est": [
+      0.2123,
+      0.0267,
+      -1.402
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21011,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.212,
+     "y": 0.0268,
+     "yaw": 1.734,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10108530404977507
+   },
+   {
+    "seed": 21012,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21012,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.247,
+     "y": -0.0017,
+     "yaw": 1.54,
+     "T": 7.4,
+     "collision": null,
+     "est": [
+      0.2473,
+      -0.0018,
+      1.2495
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21012,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.247,
+     "y": -0.0017,
+     "yaw": 1.54,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11770040728151802
+   },
+   {
+    "seed": 21013,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21013,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2354,
+     "y": -0.0188,
+     "yaw": 0.657,
+     "T": 7.75,
+     "collision": null,
+     "est": [
+      0.2356,
+      -0.0189,
+      0.7048
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21013,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2354,
+     "y": -0.0188,
+     "yaw": 0.657,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10025248164311053
+   },
+   {
+    "seed": 21014,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21014,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2469,
+     "y": -0.0017,
+     "yaw": 2.711,
+     "T": 8.7,
+     "collision": null,
+     "est": [
+      0.247,
+      -0.0016,
+      -1.2147
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21014,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2469,
+     "y": -0.0017,
+     "yaw": 2.711,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10256702080369
+   },
+   {
+    "seed": 21015,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21015,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2198,
+     "y": 0.0666,
+     "yaw": -3.061,
+     "T": 7.55,
+     "collision": null,
+     "est": [
+      0.2202,
+      0.0659,
+      0.0892
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21015,
+     "outcome": "off_target",
+     "bin": null,
+     "x": 0.2198,
+     "y": 0.0666,
+     "yaw": -3.061,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1105418975930661
+   },
+   {
+    "seed": 21016,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21016,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2569,
+     "y": -0.0321,
+     "yaw": -0.066,
+     "T": 7.67,
+     "collision": null,
+     "est": [
+      0.2573,
+      -0.0324,
+      -0.6255
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21016,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2569,
+     "y": -0.0321,
+     "yaw": -0.066,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10435285978019239
+   },
+   {
+    "seed": 21017,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21017,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.249,
+     "y": 0.0103,
+     "yaw": -1.276,
+     "T": 7.03,
+     "collision": null,
+     "est": [
+      0.2493,
+      0.0104,
+      -1.231
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21017,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.249,
+     "y": 0.0103,
+     "yaw": -1.276,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11814887635409835
+   },
+   {
+    "seed": 21018,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21018,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2556,
+     "y": -0.0762,
+     "yaw": -1.877,
+     "T": 9.12,
+     "collision": null,
+     "est": [
+      0.2558,
+      -0.0756,
+      -1.3286
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21018,
+     "outcome": "miss",
+     "bin": null,
+     "x": 0.2556,
+     "y": -0.0762,
+     "yaw": -1.877,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09590686066076162
+   },
+   {
+    "seed": 21019,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21019,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2436,
+     "y": -0.0056,
+     "yaw": -1.7,
+     "T": 7.2,
+     "collision": null,
+     "est": [
+      0.2439,
+      -0.0056,
+      1.4491
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21019,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2436,
+     "y": -0.0056,
+     "yaw": -1.7,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13028815737925495
+   },
+   {
+    "seed": 21020,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21020,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2249,
+     "y": 0.0164,
+     "yaw": -0.93,
+     "T": 7.13,
+     "collision": null,
+     "est": [
+      0.2248,
+      0.0167,
+      0.5698
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21020,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2249,
+     "y": 0.0164,
+     "yaw": -0.93,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10202478268183769
+   },
+   {
+    "seed": 21021,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21021,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2341,
+     "y": -0.0092,
+     "yaw": 2.874,
+     "T": 7.31,
+     "collision": null,
+     "est": [
+      0.2343,
+      -0.0092,
+      -0.2203
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21021,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2341,
+     "y": -0.0092,
+     "yaw": 2.874,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09823814150877304
+   },
+   {
+    "seed": 21022,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21022,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2333,
+     "y": -0.0737,
+     "yaw": 2.708,
+     "T": 9.14,
+     "collision": null,
+     "est": [
+      0.2335,
+      -0.0733,
+      1.492
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21022,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2333,
+     "y": -0.0737,
+     "yaw": 2.708,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12553132488392293
+   },
+   {
+    "seed": 21023,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21023,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2068,
+     "y": -0.0378,
+     "yaw": 1.791,
+     "T": 6.65,
+     "collision": null,
+     "est": [
+      0.2074,
+      -0.0377,
+      -1.3428
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21023,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2068,
+     "y": -0.0378,
+     "yaw": 1.791,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1092963758856059
+   },
+   {
+    "seed": 21024,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21024,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2297,
+     "y": -0.0357,
+     "yaw": -0.903,
+     "T": 7.51,
+     "collision": null,
+     "est": [
+      0.2299,
+      -0.036,
+      -1.5448
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21024,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2297,
+     "y": -0.0357,
+     "yaw": -0.903,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11586248409003022
+   },
+   {
+    "seed": 21025,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21025,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2382,
+     "y": -0.0123,
+     "yaw": -0.145,
+     "T": 7.39,
+     "collision": null,
+     "est": [
+      0.2385,
+      -0.0125,
+      -0.1026
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21025,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2382,
+     "y": -0.0123,
+     "yaw": -0.145,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11528551229275766
+   },
+   {
+    "seed": 21026,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21026,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2417,
+     "y": 0.0469,
+     "yaw": 2.162,
+     "T": 8.41,
+     "collision": null,
+     "est": [
+      0.242,
+      0.0466,
+      -1.3771
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21026,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2417,
+     "y": 0.0469,
+     "yaw": 2.162,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09395937435328962
+   },
+   {
+    "seed": 21027,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21027,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2586,
+     "y": -0.0367,
+     "yaw": 2.784,
+     "T": 7.19,
+     "collision": null,
+     "est": [
+      0.2589,
+      -0.0366,
+      -0.3755
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21027,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2586,
+     "y": -0.0367,
+     "yaw": 2.784,
+     "collision": null
+    },
+    "infer_ms_p99": 0.14261359698139134
+   },
+   {
+    "seed": 21028,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21028,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2399,
+     "y": -0.0196,
+     "yaw": -3.0,
+     "T": 7.46,
+     "collision": null,
+     "est": [
+      0.2402,
+      -0.0198,
+      -0.4486
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21028,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2399,
+     "y": -0.0196,
+     "yaw": -3.0,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11702795978635551
+   },
+   {
+    "seed": 21029,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21029,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2308,
+     "y": -0.0308,
+     "yaw": 0.129,
+     "T": 7.6,
+     "collision": null,
+     "est": [
+      0.2309,
+      -0.031,
+      0.1739
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21029,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2308,
+     "y": -0.0308,
+     "yaw": 0.129,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12825411162339156
+   },
+   {
+    "seed": 21030,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21030,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2432,
+     "y": -0.0705,
+     "yaw": -0.968,
+     "T": 9.17,
+     "collision": null,
+     "est": [
+      0.2433,
+      -0.07,
+      -1.5015
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21030,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2432,
+     "y": -0.0705,
+     "yaw": -0.968,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11851902236230674
+   },
+   {
+    "seed": 21031,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21031,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2318,
+     "y": 0.0099,
+     "yaw": -2.389,
+     "T": 7.6,
+     "collision": null,
+     "est": [
+      0.232,
+      0.0099,
+      0.7512
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21031,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2318,
+     "y": 0.0099,
+     "yaw": -2.389,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13308792491443455
+   },
+   {
+    "seed": 21032,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21032,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.238,
+     "y": 0.0728,
+     "yaw": 1.586,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.2382,
+      0.0733,
+      -1.4161
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21032,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.238,
+     "y": 0.0728,
+     "yaw": 1.586,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11773888953030122
+   },
+   {
+    "seed": 21033,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21033,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0237,
+     "yaw": 0.616,
+     "T": 7.36,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0238,
+      0.6624
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21033,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0237,
+     "yaw": 0.616,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11433473904617134
+   },
+   {
+    "seed": 21034,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21034,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2124,
+     "y": 0.0634,
+     "yaw": 1.92,
+     "T": 8.08,
+     "collision": null,
+     "est": [
+      0.2128,
+      0.0628,
+      -1.2119
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21034,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2124,
+     "y": 0.0634,
+     "yaw": 1.92,
+     "collision": null
+    },
+    "infer_ms_p99": 0.105146405985579
+   },
+   {
+    "seed": 21035,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21035,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2518,
+     "y": 0.0611,
+     "yaw": 2.909,
+     "T": 7.68,
+     "collision": null,
+     "est": [
+      0.252,
+      0.0605,
+      -0.2217
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21035,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2518,
+     "y": 0.0611,
+     "yaw": 2.909,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11294160736724734
+   },
+   {
+    "seed": 21036,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21036,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2347,
+     "y": -0.0536,
+     "yaw": 0.991,
+     "T": 7.69,
+     "collision": null,
+     "est": [
+      0.2349,
+      -0.0541,
+      -0.273
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21036,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2347,
+     "y": -0.0536,
+     "yaw": 0.991,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09450770448893316
+   },
+   {
+    "seed": 21037,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21037,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0707,
+     "yaw": -2.679,
+     "T": 6.99,
+     "collision": null,
+     "est": [
+      0.2353,
+      0.0712,
+      0.5084
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21037,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0707,
+     "yaw": -2.679,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11670642765238887
+   },
+   {
+    "seed": 21038,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21038,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2053,
+     "y": -0.0179,
+     "yaw": -1.571,
+     "T": 8.71,
+     "collision": null,
+     "est": [
+      0.2056,
+      -0.0179,
+      -1.3251
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21038,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2053,
+     "y": -0.0179,
+     "yaw": -1.571,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09519999730400742
+   },
+   {
+    "seed": 21039,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21039,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2384,
+     "y": 0.0012,
+     "yaw": -1.254,
+     "T": 7.16,
+     "collision": null,
+     "est": [
+      0.2388,
+      0.0012,
+      -1.2498
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21039,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2384,
+     "y": 0.0012,
+     "yaw": -1.254,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11696770088747148
+   },
+   {
+    "seed": 21040,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21040,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2457,
+     "y": -0.0707,
+     "yaw": 2.265,
+     "T": 7.89,
+     "collision": null,
+     "est": [
+      0.246,
+      -0.0713,
+      -1.2894
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21040,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2457,
+     "y": -0.0707,
+     "yaw": 2.265,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11878211749717622
+   },
+   {
+    "seed": 21041,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21041,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": 0.0459,
+     "yaw": 2.122,
+     "T": 6.76,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0463,
+      -0.9691
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21041,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": 0.0459,
+     "yaw": 2.122,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1227227691560984
+   },
+   {
+    "seed": 21042,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21042,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2466,
+     "y": -0.0335,
+     "yaw": 0.888,
+     "T": 8.91,
+     "collision": null,
+     "est": [
+      0.2468,
+      -0.0334,
+      0.3171
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21042,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2466,
+     "y": -0.0335,
+     "yaw": 0.888,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10806614067405473
+   },
+   {
+    "seed": 21043,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21043,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2309,
+     "y": -0.0466,
+     "yaw": 1.294,
+     "T": 7.02,
+     "collision": null,
+     "est": [
+      0.2312,
+      -0.0464,
+      1.3017
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21043,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2309,
+     "y": -0.0466,
+     "yaw": 1.294,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1249353750608862
+   },
+   {
+    "seed": 21044,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21044,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0747,
+     "yaw": 2.28,
+     "T": 7.86,
+     "collision": null,
+     "est": [
+      0.235,
+      -0.0754,
+      -1.3517
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21044,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0747,
+     "yaw": 2.28,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10860700858756905
+   },
+   {
+    "seed": 21045,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21045,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2346,
+     "y": -0.0729,
+     "yaw": -0.428,
+     "T": 7.82,
+     "collision": null,
+     "est": [
+      0.2348,
+      -0.0734,
+      -0.3807
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21045,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2346,
+     "y": -0.0729,
+     "yaw": -0.428,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10794000700116163
+   },
+   {
+    "seed": 21046,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21046,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2499,
+     "y": 0.0769,
+     "yaw": 2.637,
+     "T": 8.41,
+     "collision": null,
+     "est": [
+      0.25,
+      0.0762,
+      1.4803
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21046,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2499,
+     "y": 0.0769,
+     "yaw": 2.637,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10068951407447466
+   },
+   {
+    "seed": 21047,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21047,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2355,
+     "y": -0.0474,
+     "yaw": 0.155,
+     "T": 7.05,
+     "collision": null,
+     "est": [
+      0.2357,
+      -0.0471,
+      0.1497
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21047,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2355,
+     "y": -0.0474,
+     "yaw": 0.155,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12199585209600632
+   },
+   {
+    "seed": 21048,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21048,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2109,
+     "y": -0.0567,
+     "yaw": 3.108,
+     "T": 7.68,
+     "collision": null,
+     "est": [
+      0.2109,
+      -0.0573,
+      -0.1996
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21048,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2109,
+     "y": -0.0567,
+     "yaw": 3.108,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09903040248900652
+   },
+   {
+    "seed": 21049,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21049,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2403,
+     "y": -0.0737,
+     "yaw": 1.332,
+     "T": 7.52,
+     "collision": null,
+     "est": [
+      0.2406,
+      -0.0741,
+      1.3764
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21049,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2403,
+     "y": -0.0737,
+     "yaw": 1.332,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10106549132615338
+   },
+   {
+    "seed": 21050,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21050,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2454,
+     "y": -0.0626,
+     "yaw": -2.453,
+     "T": 9.13,
+     "collision": null,
+     "est": [
+      0.2456,
+      -0.0622,
+      -1.4437
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21050,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2454,
+     "y": -0.0626,
+     "yaw": -2.453,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11439752299338582
+   },
+   {
+    "seed": 21051,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21051,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2532,
+     "y": 0.0795,
+     "yaw": 2.94,
+     "T": 7.83,
+     "collision": null,
+     "est": [
+      0.2533,
+      0.0787,
+      -0.1993
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21051,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2532,
+     "y": 0.0795,
+     "yaw": 2.94,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1213299797382207
+   },
+   {
+    "seed": 21052,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21052,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.248,
+     "y": 0.0458,
+     "yaw": -0.475,
+     "T": 7.16,
+     "collision": null,
+     "est": [
+      0.2483,
+      0.0464,
+      -1.0064
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21052,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.248,
+     "y": 0.0458,
+     "yaw": -0.475,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1040877401828766
+   },
+   {
+    "seed": 21053,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21053,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2215,
+     "y": -0.0756,
+     "yaw": -1.724,
+     "T": 7.47,
+     "collision": null,
+     "est": [
+      0.2217,
+      -0.0762,
+      1.4626
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21053,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2215,
+     "y": -0.0756,
+     "yaw": -1.724,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10852953302673998
+   },
+   {
+    "seed": 21054,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21054,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2524,
+     "y": 0.0285,
+     "yaw": -3.139,
+     "T": 8.59,
+     "collision": null,
+     "est": [
+      0.2525,
+      0.0284,
+      1.2569
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21054,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2524,
+     "y": 0.0285,
+     "yaw": -3.139,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09769269963726403
+   },
+   {
+    "seed": 21055,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21055,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2116,
+     "y": -0.0445,
+     "yaw": -0.275,
+     "T": 6.77,
+     "collision": null,
+     "est": [
+      0.2122,
+      -0.0441,
+      -0.2702
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21055,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2116,
+     "y": -0.0445,
+     "yaw": -0.275,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11683534248732032
+   },
+   {
+    "seed": 21056,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21056,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2256,
+     "y": 0.0707,
+     "yaw": 2.206,
+     "T": 6.86,
+     "collision": null,
+     "est": [
+      0.2257,
+      0.0711,
+      -1.2307
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21056,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2256,
+     "y": 0.0707,
+     "yaw": 2.206,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13095724512822965
+   },
+   {
+    "seed": 21057,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21057,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2326,
+     "y": 0.0387,
+     "yaw": -3.12,
+     "T": 7.04,
+     "collision": null,
+     "est": [
+      0.2328,
+      0.0389,
+      0.0727
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21057,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2326,
+     "y": 0.0387,
+     "yaw": -3.12,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12767889071255922
+   },
+   {
+    "seed": 21058,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21058,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2494,
+     "y": 0.0687,
+     "yaw": 0.805,
+     "T": 8.42,
+     "collision": null,
+     "est": [
+      0.2496,
+      0.068,
+      1.422
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21058,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2494,
+     "y": 0.0687,
+     "yaw": 0.805,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10671026422642173
+   },
+   {
+    "seed": 21059,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21059,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2419,
+     "y": -0.0016,
+     "yaw": 0.52,
+     "T": 7.42,
+     "collision": null,
+     "est": [
+      0.2422,
+      -0.0016,
+      0.5218
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21059,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2419,
+     "y": -0.0016,
+     "yaw": 0.52,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09922771132551134
+   },
+   {
+    "seed": 21060,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21060,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2428,
+     "y": 0.0628,
+     "yaw": -1.58,
+     "T": 7.05,
+     "collision": null,
+     "est": [
+      0.2431,
+      0.0633,
+      1.3983
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21060,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2428,
+     "y": 0.0628,
+     "yaw": -1.58,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10558223119005566
+   },
+   {
+    "seed": 21061,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21061,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0143,
+     "yaw": 0.549,
+     "T": 7.41,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0143,
+      0.5905
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21061,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0143,
+     "yaw": 0.549,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13703476637601858
+   },
+   {
+    "seed": 21062,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21062,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2538,
+     "y": -0.0186,
+     "yaw": -2.766,
+     "T": 8.87,
+     "collision": null,
+     "est": [
+      0.254,
+      -0.0185,
+      -0.4467
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21062,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2538,
+     "y": -0.0186,
+     "yaw": -2.766,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11568312882445758
+   },
+   {
+    "seed": 21063,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21063,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2112,
+     "y": 0.0298,
+     "yaw": 1.903,
+     "T": 7.17,
+     "collision": null,
+     "est": [
+      0.2115,
+      0.0296,
+      -1.2472
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21063,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2112,
+     "y": 0.0298,
+     "yaw": 1.903,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10648337076418125
+   },
+   {
+    "seed": 21064,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21064,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2381,
+     "y": -0.0254,
+     "yaw": -0.572,
+     "T": 7.49,
+     "collision": null,
+     "est": [
+      0.2383,
+      -0.0257,
+      -1.3303
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21064,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2381,
+     "y": -0.0254,
+     "yaw": -0.572,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1043633883818984
+   },
+   {
+    "seed": 21065,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21065,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2288,
+     "y": 0.046,
+     "yaw": -0.001,
+     "T": 6.96,
+     "collision": null,
+     "est": [
+      0.2287,
+      0.0463,
+      0.0527
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21065,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2288,
+     "y": 0.046,
+     "yaw": -0.001,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13724451884627345
+   },
+   {
+    "seed": 21066,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21066,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2329,
+     "y": 0.0714,
+     "yaw": 2.805,
+     "T": 8.25,
+     "collision": null,
+     "est": [
+      0.2331,
+      0.0709,
+      -1.4784
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21066,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2329,
+     "y": 0.0714,
+     "yaw": 2.805,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09497076156549156
+   },
+   {
+    "seed": 21067,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21067,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2278,
+     "y": 0.0734,
+     "yaw": -2.401,
+     "T": 7.79,
+     "collision": null,
+     "est": [
+      0.2283,
+      0.0728,
+      0.7538
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21067,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2278,
+     "y": 0.0734,
+     "yaw": -2.401,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11975322966463871
+   },
+   {
+    "seed": 21068,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21068,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.219,
+     "y": 0.0617,
+     "yaw": -1.761,
+     "T": 6.84,
+     "collision": null,
+     "est": [
+      0.2191,
+      0.0623,
+      -1.3146
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21068,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.219,
+     "y": 0.0617,
+     "yaw": -1.761,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10027389391325417
+   },
+   {
+    "seed": 21069,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21069,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": 0.048,
+     "yaw": 2.471,
+     "T": 6.83,
+     "collision": null,
+     "est": [
+      0.2351,
+      0.0484,
+      -0.6231
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21069,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": 0.048,
+     "yaw": 2.471,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09619338437914852
+   },
+   {
+    "seed": 21070,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21070,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.248,
+     "y": 0.0343,
+     "yaw": 1.887,
+     "T": 8.52,
+     "collision": null,
+     "est": [
+      0.2481,
+      0.0342,
+      1.3096
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21070,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.248,
+     "y": 0.0343,
+     "yaw": 1.887,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11409751605242512
+   },
+   {
+    "seed": 21071,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21071,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2392,
+     "y": 0.0248,
+     "yaw": 1.822,
+     "T": 7.33,
+     "collision": null,
+     "est": [
+      0.2395,
+      0.0248,
+      -1.32
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21071,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2392,
+     "y": 0.0248,
+     "yaw": 1.822,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11479407548904426
+   },
+   {
+    "seed": 21072,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21072,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.245,
+     "y": -0.0656,
+     "yaw": -0.492,
+     "T": 7.84,
+     "collision": null,
+     "est": [
+      0.2453,
+      -0.0661,
+      -1.4847
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21072,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.245,
+     "y": -0.0656,
+     "yaw": -0.492,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12688812334090474
+   },
+   {
+    "seed": 21073,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21073,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2295,
+     "y": 0.0478,
+     "yaw": 2.046,
+     "T": 6.68,
+     "collision": null,
+     "est": [
+      0.2297,
+      0.048,
+      -1.048
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21073,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2295,
+     "y": 0.0478,
+     "yaw": 2.046,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09666836704127492
+   },
+   {
+    "seed": 21074,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21074,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2425,
+     "y": 0.0642,
+     "yaw": -1.491,
+     "T": 8.36,
+     "collision": null,
+     "est": [
+      0.2427,
+      0.0637,
+      -1.464
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21074,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2425,
+     "y": 0.0642,
+     "yaw": -1.491,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10692970827221872
+   },
+   {
+    "seed": 21075,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21075,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2102,
+     "y": 0.0086,
+     "yaw": -1.176,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.2105,
+      0.0086,
+      -1.1851
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21075,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2102,
+     "y": 0.0086,
+     "yaw": -1.176,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12405634275637571
+   },
+   {
+    "seed": 21076,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21076,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2412,
+     "y": -0.0331,
+     "yaw": -1.774,
+     "T": 7.57,
+     "collision": null,
+     "est": [
+      0.2416,
+      -0.0334,
+      -0.2084
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21076,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2412,
+     "y": -0.0331,
+     "yaw": -1.774,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10048797004856176
+   },
+   {
+    "seed": 21077,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21077,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2117,
+     "y": 0.011,
+     "yaw": -1.607,
+     "T": 6.64,
+     "collision": null,
+     "est": [
+      0.2119,
+      0.011,
+      -1.5617
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21077,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2117,
+     "y": 0.011,
+     "yaw": -1.607,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12357889674603952
+   },
+   {
+    "seed": 21078,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21078,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.216,
+     "y": -0.0051,
+     "yaw": -0.36,
+     "T": 8.59,
+     "collision": null,
+     "est": [
+      0.2163,
+      -0.005,
+      0.9808
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21078,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.216,
+     "y": -0.0051,
+     "yaw": -0.36,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11080614174716176
+   },
+   {
+    "seed": 21079,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21079,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2505,
+     "y": -0.0117,
+     "yaw": 2.274,
+     "T": 7.18,
+     "collision": null,
+     "est": [
+      0.2508,
+      -0.0117,
+      -0.8505
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21079,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2505,
+     "y": -0.0117,
+     "yaw": 2.274,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1115497678983957
+   },
+   {
+    "seed": 21080,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21080,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2422,
+     "y": -0.0124,
+     "yaw": 2.562,
+     "T": 7.43,
+     "collision": null,
+     "est": [
+      0.2425,
+      -0.0126,
+      -0.5227
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21080,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2422,
+     "y": -0.0124,
+     "yaw": 2.562,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11970454244874433
+   },
+   {
+    "seed": 21081,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21081,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.233,
+     "y": 0.0537,
+     "yaw": -2.077,
+     "T": 7.32,
+     "collision": null,
+     "est": [
+      0.2333,
+      0.0541,
+      1.1158
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21081,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.233,
+     "y": 0.0537,
+     "yaw": -2.077,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10964134940877568
+   },
+   {
+    "seed": 21082,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21082,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2458,
+     "y": -0.0756,
+     "yaw": 1.285,
+     "T": 9.23,
+     "collision": null,
+     "est": [
+      0.2459,
+      -0.0751,
+      -1.5015
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21082,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2458,
+     "y": -0.0756,
+     "yaw": 1.285,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11138777481392043
+   },
+   {
+    "seed": 21083,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21083,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2253,
+     "y": 0.0088,
+     "yaw": 0.783,
+     "T": 7.62,
+     "collision": null,
+     "est": [
+      0.2255,
+      0.0088,
+      0.781
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21083,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2253,
+     "y": 0.0088,
+     "yaw": 0.783,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1037914084736258
+   },
+   {
+    "seed": 21084,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21084,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2242,
+     "y": 0.0233,
+     "yaw": 0.621,
+     "T": 7.08,
+     "collision": null,
+     "est": [
+      0.2243,
+      0.0236,
+      -0.1278
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21084,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2242,
+     "y": 0.0233,
+     "yaw": 0.621,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11437561479397121
+   },
+   {
+    "seed": 21085,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21085,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2268,
+     "y": -0.0041,
+     "yaw": 1.949,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.227,
+      -0.0041,
+      -1.1461
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21085,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2268,
+     "y": -0.0041,
+     "yaw": 1.949,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12488225707784296
+   },
+   {
+    "seed": 21086,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21086,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2594,
+     "y": -0.0037,
+     "yaw": -1.633,
+     "T": 8.83,
+     "collision": null,
+     "est": [
+      0.2596,
+      -0.0037,
+      -0.7538
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21086,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2594,
+     "y": -0.0037,
+     "yaw": -1.633,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10342073859646918
+   },
+   {
+    "seed": 21087,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21087,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2114,
+     "y": 0.0655,
+     "yaw": -0.113,
+     "T": 7.46,
+     "collision": null,
+     "est": [
+      0.2117,
+      0.0648,
+      -0.1174
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21087,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2114,
+     "y": 0.0655,
+     "yaw": -0.113,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11359052849002187
+   },
+   {
+    "seed": 21088,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21088,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2451,
+     "y": 0.0187,
+     "yaw": -2.512,
+     "T": 7.26,
+     "collision": null,
+     "est": [
+      0.2454,
+      0.0189,
+      0.3219
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21088,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2451,
+     "y": 0.0187,
+     "yaw": -2.512,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11134247877635063
+   },
+   {
+    "seed": 21089,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21089,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": -0.0639,
+     "yaw": -2.708,
+     "T": 8.01,
+     "collision": null,
+     "est": [
+      0.2352,
+      -0.0645,
+      0.4763
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21089,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": -0.0639,
+     "yaw": -2.708,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11273174430243672
+   },
+   {
+    "seed": 21090,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21090,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2132,
+     "y": 0.0193,
+     "yaw": 0.173,
+     "T": 8.41,
+     "collision": null,
+     "est": [
+      0.2134,
+      0.0192,
+      -1.311
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21090,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2132,
+     "y": 0.0193,
+     "yaw": 0.173,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11285341577604417
+   },
+   {
+    "seed": 21091,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21091,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2501,
+     "y": -0.0251,
+     "yaw": -0.198,
+     "T": 7.17,
+     "collision": null,
+     "est": [
+      0.2503,
+      -0.0251,
+      -0.1971
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21091,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2501,
+     "y": -0.0251,
+     "yaw": -0.198,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10976823279634124
+   },
+   {
+    "seed": 21092,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21092,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2236,
+     "y": 0.0383,
+     "yaw": 1.387,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.2237,
+      0.0387,
+      -1.3761
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21092,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2236,
+     "y": 0.0383,
+     "yaw": 1.387,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11645640479400768
+   },
+   {
+    "seed": 21093,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21093,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2369,
+     "y": -0.0436,
+     "yaw": 3.007,
+     "T": 7.63,
+     "collision": null,
+     "est": [
+      0.2371,
+      -0.044,
+      -0.0892
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21093,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2369,
+     "y": -0.0436,
+     "yaw": 3.007,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11476859683170915
+   },
+   {
+    "seed": 21094,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21094,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.254,
+     "y": 0.0064,
+     "yaw": 0.872,
+     "T": 8.72,
+     "collision": null,
+     "est": [
+      0.2542,
+      0.0064,
+      1.3834
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21094,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.254,
+     "y": 0.0064,
+     "yaw": 0.872,
+     "collision": null
+    },
+    "infer_ms_p99": 0.109599344432354
+   },
+   {
+    "seed": 21095,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21095,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2132,
+     "y": 0.0416,
+     "yaw": -2.909,
+     "T": 7.37,
+     "collision": null,
+     "est": [
+      0.2135,
+      0.0411,
+      0.2297
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21095,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2132,
+     "y": 0.0416,
+     "yaw": -2.909,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12609861674718562
+   },
+   {
+    "seed": 21096,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21096,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2303,
+     "y": 0.0355,
+     "yaw": -0.497,
+     "T": 7.05,
+     "collision": null,
+     "est": [
+      0.2303,
+      0.036,
+      -1.0571
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21096,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2303,
+     "y": 0.0355,
+     "yaw": -0.497,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10662552551366392
+   },
+   {
+    "seed": 21097,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21097,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0058,
+     "yaw": -2.288,
+     "T": 7.63,
+     "collision": null,
+     "est": [
+      0.2354,
+      0.0058,
+      0.9007
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21097,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0058,
+     "yaw": -2.288,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10355529375374319
+   },
+   {
+    "seed": 21098,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21098,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2196,
+     "y": 0.0234,
+     "yaw": 1.992,
+     "T": 8.38,
+     "collision": null,
+     "est": [
+      0.2198,
+      0.0234,
+      -1.1615
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21098,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2196,
+     "y": 0.0234,
+     "yaw": 1.992,
+     "collision": null
+    },
+    "infer_ms_p99": 0.0983591168187559
+   },
+   {
+    "seed": 21099,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21099,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2291,
+     "y": 0.004,
+     "yaw": 2.307,
+     "T": 7.09,
+     "collision": null,
+     "est": [
+      0.2294,
+      0.004,
+      -0.8301
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21099,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2291,
+     "y": 0.004,
+     "yaw": 2.307,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11673972825519742
+   },
+   {
+    "seed": 21100,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21100,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2262,
+     "y": -0.0031,
+     "yaw": -1.232,
+     "T": 7.27,
+     "collision": null,
+     "est": [
+      0.2263,
+      -0.003,
+      -0.3681
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21100,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2262,
+     "y": -0.0031,
+     "yaw": -1.232,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11343911522999414
+   },
+   {
+    "seed": 21101,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21101,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2121,
+     "y": -0.0662,
+     "yaw": 1.572,
+     "T": 7.38,
+     "collision": null,
+     "est": [
+      0.2124,
+      -0.0665,
+      -1.521
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21101,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2121,
+     "y": -0.0662,
+     "yaw": 1.572,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12102023581974213
+   },
+   {
+    "seed": 21102,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21102,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2602,
+     "y": -0.0206,
+     "yaw": -3.046,
+     "T": 8.94,
+     "collision": null,
+     "est": [
+      0.2603,
+      -0.0205,
+      -1.497
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21102,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2602,
+     "y": -0.0206,
+     "yaw": -3.046,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11358114192262297
+   },
+   {
+    "seed": 21103,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21103,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2518,
+     "y": 0.0652,
+     "yaw": -0.743,
+     "T": 7.69,
+     "collision": null,
+     "est": [
+      0.2519,
+      0.0646,
+      -0.7477
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21103,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2518,
+     "y": 0.0652,
+     "yaw": -0.743,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11240964406169957
+   },
+   {
+    "seed": 21104,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21104,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2231,
+     "y": -0.0787,
+     "yaw": 2.04,
+     "T": 7.84,
+     "collision": null,
+     "est": [
+      0.2233,
+      -0.0793,
+      -1.5206
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21104,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2231,
+     "y": -0.0787,
+     "yaw": 2.04,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11950285872444515
+   },
+   {
+    "seed": 21105,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21105,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2229,
+     "y": -0.0041,
+     "yaw": -1.212,
+     "T": 6.95,
+     "collision": null,
+     "est": [
+      0.2231,
+      -0.0041,
+      -1.1666
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21105,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2229,
+     "y": -0.0041,
+     "yaw": -1.212,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11699087219312788
+   },
+   {
+    "seed": 21106,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21106,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.223,
+     "y": -0.0606,
+     "yaw": 2.314,
+     "T": 8.98,
+     "collision": null,
+     "est": [
+      0.2233,
+      -0.0604,
+      1.2044
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21106,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.223,
+     "y": -0.0606,
+     "yaw": 2.314,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10829025064595045
+   },
+   {
+    "seed": 21107,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21107,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2255,
+     "y": -0.0011,
+     "yaw": 0.187,
+     "T": 7.21,
+     "collision": null,
+     "est": [
+      0.2258,
+      -0.0011,
+      0.1898
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21107,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2255,
+     "y": -0.0011,
+     "yaw": 0.187,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10091963573358956
+   },
+   {
+    "seed": 21108,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21108,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2346,
+     "y": 0.0206,
+     "yaw": 1.825,
+     "T": 7.17,
+     "collision": null,
+     "est": [
+      0.2348,
+      0.0209,
+      -0.193
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21108,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2346,
+     "y": 0.0206,
+     "yaw": 1.825,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12377658160403379
+   },
+   {
+    "seed": 21109,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21109,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0405,
+     "yaw": 2.452,
+     "T": 6.87,
+     "collision": null,
+     "est": [
+      0.2353,
+      0.0408,
+      -0.6409
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21109,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": 0.0405,
+     "yaw": 2.452,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1057279936503619
+   },
+   {
+    "seed": 21110,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21110,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.249,
+     "y": -0.0118,
+     "yaw": -0.275,
+     "T": 8.79,
+     "collision": null,
+     "est": [
+      0.2493,
+      -0.0118,
+      0.1514
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21110,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.249,
+     "y": -0.0118,
+     "yaw": -0.275,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12787723797373488
+   },
+   {
+    "seed": 21111,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21111,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2524,
+     "y": -0.053,
+     "yaw": -2.743,
+     "T": 7.22,
+     "collision": null,
+     "est": [
+      0.2525,
+      -0.0526,
+      0.3863
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21111,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2524,
+     "y": -0.053,
+     "yaw": -2.743,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1255716243758798
+   },
+   {
+    "seed": 21112,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21112,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2294,
+     "y": 0.028,
+     "yaw": 1.322,
+     "T": 7.08,
+     "collision": null,
+     "est": [
+      0.2294,
+      0.0283,
+      0.76
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21112,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2294,
+     "y": 0.028,
+     "yaw": 1.322,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11802136665210138
+   },
+   {
+    "seed": 21113,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21113,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0389,
+     "yaw": -0.587,
+     "T": 6.91,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0392,
+      -0.5422
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21113,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0389,
+     "yaw": -0.587,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10604449314996602
+   },
+   {
+    "seed": 21114,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21114,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2125,
+     "y": 0.0569,
+     "yaw": 0.023,
+     "T": 8.13,
+     "collision": null,
+     "est": [
+      0.2129,
+      0.0565,
+      -1.2354
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21114,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2125,
+     "y": 0.0569,
+     "yaw": 0.023,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10802562115713954
+   },
+   {
+    "seed": 21115,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21115,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2131,
+     "y": 0.0078,
+     "yaw": 1.495,
+     "T": 7.05,
+     "collision": null,
+     "est": [
+      0.2135,
+      0.0077,
+      1.5009
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21115,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2131,
+     "y": 0.0078,
+     "yaw": 1.495,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12816863250918692
+   },
+   {
+    "seed": 21116,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21116,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2423,
+     "y": -0.0501,
+     "yaw": 2.067,
+     "T": 7.7,
+     "collision": null,
+     "est": [
+      0.2425,
+      -0.0506,
+      1.3883
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21116,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2423,
+     "y": -0.0501,
+     "yaw": 2.067,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09930433589033787
+   },
+   {
+    "seed": 21117,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21117,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2274,
+     "y": -0.0585,
+     "yaw": -1.074,
+     "T": 7.5,
+     "collision": null,
+     "est": [
+      0.2277,
+      -0.0588,
+      -1.029
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21117,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2274,
+     "y": -0.0585,
+     "yaw": -1.074,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11467303265817463
+   },
+   {
+    "seed": 21118,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21118,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2507,
+     "y": 0.0045,
+     "yaw": -0.673,
+     "T": 8.7,
+     "collision": null,
+     "est": [
+      0.2509,
+      0.0045,
+      1.1442
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21118,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2507,
+     "y": 0.0045,
+     "yaw": -0.673,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10854339110665033
+   },
+   {
+    "seed": 21119,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21119,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2283,
+     "y": -0.0015,
+     "yaw": -1.804,
+     "T": 7.12,
+     "collision": null,
+     "est": [
+      0.2286,
+      -0.0016,
+      1.3437
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21119,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2283,
+     "y": -0.0015,
+     "yaw": -1.804,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12344189570285383
+   },
+   {
+    "seed": 21120,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21120,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0731,
+     "yaw": 2.884,
+     "T": 7.85,
+     "collision": null,
+     "est": [
+      0.2349,
+      -0.0737,
+      -1.4822
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21120,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2348,
+     "y": -0.0731,
+     "yaw": 2.884,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10820003808476032
+   },
+   {
+    "seed": 21121,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21121,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2311,
+     "y": -0.0351,
+     "yaw": -3.069,
+     "T": 7.61,
+     "collision": null,
+     "est": [
+      0.2313,
+      -0.0354,
+      0.1215
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21121,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2311,
+     "y": -0.0351,
+     "yaw": -3.069,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10812889551743866
+   },
+   {
+    "seed": 21122,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21122,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2373,
+     "y": -0.0446,
+     "yaw": -0.21,
+     "T": 8.93,
+     "collision": null,
+     "est": [
+      0.2375,
+      -0.0445,
+      0.9812
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21122,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2373,
+     "y": -0.0446,
+     "yaw": -0.21,
+     "collision": null
+    },
+    "infer_ms_p99": 0.0959150027483702
+   },
+   {
+    "seed": 21123,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21123,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2527,
+     "y": -0.0768,
+     "yaw": 0.513,
+     "T": 7.24,
+     "collision": null,
+     "est": [
+      0.2528,
+      -0.0763,
+      0.5081
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21123,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2527,
+     "y": -0.0768,
+     "yaw": 0.513,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1152411254588515
+   },
+   {
+    "seed": 21124,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21124,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2409,
+     "y": 0.0404,
+     "yaw": -2.419,
+     "T": 7.12,
+     "collision": null,
+     "est": [
+      0.2412,
+      0.0409,
+      -0.9963
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21124,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2409,
+     "y": 0.0404,
+     "yaw": -2.419,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1100480020977557
+   },
+   {
+    "seed": 21125,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21125,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0313,
+     "yaw": 0.737,
+     "T": 7.35,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0315,
+      0.7797
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21125,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0313,
+     "yaw": 0.737,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11516838334500791
+   },
+   {
+    "seed": 21126,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21126,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2156,
+     "y": -0.0702,
+     "yaw": 1.24,
+     "T": 9.03,
+     "collision": null,
+     "est": [
+      0.216,
+      -0.0697,
+      1.1228
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21126,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2156,
+     "y": -0.0702,
+     "yaw": 1.24,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1114847429562361
+   },
+   {
+    "seed": 21127,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21127,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2652,
+     "y": -0.0304,
+     "yaw": 1.349,
+     "T": 7.31,
+     "collision": null,
+     "est": [
+      0.2655,
+      -0.0305,
+      1.3547
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21127,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2652,
+     "y": -0.0304,
+     "yaw": 1.349,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12226229184307165
+   },
+   {
+    "seed": 21128,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21128,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2152,
+     "y": -0.0623,
+     "yaw": 3.081,
+     "T": 7.7,
+     "collision": null,
+     "est": [
+      0.2152,
+      -0.0629,
+      -0.8588
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21128,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2152,
+     "y": -0.0623,
+     "yaw": 3.081,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11998360743746171
+   },
+   {
+    "seed": 21129,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21129,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2353,
+     "y": -0.0117,
+     "yaw": -1.913,
+     "T": 6.96,
+     "collision": null,
+     "est": [
+      0.2356,
+      -0.0117,
+      1.2767
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21129,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2353,
+     "y": -0.0117,
+     "yaw": -1.913,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12886177981272345
+   },
+   {
+    "seed": 21130,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21130,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2497,
+     "y": 0.0098,
+     "yaw": -1.852,
+     "T": 8.66,
+     "collision": null,
+     "est": [
+      0.2498,
+      0.0098,
+      1.5113
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21130,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2497,
+     "y": 0.0098,
+     "yaw": -1.852,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11918410076759761
+   },
+   {
+    "seed": 21131,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21131,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2436,
+     "y": 0.0018,
+     "yaw": 2.024,
+     "T": 7.19,
+     "collision": null,
+     "est": [
+      0.2439,
+      0.0016,
+      -1.1109
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21131,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2436,
+     "y": 0.0018,
+     "yaw": 2.024,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12633447302505377
+   },
+   {
+    "seed": 21132,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21132,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.231,
+     "y": -0.0491,
+     "yaw": -2.404,
+     "T": 7.63,
+     "collision": null,
+     "est": [
+      0.2312,
+      -0.0496,
+      0.7028
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21132,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.231,
+     "y": -0.0491,
+     "yaw": -2.404,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11661327676847577
+   },
+   {
+    "seed": 21133,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21133,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": -0.0146,
+     "yaw": 1.187,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.2351,
+      -0.0149,
+      1.2365
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21133,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2349,
+     "y": -0.0146,
+     "yaw": 1.187,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09640550590120256
+   },
+   {
+    "seed": 21134,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21134,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2459,
+     "y": 0.0311,
+     "yaw": -1.055,
+     "T": 8.52,
+     "collision": null,
+     "est": [
+      0.2461,
+      0.0311,
+      1.5229
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21134,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2459,
+     "y": 0.0311,
+     "yaw": -1.055,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12186101172119387
+   },
+   {
+    "seed": 21135,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21135,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.222,
+     "y": -0.0418,
+     "yaw": -0.137,
+     "T": 6.87,
+     "collision": null,
+     "est": [
+      0.2223,
+      -0.0416,
+      -0.1325
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21135,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.222,
+     "y": -0.0418,
+     "yaw": -0.137,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09827975416556003
+   },
+   {
+    "seed": 21136,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21136,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.228,
+     "y": 0.0213,
+     "yaw": 2.543,
+     "T": 7.11,
+     "collision": null,
+     "est": [
+      0.2281,
+      0.0214,
+      0.9653
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21136,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.228,
+     "y": 0.0213,
+     "yaw": 2.543,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10492301662452519
+   },
+   {
+    "seed": 21137,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21137,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2562,
+     "y": 0.0322,
+     "yaw": 1.571,
+     "T": 6.91,
+     "collision": null,
+     "est": [
+      0.2567,
+      0.0325,
+      -1.5275
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21137,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2562,
+     "y": 0.0322,
+     "yaw": 1.571,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10271863429807129
+   },
+   {
+    "seed": 21138,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21138,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2469,
+     "y": -0.044,
+     "yaw": 1.098,
+     "T": 8.99,
+     "collision": null,
+     "est": [
+      0.2471,
+      -0.0438,
+      -1.4873
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21138,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2469,
+     "y": -0.044,
+     "yaw": 1.098,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1250486460048706
+   },
+   {
+    "seed": 21139,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21139,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2159,
+     "y": 0.0646,
+     "yaw": -1.019,
+     "T": 7.49,
+     "collision": null,
+     "est": [
+      0.2165,
+      0.0642,
+      -1.0315
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21139,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2159,
+     "y": 0.0646,
+     "yaw": -1.019,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11470728786662224
+   },
+   {
+    "seed": 21140,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21140,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2274,
+     "y": 0.0696,
+     "yaw": 0.767,
+     "T": 6.88,
+     "collision": null,
+     "est": [
+      0.2274,
+      0.0701,
+      -1.3866
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21140,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2274,
+     "y": 0.0696,
+     "yaw": 0.767,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12831137864850473
+   },
+   {
+    "seed": 21141,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21141,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2358,
+     "y": -0.0724,
+     "yaw": -0.284,
+     "T": 7.85,
+     "collision": null,
+     "est": [
+      0.2359,
+      -0.0727,
+      -0.2352
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21141,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2358,
+     "y": -0.0724,
+     "yaw": -0.284,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10589999146759514
+   },
+   {
+    "seed": 21142,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21142,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2151,
+     "y": 0.0519,
+     "yaw": -2.899,
+     "T": 8.17,
+     "collision": null,
+     "est": [
+      0.2155,
+      0.0516,
+      -1.0941
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21142,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2151,
+     "y": 0.0519,
+     "yaw": -2.899,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12107050279155386
+   },
+   {
+    "seed": 21143,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21143,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2707,
+     "y": 0.0263,
+     "yaw": 1.607,
+     "T": 7.6,
+     "collision": null,
+     "est": [
+      0.2706,
+      0.0264,
+      -1.5447
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21143,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2707,
+     "y": 0.0263,
+     "yaw": 1.607,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1111722690984607
+   },
+   {
+    "seed": 21144,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21144,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2248,
+     "y": 0.0078,
+     "yaw": -1.224,
+     "T": 7.2,
+     "collision": null,
+     "est": [
+      0.2249,
+      0.008,
+      -1.412
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21144,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2248,
+     "y": 0.0078,
+     "yaw": -1.224,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10799039155244834
+   },
+   {
+    "seed": 21145,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21145,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2108,
+     "y": -0.0503,
+     "yaw": 1.593,
+     "T": 7.21,
+     "collision": null,
+     "est": [
+      0.2109,
+      -0.0507,
+      -1.5011
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21145,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2108,
+     "y": -0.0503,
+     "yaw": 1.593,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12048387317918242
+   },
+   {
+    "seed": 21146,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21146,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2369,
+     "y": 0.0629,
+     "yaw": -3.113,
+     "T": 8.31,
+     "collision": null,
+     "est": [
+      0.2371,
+      0.0624,
+      -1.5511
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21146,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2369,
+     "y": 0.0629,
+     "yaw": -3.113,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10814275359734901
+   },
+   {
+    "seed": 21147,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21147,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2494,
+     "y": -0.0242,
+     "yaw": 0.375,
+     "T": 7.28,
+     "collision": null,
+     "est": [
+      0.2496,
+      -0.0241,
+      0.3933
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21147,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2494,
+     "y": -0.0242,
+     "yaw": 0.375,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10505650308914487
+   },
+   {
+    "seed": 21148,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21148,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2439,
+     "y": -0.0202,
+     "yaw": 2.077,
+     "T": 7.5,
+     "collision": null,
+     "est": [
+      0.2442,
+      -0.0206,
+      1.1761
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21148,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2439,
+     "y": -0.0202,
+     "yaw": 2.077,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11352111236192287
+   },
+   {
+    "seed": 21149,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21149,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2294,
+     "y": -0.0748,
+     "yaw": 2.166,
+     "T": 7.69,
+     "collision": null,
+     "est": [
+      0.2296,
+      -0.0753,
+      -0.9315
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21149,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2294,
+     "y": -0.0748,
+     "yaw": 2.166,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12337410356849435
+   },
+   {
+    "seed": 21150,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21150,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2536,
+     "y": -0.025,
+     "yaw": 1.744,
+     "T": 8.91,
+     "collision": null,
+     "est": [
+      0.2538,
+      -0.025,
+      0.6671
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21150,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2536,
+     "y": -0.025,
+     "yaw": 1.744,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1235071162227542
+   },
+   {
+    "seed": 21151,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21151,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2263,
+     "y": -0.0645,
+     "yaw": -1.446,
+     "T": 6.73,
+     "collision": null,
+     "est": [
+      0.2265,
+      -0.0641,
+      -1.4373
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21151,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2263,
+     "y": -0.0645,
+     "yaw": -1.446,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11520338361151516
+   },
+   {
+    "seed": 21152,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21152,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2223,
+     "y": 0.0781,
+     "yaw": -2.699,
+     "T": 6.81,
+     "collision": null,
+     "est": [
+      0.2224,
+      0.0786,
+      -1.4969
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21152,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2223,
+     "y": 0.0781,
+     "yaw": -2.699,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11244051158428192
+   },
+   {
+    "seed": 21153,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21153,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2216,
+     "y": -0.0019,
+     "yaw": -1.238,
+     "T": 6.91,
+     "collision": null,
+     "est": [
+      0.2218,
+      -0.0019,
+      -1.1919
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21153,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2216,
+     "y": -0.0019,
+     "yaw": -1.238,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10946275549940773
+   },
+   {
+    "seed": 21154,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21154,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2079,
+     "y": 0.0115,
+     "yaw": -1.489,
+     "T": 8.47,
+     "collision": null,
+     "est": [
+      0.2081,
+      0.0114,
+      -0.4815
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21154,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2079,
+     "y": 0.0115,
+     "yaw": -1.489,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11548727285116919
+   },
+   {
+    "seed": 21155,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21155,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.244,
+     "y": 0.0693,
+     "yaw": -1.185,
+     "T": 7.7,
+     "collision": null,
+     "est": [
+      0.2445,
+      0.0687,
+      -1.1794
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21155,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.244,
+     "y": 0.0693,
+     "yaw": -1.185,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11831114883534613
+   },
+   {
+    "seed": 21156,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21156,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2117,
+     "y": -0.0406,
+     "yaw": 1.625,
+     "T": 7.57,
+     "collision": null,
+     "est": [
+      0.2116,
+      -0.041,
+      1.0874
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21156,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2117,
+     "y": -0.0406,
+     "yaw": 1.625,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10525611112825572
+   },
+   {
+    "seed": 21157,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21157,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2367,
+     "y": -0.0124,
+     "yaw": 1.319,
+     "T": 6.99,
+     "collision": null,
+     "est": [
+      0.237,
+      -0.0126,
+      1.3631
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21157,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2367,
+     "y": -0.0124,
+     "yaw": 1.319,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10932225151918828
+   },
+   {
+    "seed": 21158,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21158,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2166,
+     "y": -0.0565,
+     "yaw": -0.87,
+     "T": 8.94,
+     "collision": null,
+     "est": [
+      0.217,
+      -0.0562,
+      1.256
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21158,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2166,
+     "y": -0.0565,
+     "yaw": -0.87,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09584426530636853
+   },
+   {
+    "seed": 21159,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21159,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2539,
+     "y": 0.0694,
+     "yaw": 2.365,
+     "T": 7.74,
+     "collision": null,
+     "est": [
+      0.2539,
+      0.069,
+      -0.7717
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21159,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2539,
+     "y": 0.0694,
+     "yaw": 2.365,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13349685934372246
+   },
+   {
+    "seed": 21160,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21160,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.243,
+     "y": -0.0113,
+     "yaw": 1.243,
+     "T": 7.43,
+     "collision": null,
+     "est": [
+      0.2431,
+      -0.0114,
+      -0.2731
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21160,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.243,
+     "y": -0.0113,
+     "yaw": 1.243,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12134951306507008
+   },
+   {
+    "seed": 21161,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21161,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2412,
+     "y": -0.0419,
+     "yaw": 1.16,
+     "T": 7.23,
+     "collision": null,
+     "est": [
+      0.2414,
+      -0.0422,
+      1.2065
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21161,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2412,
+     "y": -0.0419,
+     "yaw": 1.16,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1257057418115437
+   },
+   {
+    "seed": 21162,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21162,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2491,
+     "y": 0.0263,
+     "yaw": -0.655,
+     "T": 8.57,
+     "collision": null,
+     "est": [
+      0.2493,
+      0.0262,
+      0.2008
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21162,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2491,
+     "y": 0.0263,
+     "yaw": -0.655,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10812033433467151
+   },
+   {
+    "seed": 21163,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21163,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.252,
+     "y": -0.0172,
+     "yaw": -2.342,
+     "T": 7.56,
+     "collision": null,
+     "est": [
+      0.2522,
+      -0.0172,
+      0.7925
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21163,
+     "outcome": "off_target",
+     "bin": null,
+     "x": 0.252,
+     "y": -0.0172,
+     "yaw": -2.342,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1168960880022497
+   },
+   {
+    "seed": 21164,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21164,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2296,
+     "y": 0.0115,
+     "yaw": 1.111,
+     "T": 7.18,
+     "collision": null,
+     "est": [
+      0.2296,
+      0.0116,
+      0.1571
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21164,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2296,
+     "y": 0.0115,
+     "yaw": 1.111,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12569676386192452
+   },
+   {
+    "seed": 21165,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21165,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2493,
+     "y": -0.0475,
+     "yaw": -1.334,
+     "T": 7.45,
+     "collision": null,
+     "est": [
+      0.2496,
+      -0.0478,
+      -1.2875
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21165,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2493,
+     "y": -0.0475,
+     "yaw": -1.334,
+     "collision": null
+    },
+    "infer_ms_p99": 0.13060964527539934
+   },
+   {
+    "seed": 21166,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21166,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.223,
+     "y": 0.0258,
+     "yaw": 1.432,
+     "T": 8.36,
+     "collision": null,
+     "est": [
+      0.2233,
+      0.0257,
+      -1.1389
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21166,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.223,
+     "y": 0.0258,
+     "yaw": 1.432,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11062172823585571
+   },
+   {
+    "seed": 21167,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21167,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2098,
+     "y": -0.0183,
+     "yaw": -2.965,
+     "T": 7.13,
+     "collision": null,
+     "est": [
+      0.2102,
+      -0.0183,
+      0.1648
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21167,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2098,
+     "y": -0.0183,
+     "yaw": -2.965,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1192278857342899
+   },
+   {
+    "seed": 21168,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21168,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2363,
+     "y": 0.065,
+     "yaw": -3.011,
+     "T": 6.98,
+     "collision": null,
+     "est": [
+      0.2365,
+      0.0656,
+      1.5529
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21168,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2363,
+     "y": 0.065,
+     "yaw": -3.011,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10857501183636488
+   },
+   {
+    "seed": 21169,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21169,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": -0.0413,
+     "yaw": 0.53,
+     "T": 7.88,
+     "collision": null,
+     "est": [
+      0.2352,
+      -0.0416,
+      0.5791
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21169,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2351,
+     "y": -0.0413,
+     "yaw": 0.53,
+     "collision": null
+    },
+    "infer_ms_p99": 0.14462938648648577
+   },
+   {
+    "seed": 21170,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21170,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2474,
+     "y": -0.0016,
+     "yaw": 0.537,
+     "T": 8.71,
+     "collision": null,
+     "est": [
+      0.2477,
+      -0.0016,
+      -1.1076
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21170,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2474,
+     "y": -0.0016,
+     "yaw": 0.537,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1347952242940666
+   },
+   {
+    "seed": 21171,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21171,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2139,
+     "y": -0.0073,
+     "yaw": -1.34,
+     "T": 6.9,
+     "collision": null,
+     "est": [
+      0.2142,
+      -0.0073,
+      -1.3305
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21171,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2139,
+     "y": -0.0073,
+     "yaw": -1.34,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1297358900774271
+   },
+   {
+    "seed": 21172,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21172,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2466,
+     "y": -0.048,
+     "yaw": 0.435,
+     "T": 7.72,
+     "collision": null,
+     "est": [
+      0.2469,
+      -0.0484,
+      0.4674
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21172,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2466,
+     "y": -0.048,
+     "yaw": 0.435,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10655811405740687
+   },
+   {
+    "seed": 21173,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21173,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2432,
+     "y": 0.0169,
+     "yaw": -1.308,
+     "T": 6.93,
+     "collision": null,
+     "est": [
+      0.2436,
+      0.0171,
+      -1.2587
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21173,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2432,
+     "y": 0.0169,
+     "yaw": -1.308,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11606591520830992
+   },
+   {
+    "seed": 21174,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21174,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2169,
+     "y": 0.0324,
+     "yaw": -1.631,
+     "T": 8.31,
+     "collision": null,
+     "est": [
+      0.2173,
+      0.0322,
+      -1.3542
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21174,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2169,
+     "y": 0.0324,
+     "yaw": -1.631,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12420773855410532
+   },
+   {
+    "seed": 21175,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21175,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2405,
+     "y": 0.0072,
+     "yaw": -1.851,
+     "T": 7.29,
+     "collision": null,
+     "est": [
+      0.2407,
+      0.0071,
+      1.3091
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21175,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2405,
+     "y": 0.0072,
+     "yaw": -1.851,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11738638277165597
+   },
+   {
+    "seed": 21176,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21176,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2481,
+     "y": 0.0596,
+     "yaw": 2.824,
+     "T": 7.11,
+     "collision": null,
+     "est": [
+      0.2484,
+      0.0601,
+      1.5268
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21176,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2481,
+     "y": 0.0596,
+     "yaw": 2.824,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09667116217315208
+   },
+   {
+    "seed": 21177,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21177,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2357,
+     "y": -0.0011,
+     "yaw": -2.753,
+     "T": 7.47,
+     "collision": null,
+     "est": [
+      0.2359,
+      -0.0012,
+      0.4373
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21177,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2357,
+     "y": -0.0011,
+     "yaw": -2.753,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11650427710264927
+   },
+   {
+    "seed": 21178,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21178,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2288,
+     "y": 0.0334,
+     "yaw": -2.595,
+     "T": 8.36,
+     "collision": null,
+     "est": [
+      0.229,
+      0.0332,
+      -1.0962
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21178,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2288,
+     "y": 0.0334,
+     "yaw": -2.595,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11600364348851162
+   },
+   {
+    "seed": 21179,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21179,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2531,
+     "y": 0.0751,
+     "yaw": 0.474,
+     "T": 7.89,
+     "collision": null,
+     "est": [
+      0.2535,
+      0.0744,
+      0.4842
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21179,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2531,
+     "y": 0.0751,
+     "yaw": 0.474,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10719276382587851
+   },
+   {
+    "seed": 21180,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21180,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2342,
+     "y": 0.0119,
+     "yaw": -1.073,
+     "T": 7.21,
+     "collision": null,
+     "est": [
+      0.2344,
+      0.012,
+      1.1587
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21180,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2342,
+     "y": 0.0119,
+     "yaw": -1.073,
+     "collision": null
+    },
+    "infer_ms_p99": 0.14420451363548636
+   },
+   {
+    "seed": 21181,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21181,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2218,
+     "y": -0.0018,
+     "yaw": 1.401,
+     "T": 6.8,
+     "collision": null,
+     "est": [
+      0.222,
+      -0.0019,
+      1.4469
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21181,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2218,
+     "y": -0.0018,
+     "yaw": 1.401,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12101002736017122
+   },
+   {
+    "seed": 21182,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21182,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2147,
+     "y": 0.0674,
+     "yaw": 0.981,
+     "T": 8.09,
+     "collision": null,
+     "est": [
+      0.215,
+      0.0668,
+      -1.2498
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21182,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2147,
+     "y": 0.0674,
+     "yaw": 0.981,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09164747432805599
+   },
+   {
+    "seed": 21183,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21183,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.243,
+     "y": 0.0001,
+     "yaw": 0.473,
+     "T": 7.39,
+     "collision": null,
+     "est": [
+      0.2433,
+      -0.0,
+      0.4691
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21183,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.243,
+     "y": 0.0001,
+     "yaw": 0.473,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10602976311929527
+   },
+   {
+    "seed": 21184,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21184,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2602,
+     "y": 0.0736,
+     "yaw": 1.578,
+     "T": 7.22,
+     "collision": null,
+     "est": [
+      0.2605,
+      0.0741,
+      1.5085
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21184,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2602,
+     "y": 0.0736,
+     "yaw": 1.578,
+     "collision": null
+    },
+    "infer_ms_p99": 0.0700516300275922
+   },
+   {
+    "seed": 21185,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21185,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2374,
+     "y": 0.0044,
+     "yaw": -2.228,
+     "T": 7.67,
+     "collision": null,
+     "est": [
+      0.2378,
+      0.0044,
+      0.9607
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21185,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2374,
+     "y": 0.0044,
+     "yaw": -2.228,
+     "collision": null
+    },
+    "infer_ms_p99": 0.1290180045180023
+   },
+   {
+    "seed": 21186,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21186,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2421,
+     "y": 0.027,
+     "yaw": -0.464,
+     "T": 8.51,
+     "collision": null,
+     "est": [
+      0.2422,
+      0.0269,
+      -0.3328
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21186,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2421,
+     "y": 0.027,
+     "yaw": -0.464,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09071608423255385
+   },
+   {
+    "seed": 21187,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21187,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2154,
+     "y": 0.0184,
+     "yaw": 1.35,
+     "T": 7.18,
+     "collision": null,
+     "est": [
+      0.2159,
+      0.0184,
+      1.3597
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21187,
+     "outcome": "knocked",
+     "bin": null,
+     "x": 0.2154,
+     "y": 0.0184,
+     "yaw": 1.35,
+     "collision": null
+    },
+    "infer_ms_p99": 0.11351270717568702
+   },
+   {
+    "seed": 21188,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21188,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2533,
+     "y": -0.0352,
+     "yaw": 0.226,
+     "T": 7.67,
+     "collision": null,
+     "est": [
+      0.2535,
+      -0.0355,
+      -0.6269
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21188,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2533,
+     "y": -0.0352,
+     "yaw": 0.226,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10505887214094403
+   },
+   {
+    "seed": 21189,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21189,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0454,
+     "yaw": 0.568,
+     "T": 7.15,
+     "collision": null,
+     "est": [
+      0.2352,
+      0.0456,
+      0.6096
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21189,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": 0.0454,
+     "yaw": 0.568,
+     "collision": null
+    },
+    "infer_ms_p99": 0.12148564797826125
+   },
+   {
+    "seed": 21190,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21190,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2293,
+     "y": 0.0516,
+     "yaw": -0.504,
+     "T": 8.28,
+     "collision": null,
+     "est": [
+      0.2296,
+      0.0512,
+      -1.4433
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21190,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2293,
+     "y": 0.0516,
+     "yaw": -0.504,
+     "collision": null
+    },
+    "infer_ms_p99": 0.06388115813024342
+   },
+   {
+    "seed": 21191,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21191,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2374,
+     "y": 0.0218,
+     "yaw": -1.359,
+     "T": 7.3,
+     "collision": null,
+     "est": [
+      0.2377,
+      0.0218,
+      -1.3465
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21191,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2374,
+     "y": 0.0218,
+     "yaw": -1.359,
+     "collision": null
+    },
+    "infer_ms_p99": 0.09921750286594044
+   },
+   {
+    "seed": 21192,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21192,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2134,
+     "y": 0.0641,
+     "yaw": -1.583,
+     "T": 6.78,
+     "collision": null,
+     "est": [
+      0.2134,
+      0.0646,
+      -1.1984
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21192,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2134,
+     "y": 0.0641,
+     "yaw": -1.583,
+     "collision": null
+    },
+    "infer_ms_p99": 0.044037270126864314
+   },
+   {
+    "seed": 21193,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21193,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": -0.0246,
+     "yaw": 0.485,
+     "T": 7.72,
+     "collision": null,
+     "est": [
+      0.2352,
+      -0.0249,
+      0.534
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21193,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.235,
+     "y": -0.0246,
+     "yaw": 0.485,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10446998057886961
+   },
+   {
+    "seed": 21194,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21194,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2283,
+     "y": 0.0697,
+     "yaw": -2.329,
+     "T": 8.21,
+     "collision": null,
+     "est": [
+      0.2286,
+      0.0691,
+      -1.4908
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21194,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2283,
+     "y": 0.0697,
+     "yaw": -2.329,
+     "collision": null
+    },
+    "infer_ms_p99": 0.03832950140349568
+   },
+   {
+    "seed": 21195,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21195,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2508,
+     "y": -0.0099,
+     "yaw": 1.143,
+     "T": 7.8,
+     "collision": null,
+     "est": [
+      0.251,
+      -0.01,
+      1.1265
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21195,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2508,
+     "y": -0.0099,
+     "yaw": 1.143,
+     "collision": null
+    },
+    "infer_ms_p99": 0.16438713646493872
+   },
+   {
+    "seed": 21196,
+    "item": "tomato_soup_can",
+    "classical": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21196,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2312,
+     "y": -0.0622,
+     "yaw": -0.932,
+     "T": 7.73,
+     "collision": null,
+     "est": [
+      0.2313,
+      -0.0627,
+      1.2815
+     ]
+    },
+    "onnx": {
+     "item": "tomato_soup_can",
+     "seen": "tomato_soup_can",
+     "seed": 21196,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2312,
+     "y": -0.0622,
+     "yaw": -0.932,
+     "collision": null
+    },
+    "infer_ms_p99": 0.04259109613485635
+   },
+   {
+    "seed": 21197,
+    "item": "potted_meat_can",
+    "classical": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21197,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2395,
+     "y": 0.0112,
+     "yaw": 1.346,
+     "T": 6.88,
+     "collision": null,
+     "est": [
+      0.2397,
+      0.0112,
+      1.3921
+     ]
+    },
+    "onnx": {
+     "item": "potted_meat_can",
+     "seen": "potted_meat_can",
+     "seed": 21197,
+     "outcome": "ok",
+     "bin": "metal",
+     "x": 0.2395,
+     "y": 0.0112,
+     "yaw": 1.346,
+     "collision": null
+    },
+    "infer_ms_p99": 0.10210858774371447
+   },
+   {
+    "seed": 21198,
+    "item": "standin_pet_bottle",
+    "classical": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21198,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2207,
+     "y": 0.0798,
+     "yaw": 2.774,
+     "T": 8.11,
+     "collision": null,
+     "est": [
+      0.2211,
+      0.0792,
+      -1.3883
+     ]
+    },
+    "onnx": {
+     "item": "standin_pet_bottle",
+     "seen": "standin_pet_bottle",
+     "seed": 21198,
+     "outcome": "ok",
+     "bin": "plastic",
+     "x": 0.2207,
+     "y": 0.0798,
+     "yaw": 2.774,
+     "collision": null
+    },
+    "infer_ms_p99": 0.04420001641847195
+   },
+   {
+    "seed": 21199,
+    "item": "standin_tea_box",
+    "classical": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21199,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2163,
+     "y": 0.0308,
+     "yaw": -0.519,
+     "T": 7.19,
+     "collision": null,
+     "est": [
+      0.2167,
+      0.0307,
+      -0.5214
+     ]
+    },
+    "onnx": {
+     "item": "standin_tea_box",
+     "seen": "standin_tea_box",
+     "seed": 21199,
+     "outcome": "ok",
+     "bin": "cardboard",
+     "x": 0.2163,
+     "y": 0.0308,
+     "yaw": -0.519,
+     "collision": null
+    },
+    "infer_ms_p99": 0.07139438530430202
+   }
+  ]
+ },
+ "rate": {
+  "rule": "mean tick period within 1% of 33.33 ms and no tick later than 1.5 periods",
+  "summary": {
+   "period_ms_mean": 33.334,
+   "period_ms_p99_max": 33.802,
+   "period_ms_max": 41.122,
+   "late_ticks": 0,
+   "infer_ms_p99_max": 0.425,
+   "ticks": 6300,
+   "passed": true
+  },
+  "rows": [
+   {
+    "seed": 21200,
+    "outcome": "ok",
+    "infer_ms_mean": 0.0990211592233252,
+    "infer_ms_p99": 0.20907749538309875,
+    "infer_ms_max": 0.27412502095103264,
+    "period_ms_mean": 33.3346523376772,
+    "period_ms_p99": 33.796348451287486,
+    "period_ms_max": 33.82120898459107,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21201,
+    "outcome": "ok",
+    "infer_ms_mean": 0.10354883344252669,
+    "infer_ms_p99": 0.168605400249362,
+    "infer_ms_max": 0.22245798027142882,
+    "period_ms_mean": 33.33488521670365,
+    "period_ms_p99": 33.66763900965452,
+    "period_ms_max": 33.794375020079315,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21202,
+    "outcome": "ok",
+    "infer_ms_mean": 0.10377951631588596,
+    "infer_ms_p99": 0.22465047659352438,
+    "infer_ms_max": 0.28450001263991,
+    "period_ms_mean": 33.33493590760519,
+    "period_ms_p99": 33.71999862079974,
+    "period_ms_max": 33.81575003731996,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21203,
+    "outcome": "ok",
+    "infer_ms_mean": 0.12457260606987847,
+    "infer_ms_p99": 0.26518137310631573,
+    "infer_ms_max": 0.4040410276502371,
+    "period_ms_mean": 33.33397783768351,
+    "period_ms_p99": 33.77190074475948,
+    "period_ms_max": 33.788500004448,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21204,
+    "outcome": "ok",
+    "infer_ms_mean": 0.11731744466704272,
+    "infer_ms_p99": 0.25730522931553435,
+    "infer_ms_max": 0.3034170367754996,
+    "period_ms_mean": 33.33432510829602,
+    "period_ms_p99": 33.6776059231488,
+    "period_ms_max": 33.773208037018776,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21205,
+    "outcome": "ok",
+    "infer_ms_mean": 0.10982687189613306,
+    "infer_ms_p99": 0.215061636408791,
+    "infer_ms_max": 0.22591702872887254,
+    "period_ms_mean": 33.333470671924104,
+    "period_ms_p99": 33.77894207078498,
+    "period_ms_max": 33.83795899571851,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21206,
+    "outcome": "ok",
+    "infer_ms_mean": 0.13051806405807534,
+    "infer_ms_p99": 0.32526551047340035,
+    "infer_ms_max": 0.39491598727181554,
+    "period_ms_mean": 33.33398726102184,
+    "period_ms_p99": 33.73964526865166,
+    "period_ms_max": 34.390792017802596,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21207,
+    "outcome": "ok",
+    "infer_ms_mean": 0.1202072713538886,
+    "infer_ms_p99": 0.2050999982748182,
+    "infer_ms_max": 0.22608297877013683,
+    "period_ms_mean": 33.33458691708607,
+    "period_ms_p99": 33.72971280303318,
+    "period_ms_max": 33.76554197166115,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21208,
+    "outcome": "ok",
+    "infer_ms_mean": 0.11657806582719324,
+    "infer_ms_p99": 0.22972724866122018,
+    "infer_ms_max": 0.2510839840397239,
+    "period_ms_mean": 33.333751194291764,
+    "period_ms_p99": 33.731299241189845,
+    "period_ms_max": 33.798292046412826,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21209,
+    "outcome": "ok",
+    "infer_ms_mean": 0.24026403377305658,
+    "infer_ms_p99": 0.4042082210071386,
+    "infer_ms_max": 0.49637496704235673,
+    "period_ms_mean": 33.33414782166398,
+    "period_ms_p99": 33.765303958789445,
+    "period_ms_max": 33.811708039138466,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21210,
+    "outcome": "ok",
+    "infer_ms_mean": 0.23432316088546362,
+    "infer_ms_p99": 0.3725328645668924,
+    "infer_ms_max": 0.3950829850509763,
+    "period_ms_mean": 33.33431953500517,
+    "period_ms_p99": 33.80225824424997,
+    "period_ms_max": 41.12170799635351,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21211,
+    "outcome": "ok",
+    "infer_ms_mean": 0.2113148261467734,
+    "infer_ms_p99": 0.3879318595863881,
+    "infer_ms_max": 0.7661670097149909,
+    "period_ms_mean": 33.333412818514276,
+    "period_ms_p99": 33.77141794015188,
+    "period_ms_max": 33.78458303632215,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21212,
+    "outcome": "ok",
+    "infer_ms_mean": 0.17437327538602174,
+    "infer_ms_p99": 0.36182550597004604,
+    "infer_ms_max": 0.5589170032180846,
+    "period_ms_mean": 33.334296710187104,
+    "period_ms_p99": 33.74971948273014,
+    "period_ms_max": 33.800915989559144,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21213,
+    "outcome": "ok",
+    "infer_ms_mean": 0.20103704217555268,
+    "infer_ms_p99": 0.36647269618697487,
+    "infer_ms_max": 0.4421669873408973,
+    "period_ms_mean": 33.33401844271749,
+    "period_ms_p99": 33.79127818509005,
+    "period_ms_max": 36.2792499945499,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21214,
+    "outcome": "ok",
+    "infer_ms_mean": 0.12829696948063518,
+    "infer_ms_p99": 0.27144926367327576,
+    "infer_ms_max": 0.28870796086266637,
+    "period_ms_mean": 33.33378383748168,
+    "period_ms_p99": 33.73010202660225,
+    "period_ms_max": 33.78224995685741,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21215,
+    "outcome": "ok",
+    "infer_ms_mean": 0.13158357284578776,
+    "infer_ms_p99": 0.24617804447188976,
+    "infer_ms_max": 0.26875000912696123,
+    "period_ms_mean": 33.33357019738478,
+    "period_ms_p99": 33.69495920778718,
+    "period_ms_max": 33.76862499862909,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21216,
+    "outcome": "ok",
+    "infer_ms_mean": 0.1306189248146164,
+    "infer_ms_p99": 0.2600316423922778,
+    "infer_ms_max": 0.2763330121524632,
+    "period_ms_mean": 33.33335310505454,
+    "period_ms_p99": 33.76109950360842,
+    "period_ms_max": 33.80887501407415,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21217,
+    "outcome": "ok",
+    "infer_ms_mean": 0.2081876762935685,
+    "infer_ms_p99": 0.4254531383048746,
+    "infer_ms_max": 0.4494159948080778,
+    "period_ms_mean": 33.33409580904071,
+    "period_ms_p99": 33.70761767611839,
+    "period_ms_max": 34.98104203026742,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21218,
+    "outcome": "ok",
+    "infer_ms_mean": 0.21765702644303914,
+    "infer_ms_p99": 0.3983299853280188,
+    "infer_ms_max": 0.4995839553885162,
+    "period_ms_mean": 33.33445992354144,
+    "period_ms_p99": 33.75531875353772,
+    "period_ms_max": 33.914165978785604,
+    "late_ticks": 0
+   },
+   {
+    "seed": 21219,
+    "outcome": "ok",
+    "infer_ms_mean": 0.23233940795300498,
+    "infer_ms_p99": 0.3862918377853934,
+    "infer_ms_max": 6.996584008447826,
+    "period_ms_mean": 33.334020964925884,
+    "period_ms_p99": 33.75781724578701,
+    "period_ms_max": 33.78633299143985,
+    "late_ticks": 0
+   }
+  ]
+ }
+}

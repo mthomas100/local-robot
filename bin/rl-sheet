@@ -1,0 +1,7 @@
+#!/bin/zsh
+# rl-sheet <video.mp4> [out.png] [cols=4] [rows=3] — a contact sheet of evenly spaced frames with timestamps,
+# for an agent to read with one image call (2026-11-01). Python (imageio + PIL) because this Mac's ffmpeg 9
+# has no drawtext filter. Tiles are 480 px wide so they survive the image downscaling of the Read tool.
+set -eu
+here=${0:A:h}
+exec $here/../envs/mj/bin/python -I $here/../scripts/sheet.py "$@"

@@ -1,0 +1,39 @@
+{
+ "go1-clean": {
+  "iters": 600,
+  "envs": 1024,
+  "seconds": 112.1,
+  "policy": "runs/go1-clean/policy.pt"
+ },
+ "go1-clean-cpu": {
+  "iters": 600,
+  "envs": 1024,
+  "seconds": 139.2,
+  "policy": "runs/go1-clean-cpu/policy.pt"
+ },
+ "go1-base": {
+  "iters": 600,
+  "envs": 1024,
+  "seconds": 283.9,
+  "policy": "runs/go1-base/policy.pt"
+ },
+ "go1-cpu": {
+  "iters": 600,
+  "envs": 1024,
+  "seconds": 364.5,
+  "policy": "runs/go1-cpu/policy.pt"
+ },
+ "go1-show": {
+  "iters": 600,
+  "envs": 1024,
+  "seconds": 460.4,
+  "policy": "runs/go1-show/policy.pt"
+ },
+ "go2-base": {
+  "iters": 101,
+  "envs": 4096,
+  "backend": "metal",
+  "seconds": 93.5,
+  "device": "mps"
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-02 19:38",
+ "name": "f1-eval-seed1",
+ "trials": 200,
+ "successes": 199,
+ "success_rate": 0.995,
+ "wilson95": [
+  0.9722,
+  0.9991
+ ],
+ "acceptance": {
+  "threshold": 0.95,
+  "passed": true
+ },
+ "failures": {
+  "drop": 1
+ },
+ "per_item": {
+  "bleach_cleanser": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "cracker_box": {
+   "success": 19,
+   "n": 19,
+   "rate": 1.0
+  },
+  "gelatin_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "master_chef_can": {
+   "success": 19,
+   "n": 19,
+   "rate": 1.0
+  },
+  "mustard_bottle": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "potted_meat_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "pudding_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "sugar_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "tomato_soup_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "tuna_fish_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "windex_bottle": {
+   "success": 17,
+   "drop": 1,
+   "n": 18,
+   "rate": 0.944
+  }
+ },
+ "tools": {
+  "suction": 73,
+  "fingers": 127
+ },
+ "cycle_s": {
+  "mean": 6.69,
+  "p50": 6.55,
+  "p95": 7.98,
+  "max": 8.66
+ },
+ "plan_ms": {
+  "mean": 6.9,
+  "p95": 7.3,
+  "max": 91.5
+ },
+ "max_track_err_rad": 0.0062,
+ "collisions": 0,
+ "sampling": {
+  "x_half": 0.4,
+  "y_half": 0.08,
+  "seed": 1,
+  "items": "all 11, cycled"
+ },
+ "failed_trials": [
+  {
+   "index": 54,
+   "item": "windex_bottle",
+   "outcome": "drop",
+   "x": -0.272,
+   "y": 0.628,
+   "yaw": 3.125,
+   "detail": {
+    "segment": "lower",
+    "slip": 0.032,
+    "swing": 22.3
+   }
+  }
+ ],
+ "wall_s": 37.0
+}

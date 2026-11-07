@@ -1,0 +1,572 @@
+{
+ "date": "2026-11-03",
+ "torque_budget_Nm": 1.47,
+ "jaw_max_width_mm": 80.0,
+ "grip_lever_m": 0.07,
+ "safety": 2.0,
+ "trials_per_item": 6,
+ "kit": "real",
+ "rows": [
+  {
+   "item": "master_chef_can",
+   "material": "metal",
+   "standin": false,
+   "mass_kg": 0.414,
+   "extents_mm": [
+    104,
+    104,
+    141
+   ],
+   "height_mm": 141,
+   "grasp_width_mm": 104,
+   "jaw_ok": false,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 2.59,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "cracker_box",
+   "material": "cardboard",
+   "standin": false,
+   "mass_kg": 0.411,
+   "extents_mm": [
+    74,
+    166,
+    216
+   ],
+   "height_mm": 216,
+   "grasp_width_mm": 74,
+   "jaw_ok": true,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 3.65,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "sugar_box",
+   "material": "cardboard",
+   "standin": false,
+   "mass_kg": 0.514,
+   "extents_mm": [
+    51,
+    96,
+    178
+   ],
+   "height_mm": 178,
+   "grasp_width_mm": 51,
+   "jaw_ok": true,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 2.92,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "tomato_soup_can",
+   "material": "metal",
+   "standin": false,
+   "mass_kg": 0.349,
+   "extents_mm": [
+    69,
+    69,
+    102
+   ],
+   "height_mm": 102,
+   "grasp_width_mm": 69,
+   "jaw_ok": true,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    1.155,
+    0.816,
+    0.017,
+    0.0
+   ],
+   "torque_ratio": 0.786,
+   "torque_ok": true,
+   "z_lift_m": 0.158,
+   "grip_force_N": 21.0,
+   "grip_ratio": 3.07,
+   "grip_ok": true,
+   "checks_ok": true,
+   "trials": {
+    "ok": 6
+   },
+   "trials_ok": 6
+  },
+  {
+   "item": "mustard_bottle",
+   "material": "plastic",
+   "standin": false,
+   "mass_kg": 0.603,
+   "extents_mm": [
+    99,
+    68,
+    193
+   ],
+   "height_mm": 193,
+   "grasp_width_mm": 68,
+   "jaw_ok": true,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 2.13,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "tuna_fish_can",
+   "material": "metal",
+   "standin": false,
+   "mass_kg": 0.171,
+   "extents_mm": [
+    86,
+    86,
+    34
+   ],
+   "height_mm": 34,
+   "grasp_width_mm": 86,
+   "jaw_ok": false,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    0.868,
+    0.531,
+    0.013,
+    0.0
+   ],
+   "torque_ratio": 0.59,
+   "torque_ok": true,
+   "z_lift_m": 0.105,
+   "grip_force_N": 21.0,
+   "grip_ratio": 6.26,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": {
+    "miss": 5,
+    "ok": 1
+   },
+   "trials_ok": 1
+  },
+  {
+   "item": "pudding_box",
+   "material": "cardboard",
+   "standin": false,
+   "mass_kg": 0.187,
+   "extents_mm": [
+    139,
+    130,
+    40
+   ],
+   "height_mm": 40,
+   "grasp_width_mm": 130,
+   "jaw_ok": false,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    1.009,
+    0.564,
+    0.021,
+    0.0
+   ],
+   "torque_ratio": 0.686,
+   "torque_ok": true,
+   "z_lift_m": 0.108,
+   "grip_force_N": 21.0,
+   "grip_ratio": 8.01,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": {
+    "collision": 2,
+    "miss": 4
+   },
+   "trials_ok": 0
+  },
+  {
+   "item": "gelatin_box",
+   "material": "cardboard",
+   "standin": false,
+   "mass_kg": 0.097,
+   "extents_mm": [
+    90,
+    102,
+    31
+   ],
+   "height_mm": 31,
+   "grasp_width_mm": 90,
+   "jaw_ok": false,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    0.713,
+    0.436,
+    0.016,
+    0.0
+   ],
+   "torque_ratio": 0.485,
+   "torque_ok": true,
+   "z_lift_m": 0.103,
+   "grip_force_N": 21.0,
+   "grip_ratio": 15.45,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": {
+    "collision": 1,
+    "miss": 4,
+    "off_target": 1
+   },
+   "trials_ok": 0
+  },
+  {
+   "item": "potted_meat_can",
+   "material": "metal",
+   "standin": false,
+   "mass_kg": 0.37,
+   "extents_mm": [
+    103,
+    61,
+    84
+   ],
+   "height_mm": 84,
+   "grasp_width_mm": 61,
+   "jaw_ok": true,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    1.239,
+    0.836,
+    0.029,
+    0.0
+   ],
+   "torque_ratio": 0.843,
+   "torque_ok": true,
+   "z_lift_m": 0.14,
+   "grip_force_N": 21.0,
+   "grip_ratio": 2.89,
+   "grip_ok": true,
+   "checks_ok": true,
+   "trials": {
+    "ok": 6
+   },
+   "trials_ok": 6
+  },
+  {
+   "item": "bleach_cleanser",
+   "material": "plastic",
+   "standin": false,
+   "mass_kg": 1.131,
+   "extents_mm": [
+    105,
+    70,
+    253
+   ],
+   "height_mm": 253,
+   "grasp_width_mm": 70,
+   "jaw_ok": true,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 1.14,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "windex_bottle",
+   "material": "plastic",
+   "standin": false,
+   "mass_kg": 1.022,
+   "extents_mm": [
+    96,
+    99,
+    270
+   ],
+   "height_mm": 270,
+   "grasp_width_mm": 96,
+   "jaw_ok": false,
+   "reach_ok": false,
+   "torque_ok": null,
+   "grip_force_N": 21.0,
+   "grip_ratio": 1.26,
+   "grip_ok": true,
+   "checks_ok": false,
+   "trials": null
+  },
+  {
+   "item": "standin_pet_bottle",
+   "material": "plastic",
+   "standin": true,
+   "mass_kg": 0.045,
+   "extents_mm": [
+    56,
+    56,
+    110
+   ],
+   "height_mm": 110,
+   "grasp_width_mm": 56,
+   "jaw_ok": true,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    0.702,
+    0.407,
+    0.009,
+    0.0
+   ],
+   "torque_ratio": 0.478,
+   "torque_ok": true,
+   "z_lift_m": 0.166,
+   "grip_force_N": 21.0,
+   "grip_ratio": 28.54,
+   "grip_ok": true,
+   "checks_ok": true,
+   "trials": {
+    "ok": 6
+   },
+   "trials_ok": 6
+  },
+  {
+   "item": "standin_small_tin",
+   "material": "metal",
+   "standin": true,
+   "mass_kg": 0.15,
+   "extents_mm": [
+    60,
+    60,
+    60
+   ],
+   "height_mm": 60,
+   "grasp_width_mm": 60,
+   "jaw_ok": true,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    0.811,
+    0.523,
+    0.011,
+    0.0
+   ],
+   "torque_ratio": 0.552,
+   "torque_ok": true,
+   "z_lift_m": 0.119,
+   "grip_force_N": 21.0,
+   "grip_ratio": 7.14,
+   "grip_ok": true,
+   "checks_ok": true,
+   "trials": {
+    "ok": 6
+   },
+   "trials_ok": 6
+  },
+  {
+   "item": "standin_tea_box",
+   "material": "cardboard",
+   "standin": true,
+   "mass_kg": 0.1,
+   "extents_mm": [
+    60,
+    45,
+    85
+   ],
+   "height_mm": 85,
+   "grasp_width_mm": 45,
+   "jaw_ok": true,
+   "reach_ok": true,
+   "max_hold_torque_Nm": [
+    0.0,
+    0.727,
+    0.477,
+    0.013,
+    0.0
+   ],
+   "torque_ratio": 0.495,
+   "torque_ok": true,
+   "z_lift_m": 0.141,
+   "grip_force_N": 21.0,
+   "grip_ratio": 14.98,
+   "grip_ok": true,
+   "checks_ok": true,
+   "trials": {
+    "ok": 6
+   },
+   "trials_ok": 6
+  }
+ ],
+ "admitted": [
+  "tomato_soup_can",
+  "potted_meat_can",
+  "standin_pet_bottle",
+  "standin_tea_box"
+ ],
+ "standins_because": {
+  "standin_pet_bottle": "no YCB plastic item passes the table",
+  "standin_tea_box": "no YCB cardboard item passes the table"
+ },
+ "seconds": 14.4,
+ "table": {
+  "master_chef_can": {
+   "material": "metal",
+   "mass_kg": 0.414,
+   "width_mm": 104,
+   "height_mm": 141,
+   "jaw": false,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 2.59,
+   "picks_ok": "-"
+  },
+  "cracker_box": {
+   "material": "cardboard",
+   "mass_kg": 0.411,
+   "width_mm": 74,
+   "height_mm": 216,
+   "jaw": true,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 3.65,
+   "picks_ok": "-"
+  },
+  "sugar_box": {
+   "material": "cardboard",
+   "mass_kg": 0.514,
+   "width_mm": 51,
+   "height_mm": 178,
+   "jaw": true,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 2.92,
+   "picks_ok": "-"
+  },
+  "tomato_soup_can": {
+   "material": "metal",
+   "mass_kg": 0.349,
+   "width_mm": 69,
+   "height_mm": 102,
+   "jaw": true,
+   "reach": true,
+   "torque_vs_budget": 0.786,
+   "grip_margin": 3.07,
+   "picks_ok": "6/6"
+  },
+  "mustard_bottle": {
+   "material": "plastic",
+   "mass_kg": 0.603,
+   "width_mm": 68,
+   "height_mm": 193,
+   "jaw": true,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 2.13,
+   "picks_ok": "-"
+  },
+  "tuna_fish_can": {
+   "material": "metal",
+   "mass_kg": 0.171,
+   "width_mm": 86,
+   "height_mm": 34,
+   "jaw": false,
+   "reach": true,
+   "torque_vs_budget": 0.59,
+   "grip_margin": 6.26,
+   "picks_ok": "1/6"
+  },
+  "pudding_box": {
+   "material": "cardboard",
+   "mass_kg": 0.187,
+   "width_mm": 130,
+   "height_mm": 40,
+   "jaw": false,
+   "reach": true,
+   "torque_vs_budget": 0.686,
+   "grip_margin": 8.01,
+   "picks_ok": "0/6"
+  },
+  "gelatin_box": {
+   "material": "cardboard",
+   "mass_kg": 0.097,
+   "width_mm": 90,
+   "height_mm": 31,
+   "jaw": false,
+   "reach": true,
+   "torque_vs_budget": 0.485,
+   "grip_margin": 15.45,
+   "picks_ok": "0/6"
+  },
+  "potted_meat_can": {
+   "material": "metal",
+   "mass_kg": 0.37,
+   "width_mm": 61,
+   "height_mm": 84,
+   "jaw": true,
+   "reach": true,
+   "torque_vs_budget": 0.843,
+   "grip_margin": 2.89,
+   "picks_ok": "6/6"
+  },
+  "bleach_cleanser": {
+   "material": "plastic",
+   "mass_kg": 1.131,
+   "width_mm": 70,
+   "height_mm": 253,
+   "jaw": true,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 1.14,
+   "picks_ok": "-"
+  },
+  "windex_bottle": {
+   "material": "plastic",
+   "mass_kg": 1.022,
+   "width_mm": 96,
+   "height_mm": 270,
+   "jaw": false,
+   "reach": false,
+   "torque_vs_budget": null,
+   "grip_margin": 1.26,
+   "picks_ok": "-"
+  },
+  "standin_pet_bottle": {
+   "material": "plastic",
+   "mass_kg": 0.045,
+   "width_mm": 56,
+   "height_mm": 110,
+   "jaw": true,
+   "reach": true,
+   "torque_vs_budget": 0.478,
+   "grip_margin": 28.54,
+   "picks_ok": "6/6"
+  },
+  "standin_small_tin": {
+   "material": "metal",
+   "mass_kg": 0.15,
+   "width_mm": 60,
+   "height_mm": 60,
+   "jaw": true,
+   "reach": true,
+   "torque_vs_budget": 0.552,
+   "grip_margin": 7.14,
+   "picks_ok": "6/6"
+  },
+  "standin_tea_box": {
+   "material": "cardboard",
+   "mass_kg": 0.1,
+   "width_mm": 45,
+   "height_mm": 85,
+   "jaw": true,
+   "reach": true,
+   "torque_vs_budget": 0.495,
+   "grip_margin": 14.98,
+   "picks_ok": "6/6"
+  }
+ }
+}

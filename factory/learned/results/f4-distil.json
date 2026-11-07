@@ -1,0 +1,588 @@
+{
+ "date": "2026-11-02 22:41",
+ "rounds": 3,
+ "ridge": 1.0,
+ "chosen": "zero-shot",
+ "chosen_by": "training-set mean return",
+ "results": {
+  "teacher": {
+   "train": {
+    "n": 356,
+    "success": 0.9747,
+    "t_free": 0.958,
+    "reward": 23.333,
+    "f2_t_free": 2.633,
+    "f2_success": 0.9607,
+    "failures": {
+     "off_target": 6,
+     "timeout": 1,
+     "drop": 2
+    }
+   },
+   "held_out": {
+    "n": 127,
+    "success": 0.9843,
+    "t_free": 1.078,
+    "reward": 23.482,
+    "f2_t_free": 2.746,
+    "f2_success": 0.9764,
+    "failures": {
+     "off_target": 2
+    }
+   }
+  },
+  "student_zero_shot": {
+   "train": {
+    "n": 356,
+    "success": 0.9354,
+    "t_free": 0.944,
+    "reward": 22.244,
+    "f2_t_free": 2.633,
+    "f2_success": 0.9607,
+    "failures": {
+     "off_target": 20,
+     "timeout": 1,
+     "drop": 2
+    }
+   },
+   "held_out": {
+    "n": 127,
+    "success": 0.9213,
+    "t_free": 1.036,
+    "reward": 21.762,
+    "f2_t_free": 2.746,
+    "f2_success": 0.9764,
+    "failures": {
+     "off_target": 8,
+     "timeout": 1,
+     "drop": 1
+    }
+   }
+  },
+  "student_round1": {
+   "train": {
+    "n": 356,
+    "success": 0.9326,
+    "t_free": 0.947,
+    "reward": 22.162,
+    "f2_t_free": 2.633,
+    "f2_success": 0.9607,
+    "failures": {
+     "off_target": 20,
+     "timeout": 2,
+     "ik": 1,
+     "drop": 1
+    }
+   },
+   "held_out": {
+    "n": 127,
+    "success": 0.9134,
+    "t_free": 1.034,
+    "reward": 21.544,
+    "f2_t_free": 2.746,
+    "f2_success": 0.9764,
+    "failures": {
+     "off_target": 8,
+     "timeout": 2,
+     "ik": 1
+    }
+   }
+  },
+  "student_round2": {
+   "train": {
+    "n": 356,
+    "success": 0.9298,
+    "t_free": 0.95,
+    "reward": 22.08,
+    "f2_t_free": 2.633,
+    "f2_success": 0.9607,
+    "failures": {
+     "off_target": 22,
+     "timeout": 2,
+     "drop": 1
+    }
+   },
+   "held_out": {
+    "n": 127,
+    "success": 0.937,
+    "t_free": 1.056,
+    "reward": 22.183,
+    "f2_t_free": 2.746,
+    "f2_success": 0.9764,
+    "failures": {
+     "off_target": 7,
+     "timeout": 1
+    }
+   }
+  },
+  "student_round3": {
+   "train": {
+    "n": 356,
+    "success": 0.9326,
+    "t_free": 0.949,
+    "reward": 22.16,
+    "f2_t_free": 2.633,
+    "f2_success": 0.9607,
+    "failures": {
+     "off_target": 20,
+     "timeout": 2,
+     "ik": 1,
+     "drop": 1
+    }
+   },
+   "held_out": {
+    "n": 127,
+    "success": 0.9134,
+    "t_free": 1.034,
+    "reward": 21.543,
+    "f2_t_free": 2.746,
+    "f2_success": 0.9764,
+    "failures": {
+     "off_target": 8,
+     "timeout": 2,
+     "ik": 1
+    }
+   }
+  }
+ },
+ "per_item": {
+  "teacher": {
+   "bleach_cleanser": {
+    "n": 34,
+    "success": 0.912,
+    "t_free": 1.54,
+    "f2_t_free": 3.44,
+    "held_out": false
+   },
+   "cracker_box": {
+    "n": 52,
+    "success": 0.923,
+    "t_free": 0.98,
+    "f2_t_free": 2.62,
+    "held_out": false
+   },
+   "gelatin_box": {
+    "n": 44,
+    "success": 1.0,
+    "t_free": 0.81,
+    "f2_t_free": 2.5,
+    "held_out": false
+   },
+   "master_chef_can": {
+    "n": 47,
+    "success": 0.979,
+    "t_free": 0.72,
+    "f2_t_free": 2.32,
+    "held_out": false
+   },
+   "mustard_bottle": {
+    "n": 45,
+    "success": 0.978,
+    "t_free": 1.15,
+    "f2_t_free": 3.19,
+    "held_out": false
+   },
+   "potted_meat_can": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 1.01,
+    "f2_t_free": 2.51,
+    "held_out": false
+   },
+   "pudding_box": {
+    "n": 43,
+    "success": 1.0,
+    "t_free": 0.71,
+    "f2_t_free": 2.34,
+    "held_out": false
+   },
+   "sugar_box": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 0.93,
+    "f2_t_free": 2.58,
+    "held_out": true
+   },
+   "tomato_soup_can": {
+    "n": 45,
+    "success": 1.0,
+    "t_free": 0.91,
+    "f2_t_free": 2.44,
+    "held_out": false
+   },
+   "tuna_fish_can": {
+    "n": 47,
+    "success": 1.0,
+    "t_free": 0.89,
+    "f2_t_free": 2.47,
+    "held_out": true
+   },
+   "windex_bottle": {
+    "n": 34,
+    "success": 0.941,
+    "t_free": 1.56,
+    "f2_t_free": 3.38,
+    "held_out": true
+   }
+  },
+  "student_zero_shot": {
+   "bleach_cleanser": {
+    "n": 34,
+    "success": 0.882,
+    "t_free": 1.48,
+    "f2_t_free": 3.44,
+    "held_out": false
+   },
+   "cracker_box": {
+    "n": 52,
+    "success": 0.75,
+    "t_free": 1.01,
+    "f2_t_free": 2.62,
+    "held_out": false
+   },
+   "gelatin_box": {
+    "n": 44,
+    "success": 1.0,
+    "t_free": 0.8,
+    "f2_t_free": 2.5,
+    "held_out": false
+   },
+   "master_chef_can": {
+    "n": 47,
+    "success": 0.979,
+    "t_free": 0.71,
+    "f2_t_free": 2.32,
+    "held_out": false
+   },
+   "mustard_bottle": {
+    "n": 45,
+    "success": 0.889,
+    "t_free": 1.13,
+    "f2_t_free": 3.19,
+    "held_out": false
+   },
+   "potted_meat_can": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 1.0,
+    "f2_t_free": 2.51,
+    "held_out": false
+   },
+   "pudding_box": {
+    "n": 43,
+    "success": 1.0,
+    "t_free": 0.71,
+    "f2_t_free": 2.34,
+    "held_out": false
+   },
+   "sugar_box": {
+    "n": 46,
+    "success": 0.978,
+    "t_free": 0.91,
+    "f2_t_free": 2.58,
+    "held_out": true
+   },
+   "tomato_soup_can": {
+    "n": 45,
+    "success": 1.0,
+    "t_free": 0.9,
+    "f2_t_free": 2.44,
+    "held_out": false
+   },
+   "tuna_fish_can": {
+    "n": 47,
+    "success": 1.0,
+    "t_free": 0.89,
+    "f2_t_free": 2.47,
+    "held_out": true
+   },
+   "windex_bottle": {
+    "n": 34,
+    "success": 0.735,
+    "t_free": 1.54,
+    "f2_t_free": 3.38,
+    "held_out": true
+   }
+  },
+  "student_round1": {
+   "bleach_cleanser": {
+    "n": 34,
+    "success": 0.824,
+    "t_free": 1.49,
+    "f2_t_free": 3.44,
+    "held_out": false
+   },
+   "cracker_box": {
+    "n": 52,
+    "success": 0.769,
+    "t_free": 1.02,
+    "f2_t_free": 2.62,
+    "held_out": false
+   },
+   "gelatin_box": {
+    "n": 44,
+    "success": 1.0,
+    "t_free": 0.8,
+    "f2_t_free": 2.5,
+    "held_out": false
+   },
+   "master_chef_can": {
+    "n": 47,
+    "success": 0.979,
+    "t_free": 0.72,
+    "f2_t_free": 2.32,
+    "held_out": false
+   },
+   "mustard_bottle": {
+    "n": 45,
+    "success": 0.889,
+    "t_free": 1.14,
+    "f2_t_free": 3.19,
+    "held_out": false
+   },
+   "potted_meat_can": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 1.0,
+    "f2_t_free": 2.51,
+    "held_out": false
+   },
+   "pudding_box": {
+    "n": 43,
+    "success": 1.0,
+    "t_free": 0.71,
+    "f2_t_free": 2.34,
+    "held_out": false
+   },
+   "sugar_box": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 0.95,
+    "f2_t_free": 2.58,
+    "held_out": true
+   },
+   "tomato_soup_can": {
+    "n": 45,
+    "success": 1.0,
+    "t_free": 0.91,
+    "f2_t_free": 2.44,
+    "held_out": false
+   },
+   "tuna_fish_can": {
+    "n": 47,
+    "success": 1.0,
+    "t_free": 0.89,
+    "f2_t_free": 2.47,
+    "held_out": true
+   },
+   "windex_bottle": {
+    "n": 34,
+    "success": 0.676,
+    "t_free": 1.49,
+    "f2_t_free": 3.38,
+    "held_out": true
+   }
+  },
+  "student_round2": {
+   "bleach_cleanser": {
+    "n": 34,
+    "success": 0.853,
+    "t_free": 1.51,
+    "f2_t_free": 3.44,
+    "held_out": false
+   },
+   "cracker_box": {
+    "n": 52,
+    "success": 0.75,
+    "t_free": 1.02,
+    "f2_t_free": 2.62,
+    "held_out": false
+   },
+   "gelatin_box": {
+    "n": 44,
+    "success": 1.0,
+    "t_free": 0.8,
+    "f2_t_free": 2.5,
+    "held_out": false
+   },
+   "master_chef_can": {
+    "n": 47,
+    "success": 0.979,
+    "t_free": 0.72,
+    "f2_t_free": 2.32,
+    "held_out": false
+   },
+   "mustard_bottle": {
+    "n": 45,
+    "success": 0.867,
+    "t_free": 1.15,
+    "f2_t_free": 3.19,
+    "held_out": false
+   },
+   "potted_meat_can": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 1.0,
+    "f2_t_free": 2.51,
+    "held_out": false
+   },
+   "pudding_box": {
+    "n": 43,
+    "success": 1.0,
+    "t_free": 0.71,
+    "f2_t_free": 2.34,
+    "held_out": false
+   },
+   "sugar_box": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 0.95,
+    "f2_t_free": 2.58,
+    "held_out": true
+   },
+   "tomato_soup_can": {
+    "n": 45,
+    "success": 1.0,
+    "t_free": 0.91,
+    "f2_t_free": 2.44,
+    "held_out": false
+   },
+   "tuna_fish_can": {
+    "n": 47,
+    "success": 1.0,
+    "t_free": 0.89,
+    "f2_t_free": 2.47,
+    "held_out": true
+   },
+   "windex_bottle": {
+    "n": 34,
+    "success": 0.765,
+    "t_free": 1.55,
+    "f2_t_free": 3.38,
+    "held_out": true
+   }
+  },
+  "student_round3": {
+   "bleach_cleanser": {
+    "n": 34,
+    "success": 0.853,
+    "t_free": 1.5,
+    "f2_t_free": 3.44,
+    "held_out": false
+   },
+   "cracker_box": {
+    "n": 52,
+    "success": 0.75,
+    "t_free": 1.02,
+    "f2_t_free": 2.62,
+    "held_out": false
+   },
+   "gelatin_box": {
+    "n": 44,
+    "success": 1.0,
+    "t_free": 0.8,
+    "f2_t_free": 2.5,
+    "held_out": false
+   },
+   "master_chef_can": {
+    "n": 47,
+    "success": 0.979,
+    "t_free": 0.72,
+    "f2_t_free": 2.32,
+    "held_out": false
+   },
+   "mustard_bottle": {
+    "n": 45,
+    "success": 0.889,
+    "t_free": 1.14,
+    "f2_t_free": 3.19,
+    "held_out": false
+   },
+   "potted_meat_can": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 1.0,
+    "f2_t_free": 2.51,
+    "held_out": false
+   },
+   "pudding_box": {
+    "n": 43,
+    "success": 1.0,
+    "t_free": 0.71,
+    "f2_t_free": 2.34,
+    "held_out": false
+   },
+   "sugar_box": {
+    "n": 46,
+    "success": 1.0,
+    "t_free": 0.95,
+    "f2_t_free": 2.58,
+    "held_out": true
+   },
+   "tomato_soup_can": {
+    "n": 45,
+    "success": 1.0,
+    "t_free": 0.91,
+    "f2_t_free": 2.44,
+    "held_out": false
+   },
+   "tuna_fish_can": {
+    "n": 47,
+    "success": 1.0,
+    "t_free": 0.89,
+    "f2_t_free": 2.47,
+    "held_out": true
+   },
+   "windex_bottle": {
+    "n": 34,
+    "success": 0.676,
+    "t_free": 1.5,
+    "f2_t_free": 3.38,
+    "held_out": true
+   }
+  }
+ },
+ "wall_s": 219.2,
+ "table": {
+  "teacher": {
+   "train_sorted": 0.9747,
+   "train_free_s": 0.958,
+   "held_out_sorted": 0.9843,
+   "held_out_free_s": 1.078,
+   "failures_train": 9,
+   "failures_held_out": 2
+  },
+  "student_zero_shot": {
+   "train_sorted": 0.9354,
+   "train_free_s": 0.944,
+   "held_out_sorted": 0.9213,
+   "held_out_free_s": 1.036,
+   "failures_train": 23,
+   "failures_held_out": 10
+  },
+  "student_round1": {
+   "train_sorted": 0.9326,
+   "train_free_s": 0.947,
+   "held_out_sorted": 0.9134,
+   "held_out_free_s": 1.034,
+   "failures_train": 24,
+   "failures_held_out": 11
+  },
+  "student_round2": {
+   "train_sorted": 0.9298,
+   "train_free_s": 0.95,
+   "held_out_sorted": 0.937,
+   "held_out_free_s": 1.056,
+   "failures_train": 25,
+   "failures_held_out": 8
+  },
+  "student_round3": {
+   "train_sorted": 0.9326,
+   "train_free_s": 0.949,
+   "held_out_sorted": 0.9134,
+   "held_out_free_s": 1.034,
+   "failures_train": 24,
+   "failures_held_out": 11
+  }
+ }
+}

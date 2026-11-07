@@ -1,0 +1,129 @@
+{
+ "date": "2026-11-02 19:45",
+ "name": "f1-eval",
+ "trials": 200,
+ "successes": 198,
+ "success_rate": 0.99,
+ "wilson95": [
+  0.9643,
+  0.9973
+ ],
+ "acceptance": {
+  "threshold": 0.95,
+  "passed": true
+ },
+ "failures": {
+  "drop": 2
+ },
+ "per_item": {
+  "bleach_cleanser": {
+   "success": 17,
+   "drop": 1,
+   "n": 18,
+   "rate": 0.944
+  },
+  "cracker_box": {
+   "success": 19,
+   "n": 19,
+   "rate": 1.0
+  },
+  "gelatin_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "master_chef_can": {
+   "success": 19,
+   "n": 19,
+   "rate": 1.0
+  },
+  "mustard_bottle": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "potted_meat_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "pudding_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "sugar_box": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "tomato_soup_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "tuna_fish_can": {
+   "success": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "windex_bottle": {
+   "success": 17,
+   "drop": 1,
+   "n": 18,
+   "rate": 0.944
+  }
+ },
+ "tools": {
+  "suction": 73,
+  "fingers": 127
+ },
+ "cycle_s": {
+  "mean": 7.3,
+  "p50": 7.21,
+  "p95": 8.71,
+  "max": 9.56
+ },
+ "plan_ms": {
+  "mean": 8.5,
+  "p95": 9.1,
+  "max": 239.5
+ },
+ "max_track_err_rad": 0.0063,
+ "collisions": 0,
+ "sampling": {
+  "x_half": 0.4,
+  "y_half": 0.08,
+  "seed": 0,
+  "items": "all 11, cycled"
+ },
+ "failed_trials": [
+  {
+   "index": 32,
+   "item": "windex_bottle",
+   "outcome": "drop",
+   "x": -0.291,
+   "y": 0.622,
+   "yaw": 2.977,
+   "detail": {
+    "segment": "lower",
+    "slip": 0.032,
+    "swing": 23.5
+   }
+  },
+  {
+   "index": 86,
+   "item": "bleach_cleanser",
+   "outcome": "drop",
+   "x": -0.364,
+   "y": 0.571,
+   "yaw": 2.817,
+   "detail": {
+    "segment": "lower",
+    "slip": 0.035,
+    "swing": 25.0
+   }
+  }
+ ],
+ "wall_s": 39.5
+}

@@ -1,0 +1,836 @@
+{
+ "date": "2026-11-02 20:24",
+ "seconds": 180.0,
+ "seeds": 2,
+ "table": [
+  {
+   "speed": 0.15,
+   "rate": 4.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "items": 19,
+   "outcomes": {
+    "sorted": 19
+   },
+   "attempts": {
+    "ok": 19
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 4.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "items": 19,
+   "outcomes": {
+    "sorted": 19
+   },
+   "attempts": {
+    "ok": 19
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 4.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "items": 19,
+   "outcomes": {
+    "sorted": 19
+   },
+   "attempts": {
+    "ok": 19
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 8.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 6.17,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.098,
+   "items": 41,
+   "outcomes": {
+    "sorted": 37,
+    "missed": 4
+   },
+   "attempts": {
+    "ok": 35,
+    "drop": 2
+   },
+   "attempt_success": 0.946,
+   "cycle_s": 5.58,
+   "grasp_err_mm": 2.0,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 8.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 6.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.122,
+   "items": 41,
+   "outcomes": {
+    "sorted": 36,
+    "missed": 4,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 34,
+    "drop": 3
+   },
+   "attempt_success": 0.919,
+   "cycle_s": 5.6,
+   "grasp_err_mm": 2.0,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 8.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 6.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.122,
+   "items": 41,
+   "outcomes": {
+    "sorted": 36,
+    "missed": 4,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 34,
+    "drop": 3
+   },
+   "attempt_success": 0.919,
+   "cycle_s": 5.6,
+   "grasp_err_mm": 2.0,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 12.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "items": 58,
+   "outcomes": {
+    "sorted": 42,
+    "missed": 14,
+    "dropped": 2
+   },
+   "attempts": {
+    "ok": 44
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.54,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 12.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "items": 58,
+   "outcomes": {
+    "sorted": 42,
+    "missed": 14,
+    "dropped": 2
+   },
+   "attempts": {
+    "ok": 43,
+    "drop": 1
+   },
+   "attempt_success": 0.977,
+   "cycle_s": 5.51,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 12.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "items": 58,
+   "outcomes": {
+    "sorted": 42,
+    "missed": 14,
+    "dropped": 2
+   },
+   "attempts": {
+    "ok": 43,
+    "drop": 1
+   },
+   "attempt_success": 0.977,
+   "cycle_s": 5.51,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 16.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 7.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.37,
+   "items": 73,
+   "outcomes": {
+    "sorted": 46,
+    "missed": 26,
+    "late": 1
+   },
+   "attempts": {
+    "ok": 46,
+    "collision": 2
+   },
+   "attempt_success": 0.958,
+   "cycle_s": 5.73,
+   "grasp_err_mm": 1.9,
+   "collisions": 2
+  },
+  {
+   "speed": 0.15,
+   "rate": 16.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 7.67,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.37,
+   "items": 73,
+   "outcomes": {
+    "sorted": 46,
+    "missed": 26,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 44,
+    "drop": 3
+   },
+   "attempt_success": 0.936,
+   "cycle_s": 5.68,
+   "grasp_err_mm": 1.9,
+   "collisions": 0
+  },
+  {
+   "speed": 0.15,
+   "rate": 16.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 7.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.347,
+   "items": 72,
+   "outcomes": {
+    "sorted": 47,
+    "missed": 25
+   },
+   "attempts": {
+    "ok": 46,
+    "drop": 1
+   },
+   "attempt_success": 0.979,
+   "cycle_s": 5.71,
+   "grasp_err_mm": 1.8,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 4.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "items": 21,
+   "outcomes": {
+    "sorted": 16,
+    "missed": 5
+   },
+   "attempts": {
+    "ok": 16
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 4.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "items": 21,
+   "outcomes": {
+    "sorted": 16,
+    "missed": 5
+   },
+   "attempts": {
+    "ok": 16
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 4.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "items": 21,
+   "outcomes": {
+    "sorted": 16,
+    "missed": 5
+   },
+   "attempts": {
+    "ok": 16
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 8.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "items": 43,
+   "outcomes": {
+    "sorted": 30,
+    "missed": 13
+   },
+   "attempts": {
+    "ok": 30
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 8.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "items": 43,
+   "outcomes": {
+    "sorted": 30,
+    "missed": 13
+   },
+   "attempts": {
+    "ok": 30
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 8.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "items": 43,
+   "outcomes": {
+    "sorted": 30,
+    "missed": 13
+   },
+   "attempts": {
+    "ok": 30
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 12.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "items": 62,
+   "outcomes": {
+    "sorted": 35,
+    "missed": 26,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 36
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 12.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "items": 62,
+   "outcomes": {
+    "sorted": 35,
+    "missed": 26,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 36
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 12.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "items": 62,
+   "outcomes": {
+    "sorted": 35,
+    "missed": 26,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 36
+   },
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 16.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "items": 79,
+   "outcomes": {
+    "sorted": 39,
+    "missed": 39,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 39,
+    "drop": 1
+   },
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 16.0,
+   "scheduler": "greedy",
+   "seeds": 2,
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "items": 79,
+   "outcomes": {
+    "sorted": 39,
+    "missed": 39,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 39,
+    "drop": 1
+   },
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0
+  },
+  {
+   "speed": 0.3,
+   "rate": 16.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "items": 79,
+   "outcomes": {
+    "sorted": 39,
+    "missed": 39,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 39,
+    "drop": 1
+   },
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0
+  }
+ ],
+ "best_per_speed": {
+  "0.15": {
+   "speed": 0.15,
+   "rate": 16.0,
+   "scheduler": "lookahead",
+   "seeds": 2,
+   "sorted_per_min": 7.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.347,
+   "items": 72,
+   "outcomes": {
+    "sorted": 47,
+    "missed": 25
+   },
+   "attempts": {
+    "ok": 46,
+    "drop": 1
+   },
+   "attempt_success": 0.979,
+   "cycle_s": 5.71,
+   "grasp_err_mm": 1.8,
+   "collisions": 0
+  },
+  "0.3": {
+   "speed": 0.3,
+   "rate": 16.0,
+   "scheduler": "edf",
+   "seeds": 2,
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "items": 79,
+   "outcomes": {
+    "sorted": 39,
+    "missed": 39,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 39,
+    "drop": 1
+   },
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0
+  }
+ },
+ "wall_s": 307.0,
+ "rows": {
+  "0.15 m/s \u00b7 4/min \u00b7 edf": {
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 19
+  },
+  "0.15 m/s \u00b7 4/min \u00b7 greedy": {
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 19
+  },
+  "0.15 m/s \u00b7 4/min \u00b7 lookahead": {
+   "sorted_per_min": 3.17,
+   "sorted_per_min_sd": 0.5,
+   "miss_rate": 0.0,
+   "attempt_success": 1.0,
+   "cycle_s": 5.76,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 19
+  },
+  "0.15 m/s \u00b7 8/min \u00b7 edf": {
+   "sorted_per_min": 6.17,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.098,
+   "attempt_success": 0.946,
+   "cycle_s": 5.58,
+   "grasp_err_mm": 2.0,
+   "collisions": 0,
+   "items": 41
+  },
+  "0.15 m/s \u00b7 8/min \u00b7 greedy": {
+   "sorted_per_min": 6.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.122,
+   "attempt_success": 0.919,
+   "cycle_s": 5.6,
+   "grasp_err_mm": 2.0,
+   "collisions": 0,
+   "items": 41
+  },
+  "0.15 m/s \u00b7 8/min \u00b7 lookahead": {
+   "sorted_per_min": 6.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.122,
+   "attempt_success": 0.919,
+   "cycle_s": 5.6,
+   "grasp_err_mm": 2.0,
+   "collisions": 0,
+   "items": 41
+  },
+  "0.15 m/s \u00b7 12/min \u00b7 edf": {
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "attempt_success": 1.0,
+   "cycle_s": 5.54,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 58
+  },
+  "0.15 m/s \u00b7 12/min \u00b7 greedy": {
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "attempt_success": 0.977,
+   "cycle_s": 5.51,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 58
+  },
+  "0.15 m/s \u00b7 12/min \u00b7 lookahead": {
+   "sorted_per_min": 7.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.276,
+   "attempt_success": 0.977,
+   "cycle_s": 5.51,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 58
+  },
+  "0.15 m/s \u00b7 16/min \u00b7 edf": {
+   "sorted_per_min": 7.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.37,
+   "attempt_success": 0.958,
+   "cycle_s": 5.73,
+   "grasp_err_mm": 1.9,
+   "collisions": 2,
+   "items": 73
+  },
+  "0.15 m/s \u00b7 16/min \u00b7 greedy": {
+   "sorted_per_min": 7.67,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.37,
+   "attempt_success": 0.936,
+   "cycle_s": 5.68,
+   "grasp_err_mm": 1.9,
+   "collisions": 0,
+   "items": 73
+  },
+  "0.15 m/s \u00b7 16/min \u00b7 lookahead": {
+   "sorted_per_min": 7.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.347,
+   "attempt_success": 0.979,
+   "cycle_s": 5.71,
+   "grasp_err_mm": 1.8,
+   "collisions": 0,
+   "items": 72
+  },
+  "0.30 m/s \u00b7 4/min \u00b7 edf": {
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0,
+   "items": 21
+  },
+  "0.30 m/s \u00b7 4/min \u00b7 greedy": {
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0,
+   "items": 21
+  },
+  "0.30 m/s \u00b7 4/min \u00b7 lookahead": {
+   "sorted_per_min": 2.67,
+   "sorted_per_min_sd": 0.33,
+   "miss_rate": 0.238,
+   "attempt_success": 1.0,
+   "cycle_s": 5.42,
+   "grasp_err_mm": 2.8,
+   "collisions": 0,
+   "items": 21
+  },
+  "0.30 m/s \u00b7 8/min \u00b7 edf": {
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 43
+  },
+  "0.30 m/s \u00b7 8/min \u00b7 greedy": {
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 43
+  },
+  "0.30 m/s \u00b7 8/min \u00b7 lookahead": {
+   "sorted_per_min": 5.0,
+   "sorted_per_min_sd": 0.0,
+   "miss_rate": 0.302,
+   "attempt_success": 1.0,
+   "cycle_s": 5.49,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 43
+  },
+  "0.30 m/s \u00b7 12/min \u00b7 edf": {
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 62
+  },
+  "0.30 m/s \u00b7 12/min \u00b7 greedy": {
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 62
+  },
+  "0.30 m/s \u00b7 12/min \u00b7 lookahead": {
+   "sorted_per_min": 5.83,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.435,
+   "attempt_success": 1.0,
+   "cycle_s": 5.33,
+   "grasp_err_mm": 2.2,
+   "collisions": 0,
+   "items": 62
+  },
+  "0.30 m/s \u00b7 16/min \u00b7 edf": {
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0,
+   "items": 79
+  },
+  "0.30 m/s \u00b7 16/min \u00b7 greedy": {
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0,
+   "items": 79
+  },
+  "0.30 m/s \u00b7 16/min \u00b7 lookahead": {
+   "sorted_per_min": 6.5,
+   "sorted_per_min_sd": 0.17,
+   "miss_rate": 0.506,
+   "attempt_success": 0.975,
+   "cycle_s": 5.55,
+   "grasp_err_mm": 2.1,
+   "collisions": 0,
+   "items": 79
+  }
+ },
+ "best_rows": {
+  "0.15 m/s": {
+   "rate": 16.0,
+   "scheduler": "lookahead",
+   "sorted_per_min": 7.83,
+   "miss_rate": 0.347
+  },
+  "0.30 m/s": {
+   "rate": 16.0,
+   "scheduler": "edf",
+   "sorted_per_min": 6.5,
+   "miss_rate": 0.506
+  }
+ }
+}

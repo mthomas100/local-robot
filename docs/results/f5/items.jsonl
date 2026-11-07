@@ -1,0 +1,140 @@
+{"state": "parked", "spawn_t": 1.668, "attempts": 1, "held": true, "name": "cracker_box", "material": "cardboard", "clutter": true, "settle_t": 6.819999999999471, "outcome": "sorted", "end_t": 7.44}
+{"state": "parked", "spawn_t": 1.668, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 9.36}
+{"state": "parked", "spawn_t": 5.446, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 11.86000000000063, "outcome": "sorted", "end_t": 12.46}
+{"state": "parked", "spawn_t": 6.382, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 13.92}
+{"state": "parked", "spawn_t": 6.382, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 14.2}
+{"state": "parked", "spawn_t": 7.918, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 12.874000000000885, "outcome": "missed", "end_t": 15.6}
+{"state": "parked", "spawn_t": 11.792, "attempts": 1, "held": true, "name": "sugar_box", "material": "cardboard", "settle_t": 17.380000000001246, "outcome": "sorted", "end_t": 18.0}
+{"state": "parked", "spawn_t": 22.694, "attempts": 1, "held": true, "name": "mustard_bottle", "material": "plastic", "settle_t": 29.199999999994695, "outcome": "sorted", "end_t": 29.82}
+{"state": "parked", "spawn_t": 23.748, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "outcome": "missed", "end_t": 31.44}
+{"state": "parked", "spawn_t": 28.992, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 34.63999999999637, "outcome": "sorted", "end_t": 35.24}
+{"state": "parked", "spawn_t": 34.614, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 41.12000000000429, "outcome": "sorted", "end_t": 41.72}
+{"state": "parked", "spawn_t": 38.7, "attempts": 1, "held": true, "name": "sugar_box", "material": "cardboard", "settle_t": 44.76000000000874, "outcome": "sorted", "end_t": 45.36}
+{"state": "parked", "spawn_t": 50.098, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "clutter": true, "settle_t": 54.520000000020666, "outcome": "sorted", "end_t": 55.12}
+{"state": "parked", "spawn_t": 50.098, "attempts": 0, "held": false, "name": "sugar_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 57.84}
+{"state": "parked", "spawn_t": 54.778, "attempts": 1, "held": true, "name": "mustard_bottle", "material": "plastic", "settle_t": 61.540000000029245, "outcome": "sorted", "end_t": 62.14}
+{"state": "parked", "spawn_t": 57.266, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 62.256000000029815, "outcome": "missed", "end_t": 64.96}
+{"state": "parked", "spawn_t": 58.526, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 63.00600000003073, "outcome": "missed", "end_t": 65.66}
+{"state": "parked", "spawn_t": 58.526, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 63.50600000003134, "outcome": "missed", "end_t": 66.22}
+{"state": "parked", "spawn_t": 77.014, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 82.2999999999896, "outcome": "sorted", "end_t": 82.92}
+{"state": "parked", "spawn_t": 81.244, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 87.77999999997682, "outcome": "sorted", "end_t": 88.4}
+{"state": "parked", "spawn_t": 89.596, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 95.01999999995995, "outcome": "sorted", "end_t": 95.64}
+{"state": "parked", "spawn_t": 90.532, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 95.14799999996023, "outcome": "missed", "end_t": 97.8}
+{"state": "parked", "spawn_t": 90.532, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 95.14799999996023, "outcome": "missed", "end_t": 98.22}
+{"state": "parked", "spawn_t": 109.556, "attempts": 1, "held": true, "name": "tomato_soup_can", "material": "metal", "settle_t": 115.65999999991185, "outcome": "sorted", "end_t": 116.28}
+{"state": "parked", "spawn_t": 120.5, "attempts": 1, "held": true, "name": "cracker_box", "material": "cardboard", "settle_t": 126.53999999988649, "outcome": "sorted", "end_t": 127.16}
+{"state": "parked", "spawn_t": 123.548, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 128.1159999998834, "outcome": "missed", "end_t": 130.8}
+{"state": "parked", "spawn_t": 123.548, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 128.61999999988484, "outcome": "missed", "end_t": 131.24}
+{"state": "parked", "spawn_t": 124.484, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 129.36999999988842, "outcome": "missed", "end_t": 132.16}
+{"state": "parked", "spawn_t": 129.744, "attempts": 1, "held": true, "name": "mustard_bottle", "material": "plastic", "clutter": true, "settle_t": 135.13999999991717, "outcome": "sorted", "end_t": 135.74}
+{"state": "parked", "spawn_t": 129.744, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 137.44}
+{"state": "parked", "spawn_t": 138.558, "attempts": 1, "held": true, "name": "tomato_soup_can", "material": "metal", "settle_t": 143.899999999959, "outcome": "sorted", "end_t": 144.5}
+{"state": "parked", "spawn_t": 140.086, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 145.0119999999631, "outcome": "missed", "end_t": 147.76}
+{"state": "parked", "spawn_t": 150.39, "attempts": 1, "held": true, "name": "cracker_box", "material": "cardboard", "settle_t": 156.40000000001868, "outcome": "sorted", "end_t": 157.0}
+{"state": "parked", "spawn_t": 164.53, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 171.08000000008877, "outcome": "sorted", "end_t": 171.68}
+{"state": "parked", "spawn_t": 167.32, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 172.34600000009362, "outcome": "missed", "end_t": 175.0}
+{"state": "parked", "spawn_t": 175.626, "attempts": 1, "held": true, "name": "windex_bottle", "material": "plastic", "settle_t": 182.9600000001455, "outcome": "sorted", "end_t": 183.56}
+{"state": "parked", "spawn_t": 176.56, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "outcome": "missed", "end_t": 184.58}
+{"state": "parked", "spawn_t": 188.47, "attempts": 1, "held": true, "name": "windex_bottle", "material": "plastic", "settle_t": 194.70000000020156, "outcome": "sorted", "end_t": 195.3}
+{"state": "parked", "spawn_t": 189.404, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "outcome": "missed", "end_t": 197.08}
+{"state": "parked", "spawn_t": 194.334, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "outcome": "knocked_off", "end_t": 199.02}
+{"state": "parked", "spawn_t": 192.864, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "outcome": "dropped", "end_t": 199.3}
+{"state": "parked", "spawn_t": 194.334, "attempts": 0, "held": false, "name": "sugar_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 202.3}
+{"state": "parked", "spawn_t": 199.144, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 204.7000000002493, "outcome": "sorted", "end_t": 205.3}
+{"state": "parked", "spawn_t": 201.072, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 205.56400000025224, "outcome": "missed", "end_t": 208.22}
+{"state": "parked", "spawn_t": 201.072, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 206.06400000025462, "outcome": "missed", "end_t": 208.76}
+{"state": "parked", "spawn_t": 203.95, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 209.38000000027165, "outcome": "sorted", "end_t": 209.98}
+{"state": "parked", "spawn_t": 207.038, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "clutter": true, "last_why": "late", "retry_at": 209.38400000027048, "outcome": "missed", "end_t": 214.46}
+{"state": "parked", "spawn_t": 207.038, "attempts": 1, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "late", "end_t": 214.74}
+{"state": "parked", "spawn_t": 213.31, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "clutter": true, "settle_t": 218.28000000031415, "outcome": "sorted", "end_t": 218.88}
+{"state": "parked", "spawn_t": 213.31, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 218.3320000003132, "outcome": "missed", "end_t": 221.08}
+{"state": "parked", "spawn_t": 214.394, "attempts": 0, "held": false, "name": "bleach_cleanser", "material": "plastic", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 218.3320000003132, "outcome": "missed", "end_t": 221.64}
+{"state": "parked", "spawn_t": 214.394, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 219.4180000003184, "outcome": "missed", "end_t": 222.08}
+{"state": "parked", "spawn_t": 215.838, "attempts": 0, "held": false, "name": "sugar_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 220.91800000032555, "outcome": "missed", "end_t": 223.52}
+{"state": "parked", "spawn_t": 221.25, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "clutter": true, "settle_t": 227.26000000035702, "outcome": "sorted", "end_t": 227.86}
+{"state": "parked", "spawn_t": 221.25, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 229.56}
+{"state": "parked", "spawn_t": 228.298, "attempts": 1, "held": true, "name": "windex_bottle", "material": "plastic", "settle_t": 234.66000000039236, "outcome": "sorted", "end_t": 235.26}
+{"state": "parked", "spawn_t": 230.018, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 234.55000000039064, "outcome": "missed", "end_t": 237.7}
+{"state": "parked", "spawn_t": 231.968, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 236.89200000040182, "outcome": "missed", "end_t": 239.66}
+{"state": "parked", "spawn_t": 243.456, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 249.02000000046093, "outcome": "sorted", "end_t": 249.62}
+{"state": "parked", "spawn_t": 248.38, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "outcome": "missed", "end_t": 256.06}
+{"state": "parked", "spawn_t": 247.446, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "outcome": "late", "end_t": 260.68}
+{"state": "parked", "spawn_t": 258.65, "attempts": 1, "held": true, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "late", "end_t": 266.24}
+{"state": "parked", "spawn_t": 258.65, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 266.46}
+{"state": "parked", "spawn_t": 263.52, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 268.6800000005548, "outcome": "sorted", "end_t": 269.28}
+{"state": "parked", "spawn_t": 265.324, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 268.8240000005543, "outcome": "missed", "end_t": 273.0}
+{"state": "parked", "spawn_t": 266.258, "attempts": 1, "held": true, "name": "tuna_fish_can", "material": "metal", "settle_t": 272.6600000005738, "outcome": "sorted", "end_t": 273.26}
+{"state": "parked", "spawn_t": 284.054, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 289.6400000006549, "outcome": "sorted", "end_t": 290.24}
+{"state": "parked", "spawn_t": 291.348, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 296.2400000006864, "outcome": "sorted", "end_t": 296.84}
+{"state": "parked", "spawn_t": 297.05, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 302.00800000071274, "outcome": "missed", "end_t": 304.74}
+{"state": "parked", "spawn_t": 302.722, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "clutter": true, "settle_t": 307.8400000007418, "outcome": "sorted", "end_t": 308.44}
+{"state": "parked", "spawn_t": 302.722, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 310.4}
+{"state": "parked", "spawn_t": 309.554, "attempts": 1, "held": true, "name": "tomato_soup_can", "material": "metal", "settle_t": 315.2800000007773, "outcome": "sorted", "end_t": 315.88}
+{"state": "parked", "spawn_t": 319.416, "attempts": 1, "held": true, "name": "cracker_box", "material": "cardboard", "clutter": true, "settle_t": 324.5800000008217, "outcome": "dropped", "end_t": 325.18, "where": "chute rim"}
+{"state": "parked", "spawn_t": 319.416, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 327.1}
+{"state": "parked", "spawn_t": 328.614, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 334.58000000086946, "outcome": "sorted", "end_t": 335.18}
+{"state": "parked", "spawn_t": 329.548, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 334.6300000008685, "outcome": "missed", "end_t": 337.24}
+{"state": "parked", "spawn_t": 331.798, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 336.31800000087657, "outcome": "missed", "end_t": 339.12}
+{"state": "parked", "spawn_t": 331.798, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 336.81800000087895, "outcome": "missed", "end_t": 339.48}
+{"state": "parked", "spawn_t": 332.652, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 337.31800000088134, "outcome": "missed", "end_t": 339.96}
+{"state": "parked", "spawn_t": 332.652, "attempts": 0, "held": false, "name": "bleach_cleanser", "material": "plastic", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 337.56800000088253, "outcome": "missed", "end_t": 340.34}
+{"state": "parked", "spawn_t": 342.968, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 348.1200000009341, "outcome": "sorted", "end_t": 348.72}
+{"state": "parked", "spawn_t": 348.302, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "clutter": true, "outcome": "late", "end_t": 355.7}
+{"state": "parked", "spawn_t": 348.302, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 356.18}
+{"state": "parked", "spawn_t": 354.646, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 360.660000000994, "outcome": "sorted", "end_t": 361.26}
+{"state": "parked", "spawn_t": 355.58, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 362.92}
+{"state": "parked", "spawn_t": 355.58, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 363.28}
+{"state": "parked", "spawn_t": 356.514, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 361.52800000099694, "outcome": "missed", "end_t": 364.2}
+{"state": "parked", "spawn_t": 360.56, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 366.70000000102283, "outcome": "sorted", "end_t": 367.3}
+{"state": "parked", "spawn_t": 361.494, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 368.78}
+{"state": "parked", "spawn_t": 361.494, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 369.24}
+{"state": "parked", "spawn_t": 364.694, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 369.65200000103573, "outcome": "missed", "end_t": 372.38}
+{"state": "parked", "spawn_t": 378.246, "attempts": 1, "held": true, "name": "tomato_soup_can", "material": "metal", "settle_t": 384.28000000110677, "outcome": "sorted", "end_t": 384.88}
+{"state": "parked", "spawn_t": 379.18, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 386.44}
+{"state": "parked", "spawn_t": 379.18, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 386.86}
+{"state": "parked", "spawn_t": 381.798, "attempts": 0, "held": false, "name": "bleach_cleanser", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 386.878000001118, "outcome": "missed", "end_t": 389.48}
+{"state": "parked", "spawn_t": 394.248, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "clutter": true, "outcome": "late", "end_t": 401.84}
+{"state": "parked", "spawn_t": 394.248, "attempts": 0, "held": false, "name": "bleach_cleanser", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 402.08}
+{"state": "parked", "spawn_t": 401.248, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 404.54800000120235, "outcome": "missed", "end_t": 408.6}
+{"state": "parked", "spawn_t": 401.248, "attempts": 1, "held": true, "name": "windex_bottle", "material": "plastic", "clutter": true, "settle_t": 408.76000000122366, "outcome": "sorted", "end_t": 409.36}
+{"state": "parked", "spawn_t": 421.204, "attempts": 1, "held": true, "name": "mustard_bottle", "material": "plastic", "outcome": "dropped", "end_t": 428.16}
+{"state": "parked", "spawn_t": 433.852, "attempts": 1, "held": true, "name": "bleach_cleanser", "material": "plastic", "settle_t": 441.30000000137903, "outcome": "sorted", "end_t": 441.9}
+{"state": "parked", "spawn_t": 441.836, "attempts": 1, "held": true, "name": "sugar_box", "material": "cardboard", "settle_t": 447.6400000014093, "outcome": "sorted", "end_t": 448.24}
+{"state": "parked", "spawn_t": 445.648, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 450.38800000142123, "outcome": "missed", "end_t": 453.02}
+{"state": "parked", "spawn_t": 445.648, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 450.6380000014224, "outcome": "missed", "end_t": 453.34}
+{"state": "parked", "spawn_t": 451.446, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 456.36000000145094, "outcome": "sorted", "end_t": 456.96}
+{"state": "parked", "spawn_t": 457.178, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 462.3200000014794, "outcome": "sorted", "end_t": 462.92}
+{"state": "parked", "spawn_t": 460.624, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 466.54000000149955, "outcome": "sorted", "end_t": 467.14}
+{"state": "parked", "spawn_t": 462.654, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 467.68800000150384, "outcome": "missed", "end_t": 470.34}
+{"state": "parked", "spawn_t": 467.326, "attempts": 1, "held": true, "name": "sugar_box", "material": "cardboard", "settle_t": 472.8600000015297, "outcome": "sorted", "end_t": 473.46}
+{"state": "parked", "spawn_t": 469.314, "attempts": 0, "held": false, "name": "pudding_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 474.16600000153477, "outcome": "missed", "end_t": 477.0}
+{"state": "parked", "spawn_t": 472.666, "attempts": 1, "held": true, "name": "potted_meat_can", "material": "metal", "settle_t": 478.7200000015577, "outcome": "sorted", "end_t": 479.32}
+{"state": "parked", "spawn_t": 473.6, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 480.96}
+{"state": "parked", "spawn_t": 473.6, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "outcome": "missed", "end_t": 481.28}
+{"state": "parked", "spawn_t": 485.35, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 490.300000001613, "outcome": "sorted", "end_t": 490.9}
+{"state": "parked", "spawn_t": 487.006, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 491.4520000016173, "outcome": "missed", "end_t": 494.32}
+{"state": "parked", "spawn_t": 487.006, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "clutter": true, "last_why": "ik_fail:pre", "retry_at": 491.9520000016197, "outcome": "missed", "end_t": 494.7}
+{"state": "parked", "spawn_t": 494.358, "attempts": 1, "held": true, "name": "master_chef_can", "material": "metal", "settle_t": 499.44000000165664, "outcome": "sorted", "end_t": 500.04}
+{"state": "parked", "spawn_t": 498.52, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 504.32000000167994, "outcome": "sorted", "end_t": 504.92}
+{"state": "parked", "spawn_t": 502.262, "attempts": 1, "held": true, "name": "tuna_fish_can", "material": "metal", "settle_t": 508.32000000169904, "outcome": "sorted", "end_t": 508.92}
+{"state": "parked", "spawn_t": 509.76, "attempts": 1, "held": true, "name": "tuna_fish_can", "material": "metal", "settle_t": 514.7000000016527, "outcome": "sorted", "end_t": 515.32}
+{"state": "parked", "spawn_t": 510.694, "attempts": 0, "held": false, "name": "tomato_soup_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 515.7580000016336, "outcome": "missed", "end_t": 518.38}
+{"state": "parked", "spawn_t": 519.596, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 524.5600000014196, "outcome": "sorted", "end_t": 525.18}
+{"state": "parked", "spawn_t": 520.532, "attempts": 0, "held": false, "name": "master_chef_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 524.6260000014239, "outcome": "missed", "end_t": 528.22}
+{"state": "parked", "spawn_t": 523.672, "attempts": 1, "held": true, "name": "tuna_fish_can", "material": "metal", "settle_t": 528.6600000013226, "outcome": "sorted", "end_t": 529.28}
+{"state": "parked", "spawn_t": 525.292, "attempts": 0, "held": false, "name": "windex_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 530.2340000012913, "outcome": "missed", "end_t": 532.98}
+{"state": "parked", "spawn_t": 537.2, "attempts": 1, "held": true, "name": "pudding_box", "material": "cardboard", "settle_t": 542.1600000010034, "outcome": "sorted", "end_t": 542.78}
+{"state": "parked", "spawn_t": 538.316, "attempts": 0, "held": false, "name": "tuna_fish_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 543.2960000009824, "outcome": "missed", "end_t": 546.0}
+{"state": "parked", "spawn_t": 541.66, "attempts": 1, "held": true, "name": "cracker_box", "material": "cardboard", "settle_t": 547.3400000008809, "outcome": "sorted", "end_t": 547.96}
+{"state": "parked", "spawn_t": 546.304, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "clutter": true, "settle_t": 551.2200000007891, "outcome": "sorted", "end_t": 551.84}
+{"state": "parked", "spawn_t": 546.304, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "clutter": true, "outcome": "missed", "end_t": 554.08}
+{"state": "parked", "spawn_t": 547.354, "attempts": 0, "held": false, "name": "sugar_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 552.3540000007682, "outcome": "missed", "end_t": 555.04}
+{"state": "parked", "spawn_t": 549.358, "attempts": 1, "held": true, "name": "tomato_soup_can", "material": "metal", "last_why": "late", "retry_at": 552.3540000007682, "settle_t": 556.3200000006685, "outcome": "sorted", "end_t": 556.94}
+{"state": "parked", "spawn_t": 553.812, "attempts": 1, "held": true, "name": "gelatin_box", "material": "cardboard", "settle_t": 559.5200000005929, "outcome": "sorted", "end_t": 560.14}
+{"state": "parked", "spawn_t": 554.748, "attempts": 0, "held": false, "name": "mustard_bottle", "material": "plastic", "last_why": "ik_fail:pre", "retry_at": 559.5800000005974, "outcome": "missed", "end_t": 562.44}
+{"state": "parked", "spawn_t": 556.286, "attempts": 0, "held": false, "name": "sugar_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 561.1780000005596, "outcome": "missed", "end_t": 563.98}
+{"state": "parked", "spawn_t": 563.07, "attempts": 1, "held": false, "name": "windex_bottle", "material": "plastic", "clutter": true, "outcome": "late", "end_t": 570.28}
+{"state": "parked", "spawn_t": 563.07, "attempts": 0, "held": false, "name": "gelatin_box", "material": "cardboard", "clutter": true, "outcome": "missed", "end_t": 570.74}
+{"state": "parked", "spawn_t": 564.572, "attempts": 0, "held": false, "name": "cracker_box", "material": "cardboard", "last_why": "ik_fail:pre", "retry_at": 569.5160000003624, "outcome": "missed", "end_t": 572.26}
+{"state": "parked", "spawn_t": 565.976, "attempts": 0, "held": false, "name": "potted_meat_can", "material": "metal", "last_why": "ik_fail:pre", "retry_at": 570.8160000003317, "outcome": "missed", "end_t": 573.66}
+{"state": "parked", "spawn_t": 590.646, "attempts": 1, "held": true, "name": "windex_bottle", "material": "plastic", "settle_t": 596.6799999997141, "outcome": "sorted", "end_t": 597.3}

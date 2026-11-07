@@ -1,0 +1,152 @@
+{
+ "date": "2026-11-03 17:24",
+ "stream": {
+  "rate": 12.0,
+  "clutter": 0.25
+ },
+ "seconds": 180.0,
+ "seeds": [
+  8000,
+  8011
+ ],
+ "v2": [
+  "fast",
+  "early",
+  "deadline"
+ ],
+ "margin": 0.5,
+ "rule": "0.5 m/s: 95% CI of (v2 - v1) sorted/min above 0; 0.3 m/s: its lower bound above -margin; 0 wrong chutes and no new protective-stop class for v2",
+ "table": {
+  "0.50 m/s \u00b7 v1": {
+   "speed": 0.5,
+   "v2": [],
+   "runs": 12,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "missed": 550
+   },
+   "attempts": {},
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 fast+early+deadline": {
+   "speed": 0.5,
+   "v2": [
+    "fast",
+    "early",
+    "deadline"
+   ],
+   "runs": 12,
+   "sorted_per_min": 3.999,
+   "sort_rate": 0.264,
+   "attempt_success": 0.899,
+   "cycle_s": 2.64,
+   "protective_stops": 1,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 144,
+    "missed": 389,
+    "late": 16,
+    "dropped": 1
+   },
+   "attempts": {
+    "ok": 145,
+    "drop": 14,
+    "collision": 1,
+    "knocked": 1
+   },
+   "stop_details": [
+    "tracking error 0.173 rad (contact force)"
+   ]
+  },
+  "0.30 m/s \u00b7 v1": {
+   "speed": 0.3,
+   "v2": [],
+   "runs": 12,
+   "sorted_per_min": 5.75,
+   "sort_rate": 0.392,
+   "attempt_success": 0.891,
+   "cycle_s": 3.545,
+   "protective_stops": 1,
+   "wrong_chute": 1,
+   "outcomes": {
+    "sorted": 207,
+    "missed": 294,
+    "wrong_chute": 1,
+    "dropped": 12,
+    "late": 17
+   },
+   "attempts": {
+    "ok": 215,
+    "drop": 19,
+    "knocked": 4,
+    "collision": 1,
+    "miss": 2
+   },
+   "stop_details": [
+    "tracking error 0.151 rad (contact force)"
+   ]
+  },
+  "0.30 m/s \u00b7 fast+early+deadline": {
+   "speed": 0.3,
+   "v2": [
+    "fast",
+    "early",
+    "deadline"
+   ],
+   "runs": 12,
+   "sorted_per_min": 7.167,
+   "sort_rate": 0.49,
+   "attempt_success": 0.915,
+   "cycle_s": 3.048,
+   "protective_stops": 1,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 258,
+    "missed": 235,
+    "dropped": 18,
+    "late": 19,
+    "knocked_off": 1
+   },
+   "attempts": {
+    "ok": 276,
+    "drop": 19,
+    "knocked": 3,
+    "miss": 2,
+    "carry_ik": 1,
+    "collision": 1
+   },
+   "stop_details": [
+    "tracking error 0.221 rad (contact force)"
+   ]
+  }
+ },
+ "paired": {
+  "0.50": {
+   "mean": 3.999,
+   "lo": 3.544,
+   "hi": 4.454,
+   "sd": 0.805,
+   "n": 12
+  },
+  "0.30": {
+   "mean": 1.417,
+   "lo": 0.999,
+   "hi": 1.834,
+   "sd": 0.738,
+   "n": 12
+  }
+ },
+ "verdict": {
+  "fast_beats_v1": true,
+  "not_worse_at_0_3": true,
+  "wrong_chutes_v2": 0,
+  "new_stop_classes": [],
+  "accepted": true
+ },
+ "wall_s": 1111.1
+}

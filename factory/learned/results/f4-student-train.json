@@ -1,0 +1,178 @@
+{
+ "date": "2026-11-02 22:54",
+ "name": "f4-student-ars",
+ "iters": 40,
+ "best_iter": 20,
+ "episodes": 12800,
+ "wall_s": 768.1,
+ "history": [
+  {
+   "iter": 0,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9326,
+     "t_free": 0.943,
+     "reward": 22.165,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 21,
+      "timeout": 1,
+      "drop": 2
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9291,
+     "t_free": 1.039,
+     "reward": 21.979,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 6,
+      "timeout": 2,
+      "drop": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 10,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9326,
+     "t_free": 0.928,
+     "reward": 22.18,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 19,
+      "timeout": 2,
+      "drop": 3
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9449,
+     "t_free": 1.038,
+     "reward": 22.421,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "timeout": 3,
+      "off_target": 4
+     }
+    }
+   }
+  },
+  {
+   "iter": 20,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.941,
+     "t_free": 0.915,
+     "reward": 22.428,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 16,
+      "drop": 2,
+      "timeout": 2,
+      "ik": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9213,
+     "t_free": 1.011,
+     "reward": 21.785,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 7,
+      "timeout": 1,
+      "ik": 1,
+      "drop": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 30,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9185,
+     "t_free": 0.891,
+     "reward": 21.819,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 23,
+      "drop": 1,
+      "timeout": 4,
+      "ik": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.8898,
+     "t_free": 0.95,
+     "reward": 20.958,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 10,
+      "ik": 3,
+      "drop": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 40,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9101,
+     "t_free": 0.879,
+     "reward": 21.594,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 28,
+      "timeout": 3,
+      "drop": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.8504,
+     "t_free": 0.904,
+     "reward": 19.892,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "timeout": 3,
+      "off_target": 13,
+      "ik": 2,
+      "drop": 1
+     }
+    }
+   }
+  }
+ ],
+ "config": {
+  "dirs": 16,
+  "top": 8,
+  "noise": 0.05,
+  "step": 0.03,
+  "per_dir": 10,
+  "workers": 6
+ },
+ "student": true,
+ "init": "factory/learned/student.json"
+}

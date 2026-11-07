@@ -1,0 +1,172 @@
+{
+ "samples": 400000,
+ "fk_seconds": 0.9,
+ "topdown_fraction": 0.5155,
+ "pick_z": [
+  0.79,
+  1.08
+ ],
+ "zone_coverage": 0.937,
+ "belt_coverage": 0.5029,
+ "chute_coverage": {
+  "plastic": 0.9861,
+  "metal": 1.0,
+  "cardboard": 0.9861
+ },
+ "max_horizontal_reach_m": 1.098,
+ "cycle_budget": {
+  "0.15": {
+   "zone_seconds": 6.67,
+   "items_per_minute_at_0_3m_spacing": 30.0
+  },
+  "0.3": {
+   "zone_seconds": 3.33,
+   "items_per_minute_at_0_3m_spacing": 60.0
+  },
+  "0.5": {
+   "zone_seconds": 2.0,
+   "items_per_minute_at_0_3m_spacing": 100.0
+  }
+ },
+ "ik_coverage": {
+  "zone_grasp_low": 0.98,
+  "zone_grasp_high": 0.826,
+  "chute_plastic": 1.0,
+  "chute_metal": 1.0,
+  "chute_cardboard": 1.0
+ },
+ "ik_seconds": 3.2,
+ "ik_note": "exact top-down IK on a 2 cm grid: zone at pinch heights surface+0.10 and +0.25 m, chute openings at rim+0.25 m",
+ "layout": {
+  "pedestal": [
+   0.24,
+   0.24,
+   0.6
+  ],
+  "belt": {
+   "direction": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "y": 0.55,
+   "surface_z": 0.78,
+   "width": 0.4,
+   "x_min": -1.2,
+   "x_max": 1.2,
+   "zone": [
+    -0.5,
+    0.5
+   ],
+   "plate_thickness": 0.02,
+   "reset_travel": 0.4,
+   "speeds": [
+    0.15,
+    0.3,
+    0.5
+   ],
+   "ramp": 1.0,
+   "rail_height": 0.03,
+   "rail_thickness": 0.015,
+   "rail_gap": 0.005
+  },
+  "chutes": [
+   {
+    "material": "plastic",
+    "x": -0.5,
+    "y": 0.27,
+    "inner": 0.24,
+    "depth": 0.16,
+    "wall": 0.01,
+    "rim_z": 0.6
+   },
+   {
+    "material": "metal",
+    "x": 0.0,
+    "y": 0.27,
+    "inner": 0.24,
+    "depth": 0.16,
+    "wall": 0.01,
+    "rim_z": 0.6
+   },
+   {
+    "material": "cardboard",
+    "x": 0.5,
+    "y": 0.27,
+    "inner": 0.24,
+    "depth": 0.16,
+    "wall": 0.01,
+    "rim_z": 0.6
+   }
+  ],
+  "camera": {
+   "name": "overhead",
+   "pos": [
+    0.0,
+    0.55,
+    1.78
+   ],
+   "lookat": [
+    0.0,
+    0.55,
+    0.78
+   ],
+   "up": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "fovy": 42.0,
+   "width": 848,
+   "height": 480
+  },
+  "views": {
+   "cell": [
+    [
+     2.1,
+     -1.5,
+     1.9
+    ],
+    [
+     0.0,
+     0.45,
+     0.75
+    ]
+   ],
+   "belt": [
+    [
+     0.0,
+     2.3,
+     1.5
+    ],
+    [
+     0.0,
+     0.55,
+     0.78
+    ]
+   ],
+   "end": [
+    [
+     -2.3,
+     0.55,
+     1.3
+    ],
+    [
+     0.3,
+     0.55,
+     0.78
+    ]
+   ]
+  },
+  "home_qpos": [
+   -1.9,
+   -1.92,
+   1.15,
+   -0.8008,
+   -1.5708,
+   0.0
+  ],
+  "spawn_x": -1.05,
+  "timestep": 0.002
+ }
+}

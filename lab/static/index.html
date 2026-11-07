@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sorting Cell Lab</title><link rel="stylesheet" href="/static/lab.css"></head><body>
+<header><h1>Sorting cell lab</h1><span class="sub">a UR5e and a Robotiq gripper sort YCB recyclables off a moving belt, built phase by phase on this Mac</span></header>
+<main>
+<section class="panel"><h2>What this is</h2>
+<p>A virtual recycling cell: mixed items ride a conveyor belt, a robot arm picks each one and drops it in the chute for its
+material (plastic, metal, cardboard) before it leaves the reach zone. The belt never stops, so every pick has a deadline.
+The project builds it the way a robotics engineer would: first a <b>classical pipeline</b> with no learning at all (geometry,
+planning, control), then <b>learning</b> wherever it measurably beats the classical module. Each phase below has a page
+that explains the idea, shows what was built and measured, and lets you run it yourself.</p></section>
+<section class="panel diagram"><h2>The pipeline</h2><p class="mute small">Sense along the top, decide on the right, act along the bottom, all on a simulated cell. Highlighted boxes are finished; click a box for its phase.</p><div id="dia"></div></section>
+<section class="panel"><h2>Phases</h2><div class="grid" id="phases"></div></section>
+<section class="panel"><h2>Operator dashboard</h2><p class="small">The F5 shift's KPIs live (throughput, OEE, losses, the cell's stream): <a href="/dashboard">open the dashboard</a>. Start a shift from the <a href="/phase/F5">F5 page</a> or with <code>rl shift run</code>.</p></section>
+<section class="panel"><h2>Watch it live</h2><p class="small">The cell running in real time in your browser (MuJoCo on the CPU). Start it from the <a href="/phase/F0">F0 page</a>, or open the <a href="http://127.0.0.1:8801/">stream page</a> if it is already running.</p></section>
+<section class="panel"><h2>Recent runs</h2><table id="runs"><tr><th>when</th><th>job</th><th>exit</th><th>log</th></tr></table></section>
+</main>
+<script src="/static/lab.js"></script>
+<script>
+const ORDER = ["F0","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10"];
+const TITLES = {F0:"The cell exists",F1:"Classical pick, static belt",F2:"Classical pick, moving belt",F3:"Learned pick (RL)",F4:"Seeing (vision only)",F5:"The factory (10-minute run, KPIs)",F6:"The desk arm (SO-101, in sim)",F7:"The fast belt and the operating envelope",F8:"A second arm",F9:"A learned grasp (Claude designs the reward)",F10:"The v2 shift"};
+(async () => {
+  const {status, phases} = await getJSON("/api/phases");
+  diagram($("#dia"), {highlight: ORDER.filter(p => status[p] === "done"), status});
+  for (const p of ORDER) {
+    const m = phases[p] || {}; const st = status[p];
+    $("#phases").append(h("a", {href: "/phase/" + p, class: "card"}, h("h4", {}, `${p} · ${m.title ? m.title.replace(/^F\d+\s*·\s*/, "") : TITLES[p]} `, chip(st)),
+      h("p", {}, m.summary || (phases[p] ? "" : "Page arrives when the phase starts."))));
+  }
+  const {runs} = await getJSON("/api/jobs");
+  for (const r of runs.slice(0, 12)) $("#runs").append(h("tr", {}, h("td", {}, new Date(r.started * 1000).toLocaleString()), h("td", {}, r.job), h("td", {}, r.exit === null ? "running" : String(r.exit)), h("td", {}, h("a", {href: "/api/file?path=" + encodeURIComponent(r.log), target: "_blank"}, "log"))));
+})();
+</script></body></html>

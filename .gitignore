@@ -1,0 +1,45 @@
+# weights, venvs, caches, logs, run state
+envs/
+vendor/
+runs/
+logs/
+*.log
+__pycache__/
+*.pyc
+.venv/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+!factory/desk/models/pick.onnx
+*.npz
+*.mp4
+*.gif
+*.png
+!docs/**/*.png
+!docs/**/*.gif
+.DS_Store
+wandb/
+tb/
+.cache/
+*.egg-info/
+# sorting cell: downloaded/derived assets and generated models are rebuilt by scripts/fetch_ycb.sh + factory/cell/ycb.py + factory/cell/build_mjcf.py
+factory/cell/assets/ycb/*
+!factory/cell/assets/ycb/index.json
+factory/cell/build/
+factory/cell/results/*.mp4
+lab/state/
+MUJOCO_LOG.TXT
+factory/classical/results/live-*.json
+factory/line/results/live-*.json
+# written by every factory-test / smoke run (test_f5_ops), so the done check leaves the tree clean
+factory/ops/results/f5-test.json
+factory/ops/results/f5-smoke.json
+factory/desk/build/
+factory/desk/models/*
+!factory/desk/models/pick.onnx
+!factory/desk/models/pick.json
+factory/desk/results/live.log
+factory/desk/results/live.json
+factory/cell/results/live-stream.json

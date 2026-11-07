@@ -1,0 +1,513 @@
+{
+ "date": "2026-11-03 14:49",
+ "seconds": 180.0,
+ "seeds": 2,
+ "seed0": 7000,
+ "perception": "vision",
+ "carry": "student",
+ "rows": [
+  {
+   "speed": 0.15,
+   "rate": 8.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 8.335,
+   "sort_rate": 0.808,
+   "arrivals_per_min": 10.335,
+   "attempt_success": 0.982,
+   "cycle_s": 3.875,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 50,
+    "missed": 10,
+    "wrong_chute": 1,
+    "dropped": 1
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.15,
+   "rate": 8.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 5.835,
+   "sort_rate": 0.691,
+   "arrivals_per_min": 8.5,
+   "attempt_success": 0.865,
+   "cycle_s": 3.74,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 35,
+    "dropped": 3,
+    "late": 5,
+    "missed": 8
+   },
+   "clutter_items": {
+    "sorted": 6,
+    "late": 3,
+    "missed": 4,
+    "dropped": 1
+   }
+  },
+  {
+   "speed": 0.15,
+   "rate": 12.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 10.17,
+   "sort_rate": 0.762,
+   "arrivals_per_min": 13.335,
+   "attempt_success": 0.97,
+   "cycle_s": 3.815,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 61,
+    "missed": 16,
+    "dropped": 3
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.15,
+   "rate": 12.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 7.83,
+   "sort_rate": 0.696,
+   "arrivals_per_min": 11.335,
+   "attempt_success": 0.91,
+   "cycle_s": 3.695,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 47,
+    "dropped": 2,
+    "missed": 14,
+    "late": 5
+   },
+   "clutter_items": {
+    "sorted": 11,
+    "dropped": 1,
+    "missed": 8,
+    "late": 3
+   }
+  },
+  {
+   "speed": 0.15,
+   "rate": 16.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 11.5,
+   "sort_rate": 0.726,
+   "arrivals_per_min": 15.83,
+   "attempt_success": 0.972,
+   "cycle_s": 3.8,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 69,
+    "missed": 22,
+    "dropped": 3,
+    "late": 1
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.15,
+   "rate": 16.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 10.165,
+   "sort_rate": 0.677,
+   "arrivals_per_min": 15.0,
+   "attempt_success": 0.895,
+   "cycle_s": 3.64,
+   "protective_stops": 1,
+   "outcomes": {
+    "sorted": 61,
+    "missed": 23,
+    "late": 4,
+    "dropped": 2
+   },
+   "clutter_items": {
+    "sorted": 17,
+    "missed": 10,
+    "late": 4
+   }
+  },
+  {
+   "speed": 0.3,
+   "rate": 8.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 6.165,
+   "sort_rate": 0.544,
+   "arrivals_per_min": 11.335,
+   "attempt_success": 0.975,
+   "cycle_s": 3.6,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 37,
+    "missed": 29,
+    "late": 1,
+    "dropped": 1
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.3,
+   "rate": 8.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 4.665,
+   "sort_rate": 0.538,
+   "arrivals_per_min": 8.5,
+   "attempt_success": 0.955,
+   "cycle_s": 3.415,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 28,
+    "missed": 21,
+    "dropped": 1,
+    "late": 1
+   },
+   "clutter_items": {
+    "sorted": 3,
+    "missed": 10,
+    "late": 1
+   }
+  },
+  {
+   "speed": 0.3,
+   "rate": 12.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 6.33,
+   "sort_rate": 0.441,
+   "arrivals_per_min": 14.335,
+   "attempt_success": 0.891,
+   "cycle_s": 3.65,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 38,
+    "missed": 40,
+    "dropped": 5,
+    "late": 3
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.3,
+   "rate": 12.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 5.67,
+   "sort_rate": 0.457,
+   "arrivals_per_min": 12.335,
+   "attempt_success": 0.916,
+   "cycle_s": 3.495,
+   "protective_stops": 0,
+   "outcomes": {
+    "sorted": 34,
+    "missed": 34,
+    "late": 3,
+    "dropped": 3
+   },
+   "clutter_items": {
+    "sorted": 5,
+    "missed": 17,
+    "late": 2
+   }
+  },
+  {
+   "speed": 0.3,
+   "rate": 16.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 8.165,
+   "sort_rate": 0.463,
+   "arrivals_per_min": 17.665,
+   "attempt_success": 0.914,
+   "cycle_s": 3.52,
+   "protective_stops": 1,
+   "outcomes": {
+    "sorted": 49,
+    "missed": 49,
+    "late": 4,
+    "dropped": 4
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.3,
+   "rate": 16.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 6.835,
+   "sort_rate": 0.391,
+   "arrivals_per_min": 17.335,
+   "attempt_success": 0.887,
+   "cycle_s": 3.435,
+   "protective_stops": 2,
+   "outcomes": {
+    "sorted": 41,
+    "missed": 57,
+    "dropped": 2,
+    "late": 4
+   },
+   "clutter_items": {
+    "sorted": 6,
+    "missed": 28,
+    "dropped": 1,
+    "late": 3
+   }
+  },
+  {
+   "speed": 0.5,
+   "rate": 8.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 11.83,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 71
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.5,
+   "rate": 8.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 8.665,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 52
+   },
+   "clutter_items": {
+    "missed": 14
+   }
+  },
+  {
+   "speed": 0.5,
+   "rate": 12.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 14.5,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 87
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.5,
+   "rate": 12.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 12.335,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 74
+   },
+   "clutter_items": {
+    "missed": 24
+   }
+  },
+  {
+   "speed": 0.5,
+   "rate": 16.0,
+   "clutter": 0.0,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 18.67,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 112
+   },
+   "clutter_items": {}
+  },
+  {
+   "speed": 0.5,
+   "rate": 16.0,
+   "clutter": 0.25,
+   "runs": 2,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 18.165,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "outcomes": {
+    "missed": 109
+   },
+   "clutter_items": {
+    "missed": 38
+   }
+  }
+ ],
+ "table": {
+  "0.15 m/s \u00b7 8/min \u00b7 clutter 0%": {
+   "sorted_per_min": 8.335,
+   "sort_rate": 0.808,
+   "arrivals_per_min": 10.335,
+   "attempt_success": 0.982,
+   "cycle_s": 3.875,
+   "protective_stops": 0
+  },
+  "0.15 m/s \u00b7 8/min \u00b7 clutter 25%": {
+   "sorted_per_min": 5.835,
+   "sort_rate": 0.691,
+   "arrivals_per_min": 8.5,
+   "attempt_success": 0.865,
+   "cycle_s": 3.74,
+   "protective_stops": 0
+  },
+  "0.15 m/s \u00b7 12/min \u00b7 clutter 0%": {
+   "sorted_per_min": 10.17,
+   "sort_rate": 0.762,
+   "arrivals_per_min": 13.335,
+   "attempt_success": 0.97,
+   "cycle_s": 3.815,
+   "protective_stops": 0
+  },
+  "0.15 m/s \u00b7 12/min \u00b7 clutter 25%": {
+   "sorted_per_min": 7.83,
+   "sort_rate": 0.696,
+   "arrivals_per_min": 11.335,
+   "attempt_success": 0.91,
+   "cycle_s": 3.695,
+   "protective_stops": 0
+  },
+  "0.15 m/s \u00b7 16/min \u00b7 clutter 0%": {
+   "sorted_per_min": 11.5,
+   "sort_rate": 0.726,
+   "arrivals_per_min": 15.83,
+   "attempt_success": 0.972,
+   "cycle_s": 3.8,
+   "protective_stops": 0
+  },
+  "0.15 m/s \u00b7 16/min \u00b7 clutter 25%": {
+   "sorted_per_min": 10.165,
+   "sort_rate": 0.677,
+   "arrivals_per_min": 15.0,
+   "attempt_success": 0.895,
+   "cycle_s": 3.64,
+   "protective_stops": 1
+  },
+  "0.30 m/s \u00b7 8/min \u00b7 clutter 0%": {
+   "sorted_per_min": 6.165,
+   "sort_rate": 0.544,
+   "arrivals_per_min": 11.335,
+   "attempt_success": 0.975,
+   "cycle_s": 3.6,
+   "protective_stops": 0
+  },
+  "0.30 m/s \u00b7 8/min \u00b7 clutter 25%": {
+   "sorted_per_min": 4.665,
+   "sort_rate": 0.538,
+   "arrivals_per_min": 8.5,
+   "attempt_success": 0.955,
+   "cycle_s": 3.415,
+   "protective_stops": 0
+  },
+  "0.30 m/s \u00b7 12/min \u00b7 clutter 0%": {
+   "sorted_per_min": 6.33,
+   "sort_rate": 0.441,
+   "arrivals_per_min": 14.335,
+   "attempt_success": 0.891,
+   "cycle_s": 3.65,
+   "protective_stops": 0
+  },
+  "0.30 m/s \u00b7 12/min \u00b7 clutter 25%": {
+   "sorted_per_min": 5.67,
+   "sort_rate": 0.457,
+   "arrivals_per_min": 12.335,
+   "attempt_success": 0.916,
+   "cycle_s": 3.495,
+   "protective_stops": 0
+  },
+  "0.30 m/s \u00b7 16/min \u00b7 clutter 0%": {
+   "sorted_per_min": 8.165,
+   "sort_rate": 0.463,
+   "arrivals_per_min": 17.665,
+   "attempt_success": 0.914,
+   "cycle_s": 3.52,
+   "protective_stops": 1
+  },
+  "0.30 m/s \u00b7 16/min \u00b7 clutter 25%": {
+   "sorted_per_min": 6.835,
+   "sort_rate": 0.391,
+   "arrivals_per_min": 17.335,
+   "attempt_success": 0.887,
+   "cycle_s": 3.435,
+   "protective_stops": 2
+  },
+  "0.50 m/s \u00b7 8/min \u00b7 clutter 0%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 11.83,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  },
+  "0.50 m/s \u00b7 8/min \u00b7 clutter 25%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 8.665,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  },
+  "0.50 m/s \u00b7 12/min \u00b7 clutter 0%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 14.5,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  },
+  "0.50 m/s \u00b7 12/min \u00b7 clutter 25%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 12.335,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  },
+  "0.50 m/s \u00b7 16/min \u00b7 clutter 0%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 18.67,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  },
+  "0.50 m/s \u00b7 16/min \u00b7 clutter 25%": {
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "arrivals_per_min": 18.165,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0
+  }
+ },
+ "wall_s": 834.3
+}

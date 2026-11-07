@@ -1,0 +1,232 @@
+#!/bin/zsh
+# rl — the one command an agent drives for robot RL on this Mac (2026-11-01). See README.md.
+#   rl train go1 [--name N] [--envs 1024] [--iters 600] [--threads 0] [--device cpu|mps] [--grid 16 [--live 8765]]   CPU MuJoCo 3.17 mujoco.batch, PPO
+#   rl train go1-mjbatch ...                 same trainer on the archived mjbatch package (mujoco 3.14), for comparison
+#   rl train go2 [--name N] [--backend metal|cpu] [--envs 4096] [--iters 101] [--seed 1]  Genesis + rsl_rl (metal = the Apple GPU)
+#   rl render go1|go2 <run> [--ckpt N]      play the policy headless -> <run>/eval.mp4 + eval.json + eval-sheet.png
+#   rl sheet <video.mp4> [out.png]          contact sheet with timestamps
+#   rl play go1 <run>                       open a window and drive the trained Go1 with the arrow keys
+#   rl watch <run> [--n 16] [--port 8765]   live browser view: 16 robots driven by the run's latest policy in real time (hot-reloads every 25 iterations; separate process, training keeps full speed)
+#   rl timeline go1 <run>                   video of every checkpoint side by side on the same command (learning timeline)
+#   rl status <run>                         one line: iterations, steps/s, reward, falls, done/eval summaries
+#   rl runs                                 list runs
+#   rl bench mj|gym|mjx|torch [mps]|genesis cpu|metal   throughput benchmarks (scripts/bench_sim.py)
+# The sorting cell (docs/sorting-cell-spec.md; factory/, lab/), 2026-11-02:
+#   rl cell build                           fetch/process YCB assets if missing, rebuild the cell MJCF from factory/cell/layout.py
+#   rl cell test [--engine mujoco|genesis] [--speeds 0.15,0.3,0.5] [--yaws 4]   belt stability test (F0) -> factory/cell/results/belt-test-<engine>.json
+#   rl cell chutes [--engine mujoco|genesis]  drop an item into each chute
+#   rl cell reach [--samples 400000]        reach map + exact top-down IK coverage -> docs/media/F0-reach-map.png
+#   rl cell video [--speed 0.3] [--seconds 10] [--cams cell,overhead]   record items riding the belt (opens it)
+#   rl cell media                           regenerate the F0 stills and videos (both engines)
+#   rl cell live [--speed 0.3]              interactive real-time window (mjpython; arrows = belt speed, C = collision shapes)
+#   rl cell stream [--port 8801]            the cell in real time as an MJPEG stream in the browser (opens it)
+#   rl lab [--port 8800]                    start the lab web app (phase pages, run buttons, live view) and open it
+#   rl pick eval [--trials 200] [--workers 6] [--seed 0] [--video 7]   F1: L0 picks over all items -> factory/classical/results/f1-eval.json, runs/f1-eval/
+#   rl pick replay <index> [--seed 0]       rerun one eval trial and render it (pick + belt cameras) with contact sheets
+#   rl pick sweep [--plans 1000]            F1: plan picks and sweep every path for collisions -> results/f1-plan-sweep.json
+#   rl pick control                         F1: servo step responses (rise, overshoot, settling) -> results/f1-control.json
+#   rl pick live [--port 8802] [--cam pick] [--rate 1] [--item any]   watch the pipeline pick, live in the browser (opens it)
+#   rl line eval [--seconds 180] [--seeds 2] [--speeds 0.15,0.3] [--rates 4,8,12] [--schedulers greedy,edf,lookahead]   F2: the moving line -> factory/line/results/f2-eval.json
+#   rl line video [--video 60] [--speed 0.3] [--rate 8] [--scheduler lookahead] [--cam pick]   record the line (opens it)
+#   rl line tracking                        F2: intercept prediction error vs belt speed and latency -> factory/line/results/f2-tracking.json
+#   rl line live [--port 8803] [--speed 0.3] [--rate 8] [--scheduler lookahead] [--carry f2|prior|learned|student] [--perception privileged|vision]   watch the line live in the browser (opens it; vision adds the camera's view)
+#   rl line live --speed 0.5 --v2 fast,early,deadline --carry student --perception vision   F7: the v2 cell on the fast belt, live
+#   rl carry snapshots [--runs 24]          F3: start states (the end of every F2 lift) -> runs/f3-snapshots/snapshots.pkl
+#   rl carry train [--iters 120] [--workers 14] [--name f3-ars]   F3: ARS on the carry policy (CPU) -> runs/<name>/, factory/learned/policy.json
+#   rl carry eval [--seeds 6] [--seconds 180]   F3 acceptance: F2 vs prior vs learned carry on the line, held-out items -> factory/learned/results/f3-eval.json
+#   rl carry check <policy.json>            F3: one policy on every start state (success, seconds until the robot is free, per item)
+#   rl carry media                          F3: results figure, learning timeline video, F2-vs-learned line videos (opens them)
+#   rl carry student [--iters 40]           F4: ARS fine-tune of the student carry (no true item state) -> factory/learned/student.json
+#   rl carry distil [--rounds 3]            F4: DAgger distillation of the teacher carry into the student -> results/f4-distil.json
+#   rl vision build                         F4: synthetic labelled set for identity + per-class pose model -> factory/vision/identity.npz (~25 s)
+#   rl vision measure [--scenes 60] [--speed 0.3]   F4: detector reports vs ground truth -> factory/vision/results/f4-vision-static.json
+#   rl vision eval [--seeds 16] [--seconds 180]   F4 acceptance: L2 (privileged) vs L4 (vision + student carry) -> factory/vision/results/f4-eval.json
+#   rl vision media                         F4: results figure, the L4 line video with the camera's view beside it (opens them)
+#   rl vision clutter                       F5: touching pairs, split on vs off -> factory/vision/results/f5-clutter-perception.json
+#   rl shift run [--minutes 10] [--speed 0.3] [--rate 12] [--clutter 0.25] [--pace 1]   F5: a production shift with live KPIs (opens the dashboard)
+#   rl shift sweep [--speeds 0.15,0.3,0.5] [--rates 8,12,16] [--clutter 0,0.25]   F5: the operating envelope -> factory/ops/results/f5-sweep.json
+#   rl shift report [--shift f5-shift]      F5: the one-page operations report -> docs/ops/F5-operations-report.md
+#   rl shift sweep ... --v2 fast,early,deadline --name f7-sweep-v2   F7: the envelope of the v2 cell (line.V2_FLAGS)
+#   rl shift f7 ablate [--seeds 6] [--seed0 7100] [--workers 7]   F7: each fast-belt change alone vs v1 -> factory/ops/results/f7-ablation.json
+#   rl shift f7 eval --seeds N --seed0 S    F7 acceptance: v1 vs v2 paired at 0.5 and 0.3 m/s (protocol first) -> f7-eval.json
+#   rl shift f7 report                      F7: the envelope figure and report -> docs/media/F7-envelope.png, docs/ops/F7-operations-report.md
+# The SO-101 desk cell (Factory v2, F6; docs/sorting-cell-spec.md §4, factory/desk/), 2026-11-03:
+#   rl desk build [--items admitted|all|a,b]  build the desk cell MJCF -> factory/desk/build/desk.xml
+#   rl desk reach                           top-down reach map of the SO-101 -> docs/media/F6-reach-map.png
+#   rl desk payload                         the payload-and-jaw table + physical picks -> factory/desk/results/payload.json, admitted.json
+#   rl desk sysid [--seeds 1,2,3]           system identification of planted servo/plant parameters -> results/f6-sysid.json, F6-sysid.png
+#   rl desk calib                           hand-eye calibration on five planted errors (part of the acceptance) -> results/f6-eval.json
+#   rl desk bc collect|train|check [--demos 3000] [--workers 12] [--epochs 40]   behaviour cloning of the classical pick -> factory/desk/models/pick.onnx
+#   rl desk eval calib|picks|rate|all [--workers 10]   F6 acceptance (protocol: factory/desk/results/f6-eval-protocol.md) -> results/f6-eval.json
+#   rl desk media [stills|pick|all] [--item N --seed S --kit real|ideal]   stills and pick videos (opens them)
+#   rl desk live [--port 8805] [--policy alternate|classical|onnx]   watch the desk cell pick live in the browser (opens it; stop: pkill -f desk_live.py)
+#   rl factory-test                         the factory regression suite
+# Every training/benchmark job runs under bin/memguard (64 GiB cap). GPU jobs go through gpu(): if a `hold` command is on PATH
+# (an optional GPU-sharing gate, see README) they queue behind it, otherwise they run directly.
+# RL_COMMIT=1 makes `rl train` commit the working tree before the run, so the run maps to a commit (off by default).
+set -eu -o pipefail
+R=${0:A:h:h}; cd $R
+MJB=$R/envs/mjbatch/bin/python; MJ=$R/envs/mj/bin/python; GEN=$R/envs/genesis/bin/python
+guard() { $R/bin/memguard ${MEMGUARD_CAP:-64} "$@"; }
+gpu() { # optional GPU gate: queue behind `hold` when it exists, else run directly
+  if command -v hold >/dev/null; then hold run --kind train --reason "local-robot" -- "$@"; else "$@"; fi
+}
+cmd=${1:-help}; shift || true
+case $cmd in
+  train)
+    what=${1:?rl train go1|go2}; shift
+    name=""; args=(); backend=metal
+    while [ $# -gt 0 ]; do case $1 in --name) name=$2; shift 2;; --backend) backend=$2; shift 2;; *) args+=($1); shift;; esac; done
+    stamp=$(date +%Y%m%d-%H%M%S); run=runs/${name:-$what-$stamp}; mkdir -p $run
+    if [ "${RL_COMMIT:-0}" = 1 ] && [ -n "$(git -C $R status --porcelain)" ]; then git -C $R add -A >/dev/null 2>&1 && git -C $R commit -qm "local-robot: state before run $run ($what ${args[*]:-defaults}${backend:+, backend $backend})" >/dev/null 2>&1 || true; fi   # opt-in
+    echo "run: $run (log $run/train.log)"
+    case $what in
+      go1) guard $MJ -I lib/go1_batch317.py --out $run "${args[@]}" 2>&1 | tee $run/train.log ;;
+      go1-mjbatch) guard $MJB -I lib/go1_joystick.py --out $run "${args[@]}" 2>&1 | tee $run/train.log ;;
+      go2) if [ $backend = cpu ]; then guard $GEN -I lib/genesis_go2/train.py --out $run --backend cpu "${args[@]}" 2>&1 | tee $run/train.log
+           else gpu $R/bin/memguard ${MEMGUARD_CAP:-64} $GEN -I lib/genesis_go2/train.py --out $run --backend $backend "${args[@]}" 2>&1 | tee $run/train.log; fi ;;
+      *) echo "unknown trainer $what"; exit 2;;
+    esac
+    [ -f $run/events.out.tfevents.* ] 2>/dev/null || true
+    ls $run/events.out.tfevents.* >/dev/null 2>&1 && $GEN -I scripts/tb2jsonl.py $run $run/metrics.jsonl
+    $R/bin/rl status $run ;;
+  render)
+    what=${1:?rl render go1|go2 <run>}; run=${2:?run dir}; shift 2
+    case $what in
+      go1|go1-mjbatch) if grep -q '"mjbatch"' $run/config.json 2>/dev/null; then guard $MJB -I lib/go1_joystick.py --out $run --render $run/eval.mp4 "$@" | tail -1 | tee $run/render.log
+           else guard $MJ -I lib/go1_batch317.py --out $run --render $run/eval.mp4 "$@" | tail -1 | tee $run/render.log; fi ;;
+      go2) guard $GEN -I lib/genesis_go2/record.py $run "$@" | tail -1 | tee $run/render.log ;;
+    esac
+    $R/bin/rl-sheet $run/eval.mp4 $run/eval-sheet.png ;;
+  sheet) exec $R/bin/rl-sheet "$@" ;;
+  play) run=${2:?rl play go1 <run>}; nohup $MJB lib/go1_play.py $run > $run/play.log 2>&1 & echo "play window opening for $run (log $run/play.log)" ;;
+  watch) run=${1:?rl watch <run>}; shift
+    if [ -f $run/live.json ]; then pid=$($MJ -I -c "import json,sys; print(json.load(open(sys.argv[1])).get('pid',0))" $run/live.json); [ "$pid" != 0 ] && ! kill -0 $pid 2>/dev/null && rm -f $run/live.json; fi  # stale viewer
+    if [ ! -f $run/live.json ]; then mkdir -p $run; nohup $MJ -I lib/go1_live.py $run "$@" > $run/live.log 2>&1 &
+      for i in $(seq 1 15); do [ -f $run/live.json ] && break; sleep 1; done; fi
+    url=$($MJ -I -c "import json,sys; print(json.load(open(sys.argv[1]))['url'])" $run/live.json); open $url; echo "opened $url (log $run/live.log)" ;;
+  timeline) what=${1:?rl timeline go1 <run>}; run=${2:?run dir}; shift 2
+    guard $MJ -I lib/go1_timeline.py $run "$@" | tail -1 | cut -c1-400; open $run/timeline.mp4 ;;
+  status)
+    run=${1:?run dir}
+    [ -f $run/metrics.jsonl ] && { echo -n "last: "; tail -1 $run/metrics.jsonl | cut -c1-300; }
+    [ -f $run/done.json ] && { echo -n "done: "; cat $run/done.json; echo; }
+    [ -f $run/eval.json ] && $MJ -I -c "import json,sys; e=json.load(open(sys.argv[1])); print('eval: falls', e['falls'], 'mean_err_vx', e['mean_err_vx'], 'video', e['video'])" $run/eval.json
+    [ -f $run/eval-sheet.png ] && echo "sheet: $run/eval-sheet.png"; true ;;
+  runs) for d in runs/*/; do printf "%-32s %s\n" $d "$( [ -f $d/done.json ] && cat $d/done.json || echo running/unfinished )"; done ;;
+  bench)
+    what=${1:?rl bench mj|gym|mjx|torch|genesis}; shift
+    mkdir -p logs; out=logs/bench-$(date +%Y%m%d).jsonl
+    case $what in
+      genesis) if [ "${1:-cpu}" = metal ]; then gpu $R/bin/memguard ${MEMGUARD_CAP:-64} $GEN -I scripts/bench_sim.py genesis metal 2>&1 | tee -a $out
+               else guard $GEN -I scripts/bench_sim.py genesis cpu 2>&1 | tee -a $out; fi ;;
+      torch) if [ "${1:-}" = mps ]; then gpu $R/bin/memguard ${MEMGUARD_CAP:-64} $MJ -I scripts/bench_sim.py torch mps 2>&1 | tee -a $out
+             else guard $MJ -I scripts/bench_sim.py torch 2>&1 | tee -a $out; fi ;;
+      *) guard $MJ -I scripts/bench_sim.py $what 2>&1 | tee -a $out ;;
+    esac ;;
+  cell)
+    what=${1:-help}; shift || true
+    case $what in
+      build) [ -f factory/cell/assets/ycb/_dl/022_windex_bottle/google_16k/textured.obj ] || scripts/fetch_ycb.sh
+             [ -f factory/cell/assets/ycb/022_windex_bottle/hull_base.obj ] || guard $GEN -I factory/cell/ycb.py
+             $MJ -I factory/cell/build_mjcf.py "$@" 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      test) eng=mujoco; a=(); while [ $# -gt 0 ]; do case $1 in --engine) eng=$2; shift 2;; *) a+=($1); shift;; esac; done
+            py=$MJ; [ $eng = genesis ] && py=$GEN
+            guard $py -I factory/cell/belt_test.py --engine $eng "${a[@]}" 2>&1 | grep -v "INFO\|WARNING\|UNSUPPORTED\|Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      chutes) eng=mujoco; [ "${1:-}" = --engine ] && eng=$2; py=$MJ; [ $eng = genesis ] && py=$GEN
+              guard $py -I factory/cell/chute_test.py --engine $eng 2>&1 | grep "^$eng" ;;
+      reach) guard $MJ -I factory/cell/reach_map.py "$@" 2>&1 | tail -2; open docs/media/F0-reach-map.png ;;
+      video) out=$(guard $MJ -I factory/cell/belt_video.py "$@" 2>&1 | grep "\.mp4$" | head -1); echo $out; [ -n "$out" ] && open $out ;;
+      media) guard $MJ -I factory/cell/f0_media.py && guard $GEN -I factory/cell/f0_media.py --genesis 2>&1 | grep -v "INFO\|WARNING" | tail -1; ls docs/media/F0-* ;;
+      live) nohup $R/bin/memguard 16 $R/envs/mj/bin/mjpython factory/cell/live_view.py "$@" > factory/cell/results/live.log 2>&1 &
+            echo "live window opening (log factory/cell/results/live.log); close it to stop" ;;
+      stream) port=8801; [ "${1:-}" = --port ] && port=$2
+              if ! curl -s -m 1 http://127.0.0.1:$port/state >/dev/null; then nohup $R/bin/memguard 16 $MJ -I factory/cell/live_stream.py "$@" > factory/cell/results/live-stream.log 2>&1 &
+                for i in $(seq 1 20); do curl -s -m 1 http://127.0.0.1:$port/state >/dev/null && break; sleep 1; done; fi
+              open http://127.0.0.1:$port/; echo "stream at http://127.0.0.1:$port/" ;;
+      *) sed -n '/^# The sorting cell/,/^# *rl factory-test/p' $0 ;;
+    esac ;;
+  pick)
+    what=${1:-help}; shift || true
+    case $what in
+      eval) guard $MJ -I factory/classical/eval_f1.py "$@" 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone"; [ -f runs/f1-eval/eval-sheet.png ] && echo "sheet: runs/f1-eval/eval-sheet.png" ;;
+      replay) k=${1:?rl pick replay <index>}; shift; guard $MJ -I factory/classical/eval_f1.py --replay $k --video 1 "$@" 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone"; open runs/f1-eval/replay-$k-pick.mp4 ;;
+      sweep) n=1000; [ "${1:-}" = --plans ] && n=$2; guard $MJ -I factory/classical/eval_f1.py --plans $n 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      control) $MJ -I factory/classical/control.py 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      live) port=8802; a=("$@"); [ "${1:-}" = --port ] && port=$2
+            if ! curl -s -m 1 http://127.0.0.1:$port/state >/dev/null; then nohup $R/bin/memguard 16 $MJ -I factory/classical/live_pick.py "${a[@]}" > factory/classical/results/live-pick.log 2>&1 &
+              for i in $(seq 1 20); do curl -s -m 1 http://127.0.0.1:$port/state >/dev/null && break; sleep 1; done; fi
+            open http://127.0.0.1:$port/; echo "live picks at http://127.0.0.1:$port/ (stop: pkill -f live_pick.py)" ;;
+      *) sed -n '/^#   rl pick eval/,/^#   rl pick live/p' $0 ;;
+    esac ;;
+  line)
+    what=${1:-help}; shift || true
+    case $what in
+      eval) guard $MJ -I factory/line/eval_f2.py "$@" 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      video) a=("$@"); [ $# -eq 0 ] && a=(--video 60); out=$(guard $MJ -I factory/line/eval_f2.py "${a[@]}" 2>&1 | grep "^video:" | cut -d' ' -f2); echo $out; [ -n "$out" ] && open $out ;;
+      tracking) guard $MJ -I factory/line/tracking_study.py 2>&1 | grep -v "Attach conflict\|keeping parent\|^impratio\|^cone" ;;
+      live) port=8803; a=("$@"); [ "${1:-}" = --port ] && port=$2
+            if ! curl -s -m 1 http://127.0.0.1:$port/state >/dev/null; then nohup $R/bin/memguard 16 $MJ -I factory/line/live_line.py "${a[@]}" > factory/line/results/live-line.log 2>&1 &
+              for i in $(seq 1 20); do curl -s -m 1 http://127.0.0.1:$port/state >/dev/null && break; sleep 1; done; fi
+            open http://127.0.0.1:$port/; echo "live line at http://127.0.0.1:$port/ (stop: pkill -f live_line.py)" ;;
+      *) sed -n '/^#   rl line eval/,/^#   rl line live/p' $0 ;;
+    esac ;;
+  carry)
+    what=${1:-help}; shift || true; F="Attach conflict\|keeping parent\|^impratio\|^cone"
+    case $what in
+      snapshots) guard $MJ -I factory/learned/snapshots.py "$@" 2>&1 | grep -v "$F" ;;
+      train) guard $MJ -I factory/learned/train_f3.py "$@" 2>&1 | grep -v "$F" ;;
+      eval) guard $MJ -I factory/learned/eval_f3.py "$@" 2>&1 | grep -v "$F" ;;
+      check) guard $MJ -I factory/learned/train_f3.py --eval "${1:-factory/learned/policy.json}" 2>&1 | grep -v "$F" | tail -1 ;;
+      media) guard $MJ -I factory/learned/f3_media.py "$@" 2>&1 | grep -v "$F"; open docs/media/F3-results.png docs/media/F3-timeline.mp4 ;;
+      student) guard $MJ -I factory/learned/train_f3.py --student --init "${STUDENT_INIT:-factory/learned/student.json}" --name f4-student-ars "$@" 2>&1 | grep -v "$F" ;;
+      distil) guard $MJ -I factory/learned/distil_f4.py "$@" 2>&1 | grep -v "$F" ;;
+      *) sed -n '/^#   rl carry snapshots/,/^#   rl carry distil/p' $0 ;;
+    esac ;;
+  vision)
+    what=${1:-help}; shift || true; F="Attach conflict\|keeping parent\|^impratio\|^cone\|ARB_clip_control"
+    case $what in
+      build) guard $MJ -I factory/vision/vision.py build "$@" 2>&1 | grep -v "$F" ;;
+      clutter) guard $MJ -I factory/vision/vision.py clutter "$@" 2>&1 | grep -v "$F" ;;
+      measure) guard $MJ -I factory/vision/vision.py measure "$@" 2>&1 | grep -v "$F" ;;
+      eval) gpu $R/bin/memguard ${MEMGUARD_CAP:-56} $MJ -I factory/vision/eval_f4.py "$@" 2>&1 | grep -v "$F" ;;
+      media) guard $MJ -I factory/vision/f4_media.py "$@" 2>&1 | grep -v "$F"; open docs/media/F4-results.png docs/media/F4-vision-line-0.30.mp4 ;;
+      *) sed -n '/^#   rl vision build/,/^#   rl vision media/p' $0 ;;
+    esac ;;
+  shift)
+    what=${1:-help}; shift || true; F="Attach conflict\|keeping parent\|^impratio\|^cone\|ARB_clip_control"
+    case $what in
+      run) curl -s -m 1 http://127.0.0.1:8800/api/phases >/dev/null || $0 lab >/dev/null
+           ( sleep 6; open "http://127.0.0.1:8800/dashboard" ) &
+           guard $MJ -I factory/ops/shift.py "$@" 2>&1 | grep -v "$F" ;;
+      sweep) guard $MJ -I factory/ops/sweep.py "$@" 2>&1 | grep -v "$F" ;;
+      report) $MJ -I factory/ops/report.py "$@" && open docs/media/F5-operations-report.png ;;
+      f7) sub=${1:-report}; shift || true
+          if [ "$sub" = report ]; then $MJ -I factory/ops/f7_report.py && open docs/media/F7-envelope.png
+          else guard $MJ -I factory/ops/f7.py "$sub" "$@" 2>&1 | grep -v "$F"; fi ;;
+      *) sed -n '/^#   rl shift run/,/^#   rl shift f7 report/p' $0 ;;
+    esac ;;
+  desk)
+    what=${1:-help}; shift || true; F="Attach conflict\|keeping parent\|^impratio\|^cone\|ARB_clip_control\|^$"
+    case $what in
+      build) $MJ -I factory/desk/build_desk.py "$@" 2>&1 | grep -v "$F" ;;
+      reach) guard $MJ -I factory/desk/desk_reach.py 2>&1 | grep -v "$F" | tail -1; open docs/media/F6-reach-map.png ;;
+      payload) gpu $R/bin/memguard 32 $MJ -I factory/desk/payload.py "$@" 2>&1 | grep -v "$F" ;;
+      sysid) guard $MJ -I factory/desk/sysid.py "$@" 2>&1 | grep -v "$F"; [ -f docs/media/F6-sysid.png ] && open docs/media/F6-sysid.png ;;
+      calib) gpu $R/bin/memguard 32 $MJ -I factory/desk/eval_f6.py calib 2>&1 | grep -v "$F" ;;
+      bc) gpu $R/bin/memguard 48 $MJ -I factory/desk/bc.py "$@" 2>&1 | grep -v "$F" ;;
+      eval) gpu $R/bin/memguard 48 $MJ -I factory/desk/eval_f6.py "$@" 2>&1 | grep -v "$F" ;;
+      media) gpu $R/bin/memguard 16 $MJ -I factory/desk/f6_media.py "${@:-all}" 2>&1 | grep -v "$F"; open docs/media/F6-desk-desk.png ;;
+      live) port=8805; a=("$@"); [ "${1:-}" = --port ] && port=$2
+            if ! curl -s -m 1 http://127.0.0.1:$port/state >/dev/null; then nohup $R/bin/memguard 16 $MJ -I factory/desk/desk_live.py "${a[@]}" > factory/desk/results/live.log 2>&1 &
+              for i in $(seq 1 40); do curl -s -m 1 http://127.0.0.1:$port/state >/dev/null && break; sleep 1; done; fi
+            open http://127.0.0.1:$port/; echo "desk live at http://127.0.0.1:$port/ (stop: pkill -f desk_live.py)" ;;
+      *) sed -n '/^# The SO-101 desk cell/,/^#   rl desk live/p' $0 ;;
+    esac ;;
+  lab) port=8800; [ "${1:-}" = --port ] && port=$2
+       if ! curl -s -m 1 http://127.0.0.1:$port/api/phases >/dev/null; then mkdir -p lab/state/jobs; nohup python3 lab/server.py --port $port > lab/state/server.log 2>&1 &
+         for i in $(seq 1 10); do curl -s -m 1 http://127.0.0.1:$port/api/phases >/dev/null && break; sleep 0.5; done; fi
+       open http://127.0.0.1:$port/; echo "lab at http://127.0.0.1:$port/ (log lab/state/server.log)" ;;
+  factory-test) guard $GEN -m pytest -q factory/tests -p no:cacheprovider "$@" 2>&1 | grep -v "INFO\|WARNING\|UNSUPPORTED" ;;
+  help|*) sed -n '2,/^# *rl factory-test/p' $0 ;;
+esac

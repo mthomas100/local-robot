@@ -1,0 +1,168 @@
+{
+ "id": "F7",
+ "title": "F7 · The fast belt and the operating envelope",
+ "summary": "Accepted (2026-11-03). The F5 cell, swept over belt speed, load and clutter, sorts nothing at 0.5 m/s: its approach is too slow for an item that is in reach for only 2.2 s. F7 measures that envelope, then makes the fast belt work with three changes (faster approach motions, earlier intercepts, deadline-aware scheduling), each measured on its own, and tests the result against the v1 cell under a protocol fixed before the run. Result on 12 fresh paired seeds: at 0.5 m/s v1 0.00 and v2 4.00 sorted/min (+4.00 [3.54, 4.45]); at 0.3 m/s 5.75 and 7.17 (+1.42 [1.00, 1.83]); 0 wrong chutes, no new kind of protective stop.",
+ "disciplines": [
+  "6 · Control (faster motions inside the limits)",
+  "8 · Planning under time (intercepts)",
+  "9 · Scheduling (deadlines)",
+  "12 · Reliability (failure classes)",
+  "15 · Operations (the envelope)"
+ ],
+ "highlight": [
+  "belt",
+  "robot",
+  "camera",
+  "scheduler"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "An <b>operating envelope</b> is the map of conditions under which a machine does its job: here, how many items per minute the cell sorts as the belt gets faster (0.15, 0.3, 0.5 m/s), as more items arrive (8, 12, 16 per minute) and as more of them come touching each other. Every real production cell has one, and the people who run the line need it to choose a belt speed.",
+    "The v1 cell's envelope has a cliff: at 0.15 m/s it sorts up to 11.5 items a minute, at 0.3 m/s up to 8, and at 0.5 m/s <b>none at all</b>. Every item is missed. The robot never even tries, because by the time its approach could reach the place where the item will be, that place is already out of reach."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "On a moving belt every pick is a <b>race against a deadline</b>. An item is reachable for the 1.1 m of belt in front of the robot: 7.3 s at 0.15 m/s but only 2.2 s at 0.5 m/s. In that time the robot has to decide, approach, descend while moving with the belt, close the gripper, lift and brake, and the item keeps moving the whole time (about 0.7 m of belt, in v1's timing).",
+    "Three changes, each a classic tool: <b>faster motions</b> (joint speed limits closer to the UR5e's rated 3.14 rad/s, a faster descent and lift: discipline 6, control); <b>earlier intercepts</b> (trust a track after 5 camera frames instead of 10, wait further upstream, plan from 0.3 s after the decision, close faster: discipline 8, planning under time); and <b>deadline-aware scheduling</b> (an item is a candidate only while a pick can still finish in the window, and the scheduler counts what stays catchable after each pick: discipline 9).",
+    "Measured one at a time, no single change makes the fast belt work: each one alone leaves the cell at about zero. Together they do. That is common in real systems: the binding constraint moves as soon as you relax one, so you have to relax all of them."
+   ]
+  },
+  {
+   "h": "How the test is fair",
+   "p": [
+    "The comparison is fixed before it runs (a <b>pre-registered protocol</b>): the same random streams of items (paired seeds, never used in development) for the v1 and v2 cells, at 0.5 m/s (v2 must be better, with the 95% confidence interval of the difference above zero) and at 0.3 m/s (v2 must not be worse by more than a margin fixed in advance), with zero items in the wrong chute and no new kind of protective stop."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Start the live view at 0.5 m/s and switch between the v1 and v2 cells: v1 waits while everything passes; v2 reaches upstream and catches items on the move. Run the sweep for either cell and compare the envelopes. In the code (factory/line/line.py, V2_FLAGS): change the joint limits of 'fast', the number of frames before a track is trusted in 'early', or the deadline horizon."
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8803",
+  "job": "live-fast",
+  "kind": "line",
+  "note": "The UR5e line with the overhead camera (vision only) and the learned carry. Choose the cell (v2 = the F7 changes) and the belt speed."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F7-envelope.png",
+   "caption": "The operating envelope of the v1 and v2 cells: throughput against load per belt speed, where the items go (losses by class), and each change on its own."
+  }
+ ],
+ "numbers": [
+  {
+   "label": "Acceptance: v2 - v1 sorted/min on paired fresh seeds (0.5 m/s: above 0; 0.3 m/s: above -margin)",
+   "file": "factory/ops/results/f7-eval.json",
+   "table": "paired",
+   "rowLabel": "belt m/s"
+  },
+  {
+   "label": "Each change on its own (F5 stream: 12/min, 25% touching pairs)",
+   "file": "factory/ops/results/f7-ablation.json",
+   "table": "table",
+   "rowLabel": "speed · variant"
+  },
+  {
+   "label": "The v1 envelope",
+   "file": "factory/ops/results/f7-sweep-v1.json",
+   "table": "table",
+   "rowLabel": "condition"
+  },
+  {
+   "label": "The v2 envelope",
+   "file": "factory/ops/results/f7-sweep-v2.json",
+   "table": "table",
+   "rowLabel": "condition"
+  }
+ ],
+ "jobs": [
+  {
+   "id": "live-fast",
+   "label": "Live: the fast belt",
+   "help": "The line in real time, vision only, learned carry. The v2 cell has the F7 changes.",
+   "button": "Watch",
+   "knobs": [
+    {
+     "name": "cell",
+     "type": "select",
+     "options": [
+      "v2",
+      "v1"
+     ],
+     "default": "v2"
+    },
+    {
+     "name": "speed",
+     "label": "belt m/s",
+     "type": "number",
+     "default": 0.5,
+     "min": 0.05,
+     "max": 0.6,
+     "step": 0.05
+    },
+    {
+     "name": "rate",
+     "label": "arrivals/min",
+     "type": "number",
+     "default": 12,
+     "min": 1,
+     "max": 30
+    }
+   ]
+  },
+  {
+   "id": "f7-sweep",
+   "label": "Operating envelope",
+   "help": "One cell over 3 belt speeds x 3 arrival rates x 2 clutter levels, 180 s each; writes factory/ops/results/f7-sweep-lab.json.",
+   "button": "Sweep",
+   "knobs": [
+    {
+     "name": "cell",
+     "type": "select",
+     "options": [
+      "v2",
+      "v1"
+     ],
+     "default": "v2"
+    },
+    {
+     "name": "seeds",
+     "type": "number",
+     "default": 1,
+     "min": 1,
+     "max": 4
+    }
+   ]
+  },
+  {
+   "id": "f7-ablate",
+   "label": "Each change alone",
+   "help": "v1, fast, early, deadline and all three on the F5 stream at 0.3 and 0.5 m/s (writes factory/ops/results/f7-ablation-lab.json; the recorded ablation is untouched).",
+   "button": "Ablate",
+   "knobs": [
+    {
+     "name": "seeds",
+     "type": "number",
+     "default": 2,
+     "min": 1,
+     "max": 12
+    },
+    {
+     "name": "seed0",
+     "type": "number",
+     "default": 9000,
+     "min": 0,
+     "max": 1000000
+    }
+   ]
+  }
+ ]
+}

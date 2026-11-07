@@ -1,0 +1,50 @@
+#!/bin/bash
+# memguard CAP_GIB command [args…] — run a heavy job and kill it when it is the thing exhausting memory.
+#
+# Why: batched simulation and multi-process evaluation scale memory with the number of environments and workers
+# (an evaluation worker here grows to ~6 GB), and a job orphaned by a killed shell keeps running. A cap per job keeps a
+# runaway from taking the whole machine down. Every heavy job in bin/rl runs under it. Every 2 s it checks, and kills
+# the job and its children (SIGKILL, exit 137) when any of these holds:
+#   1. tree RSS (the job and all its descendants) > CAP_GIB                 -> a runaway job
+#   2. available memory (free + inactive + purgeable + speculative) < FLOOR -> true exhaustion
+#      (MEMGUARD_FLOOR_GIB, default 4)
+#   3. free memory < 15% and tree RSS > CAP_GIB/4                          -> memory is tight AND this job is a big
+#      part of it (a small job beside another large resident process keeps running)
+#
+#   bin/memguard 32 envs/mj/bin/python -I factory/classical/eval_f1.py
+set -u
+cap=${1:?usage: memguard CAP_GIB command [args…]}; shift
+floor=${MEMGUARD_FLOOR_GIB:-4}
+"$@" &
+p=$!
+trap 'kill -TERM $p 2>/dev/null; sleep 2; kill -9 $p 2>/dev/null' INT TERM HUP
+tree_rss_kb() {  # RSS of $1 and every descendant, in KiB
+  ps -A -o pid=,ppid=,rss= 2>/dev/null | awk -v root="$1" '
+    { pp[$1] = $2; rs[$1] = $3 }
+    END { for (q in pp) { x = q; while (x != "" && x != 0 && x != 1) { if (x == root) { s += rs[q]; break } x = pp[x] } } print s + 0 }'
+}
+avail_gib() {    # free + inactive + purgeable + speculative pages, in GiB
+  vm_stat 2>/dev/null | awk '/page size of/ { for (i = 1; i <= NF; i++) if ($i ~ /^[0-9]+$/) ps = $i }
+    /^Pages (free|inactive|purgeable|speculative):/ { gsub(/\./, "", $NF); n += $NF }
+    END { printf "%d", n * ps / 1073741824 }'
+}
+while kill -0 "$p" 2>/dev/null; do
+  r=$(tree_rss_kb "$p")
+  f=$(memory_pressure 2>/dev/null | awk -F': ' '/free percentage/ {gsub(/%/,"",$2); print $2+0}')
+  a=$(avail_gib)
+  why=""
+  if [ "${r:-0}" -gt $((cap * 1048576)) ]; then why="tree rss over the cap"
+  elif [ "${a:-99}" -lt "$floor" ]; then why="available ${a} GiB under the ${floor} GiB floor"
+  elif [ "${f:-100}" -lt 15 ] && [ "${r:-0}" -gt $((cap * 262144)) ]; then why="system free under 15% and this job over a quarter of its cap"
+  fi
+  if [ -n "$why" ]; then
+    echo "memguard: killing pid $p ($why: rss $(( ${r:-0} / 1048576 )) GiB, cap $cap GiB, system free ${f:-?}%, available ${a:-?} GiB)" >&2
+    kill -9 "$p" 2>/dev/null
+    # children of the job go with its process group when it is a leader; otherwise sweep anything still parented to it.
+    pkill -9 -P "$p" 2>/dev/null
+    wait "$p" 2>/dev/null
+    exit 137
+  fi
+  sleep 2
+done
+wait "$p"

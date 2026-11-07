@@ -1,0 +1,162 @@
+{
+ "date": "2026-11-02 23:29",
+ "seconds": 180.0,
+ "seeds": 16,
+ "seed0": 300,
+ "rate_per_min": 16.0,
+ "cells": {
+  "L2": {
+   "perception": "privileged",
+   "carry": "teacher"
+  },
+  "L4": {
+   "perception": "vision",
+   "carry": "student"
+  },
+  "L2-f2": {
+   "perception": "privileged",
+   "carry": "f2"
+  },
+  "L4-f2": {
+   "perception": "vision",
+   "carry": "f2"
+  }
+ },
+ "table": {
+  "0.15 m/s \u00b7 L2": {
+   "sort_rate": 0.7721,
+   "sorted_per_min": 10.521,
+   "attempt_success": 0.983,
+   "wrong_chute": 1,
+   "dropped": 15,
+   "knocked": 1,
+   "grasp_err_mm": 1.9,
+   "ms_per_frame": null,
+   "runs": 16
+  },
+  "0.15 m/s \u00b7 L4": {
+   "sort_rate": 0.7466,
+   "sorted_per_min": 10.146,
+   "attempt_success": 0.979,
+   "wrong_chute": 0,
+   "dropped": 35,
+   "knocked": 2,
+   "grasp_err_mm": 2.5,
+   "ms_per_frame": 32.7,
+   "runs": 16
+  },
+  "0.15 m/s \u00b7 L2-f2": {
+   "sort_rate": 0.6104,
+   "sorted_per_min": 8.207,
+   "attempt_success": 0.96,
+   "wrong_chute": 0,
+   "dropped": 5,
+   "knocked": 1,
+   "grasp_err_mm": 1.9,
+   "ms_per_frame": null,
+   "runs": 16
+  },
+  "0.15 m/s \u00b7 L4-f2": {
+   "sort_rate": 0.6025,
+   "sorted_per_min": 8.082,
+   "attempt_success": 0.963,
+   "wrong_chute": 0,
+   "dropped": 8,
+   "knocked": 2,
+   "grasp_err_mm": 2.6,
+   "ms_per_frame": 33.2,
+   "runs": 16
+  },
+  "0.30 m/s \u00b7 L2": {
+   "sort_rate": 0.5267,
+   "sorted_per_min": 7.98,
+   "attempt_success": 0.966,
+   "wrong_chute": 1,
+   "dropped": 13,
+   "knocked": 1,
+   "grasp_err_mm": 13.5,
+   "ms_per_frame": null,
+   "runs": 16
+  },
+  "0.30 m/s \u00b7 L4": {
+   "sort_rate": 0.4828,
+   "sorted_per_min": 7.25,
+   "attempt_success": 0.967,
+   "wrong_chute": 0,
+   "dropped": 23,
+   "knocked": 1,
+   "grasp_err_mm": 2.6,
+   "ms_per_frame": 31.0,
+   "runs": 16
+  },
+  "0.30 m/s \u00b7 L2-f2": {
+   "sort_rate": 0.4406,
+   "sorted_per_min": 6.646,
+   "attempt_success": 0.963,
+   "wrong_chute": 0,
+   "dropped": 9,
+   "knocked": 0,
+   "grasp_err_mm": 2.3,
+   "ms_per_frame": null,
+   "runs": 16
+  },
+  "0.30 m/s \u00b7 L4-f2": {
+   "sort_rate": 0.4004,
+   "sorted_per_min": 6.043,
+   "attempt_success": 0.922,
+   "wrong_chute": 0,
+   "dropped": 16,
+   "knocked": 2,
+   "grasp_err_mm": 2.7,
+   "ms_per_frame": 31.1,
+   "runs": 16
+  }
+ },
+ "paired": {
+  "0.15 m/s \u00b7 L2 \u2212 L4": {
+   "mean": 0.0254,
+   "lo": -0.0023,
+   "hi": 0.0532,
+   "n": 16
+  },
+  "0.15 m/s \u00b7 L2-f2 \u2212 L4-f2": {
+   "mean": 0.0079,
+   "lo": -0.0086,
+   "hi": 0.0244,
+   "n": 16
+  },
+  "0.30 m/s \u00b7 L2 \u2212 L4": {
+   "mean": 0.0439,
+   "lo": 0.0183,
+   "hi": 0.0695,
+   "n": 16
+  },
+  "0.30 m/s \u00b7 L2-f2 \u2212 L4-f2": {
+   "mean": 0.0401,
+   "lo": 0.0122,
+   "hi": 0.0681,
+   "n": 16
+  }
+ },
+ "verdict": {
+  "0.15 m/s": {
+   "gap": 0.0254,
+   "ci95": [
+    -0.0023,
+    0.0532
+   ],
+   "within_10_points": true
+  },
+  "0.30 m/s": {
+   "gap": 0.0439,
+   "ci95": [
+    0.0183,
+    0.0695
+   ],
+   "within_10_points": true
+  }
+ },
+ "accepted": true,
+ "rule": "L2 - L4 paired sort-rate difference: upper end of the 95% interval below 0.10 at every belt speed",
+ "wall_s": 2114.0
+}

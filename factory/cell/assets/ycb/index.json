@@ -1,0 +1,901 @@
+{
+ "002_master_chef_can": {
+  "id": "002_master_chef_can",
+  "name": "master_chef_can",
+  "material": "metal",
+  "mass_kg": 0.414,
+  "friction": 0.5,
+  "extents": [
+   0.1038,
+   0.1038,
+   0.141
+  ],
+  "bounds": [
+   [
+    -0.0519,
+    -0.0519,
+    0.0
+   ],
+   [
+    0.0519,
+    0.0519,
+    0.141
+   ]
+  ],
+  "com": [
+   2e-05,
+   1e-05,
+   0.06961
+  ],
+  "inertia_full": [
+   0.0009737,
+   0.0009718,
+   0.0005379,
+   3e-07,
+   1e-07,
+   1e-07
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_06.obj",
+   "hull_07.obj",
+   "hull_08.obj",
+   "hull_09.obj",
+   "hull_10.obj",
+   "hull_11.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 1158.8,
+  "convex_hull_volume_cm3": 1141.6,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999999,
+    -0.0,
+    -0.001178,
+    0.017187
+   ],
+   [
+    -0.0,
+    1.0,
+    -0.000646,
+    0.009839
+   ],
+   [
+    0.001178,
+    0.000646,
+    0.999999,
+    0.000593
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.08,
+  "stable_pose_probability": 0.094
+ },
+ "003_cracker_box": {
+  "id": "003_cracker_box",
+  "name": "cracker_box",
+  "material": "cardboard",
+  "mass_kg": 0.411,
+  "friction": 0.7,
+  "extents": [
+   0.074,
+   0.1661,
+   0.2157
+  ],
+  "bounds": [
+   [
+    -0.037,
+    -0.083,
+    0.0
+   ],
+   [
+    0.037,
+    0.083,
+    0.2157
+   ]
+  ],
+  "com": [
+   -0.00168,
+   5e-05,
+   0.10537
+  ],
+  "inertia_full": [
+   0.0024971,
+   0.0017673,
+   0.0010391,
+   4e-07,
+   1.37e-05,
+   3.3e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 2364.7,
+  "convex_hull_volume_cm3": 2309.7,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999997,
+    -1e-06,
+    0.002249,
+    0.012802
+   ],
+   [
+    -1e-06,
+    1.0,
+    0.00048,
+    0.014168
+   ],
+   [
+    -0.002249,
+    -0.00048,
+    0.999997,
+    0.004301
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.13,
+  "stable_pose_probability": 0.033
+ },
+ "004_sugar_box": {
+  "id": "004_sugar_box",
+  "name": "sugar_box",
+  "material": "cardboard",
+  "mass_kg": 0.514,
+  "friction": 0.7,
+  "extents": [
+   0.0513,
+   0.0963,
+   0.1779
+  ],
+  "bounds": [
+   [
+    -0.0257,
+    -0.0481,
+    0.0
+   ],
+   [
+    0.0257,
+    0.0481,
+    0.1779
+   ]
+  ],
+  "com": [
+   -0.00032,
+   -0.00014,
+   0.08577
+  ],
+  "inertia_full": [
+   0.0017094,
+   0.0014373,
+   0.0004331,
+   -9.7e-06,
+   5.06e-05,
+   -1.85e-05
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 707.7,
+  "convex_hull_volume_cm3": 661.1,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    1.0,
+    1e-06,
+    -0.00095,
+    0.007438
+   ],
+   [
+    1e-06,
+    0.999996,
+    0.002849,
+    0.016454
+   ],
+   [
+    0.00095,
+    -0.002849,
+    0.999995,
+    0.00085
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.17,
+  "stable_pose_probability": 0.028
+ },
+ "005_tomato_soup_can": {
+  "id": "005_tomato_soup_can",
+  "name": "tomato_soup_can",
+  "material": "metal",
+  "mass_kg": 0.349,
+  "friction": 0.5,
+  "extents": [
+   0.0687,
+   0.0687,
+   0.1025
+  ],
+  "bounds": [
+   [
+    -0.0344,
+    -0.0343,
+    0.0
+   ],
+   [
+    0.0344,
+    0.0343,
+    0.1025
+   ]
+  ],
+  "com": [
+   -0.00061,
+   0.00085,
+   0.0518
+  ],
+  "inertia_full": [
+   0.0004002,
+   0.0004036,
+   0.0001989,
+   9e-07,
+   2.4e-06,
+   1.4e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_06.obj",
+   "hull_07.obj",
+   "hull_08.obj",
+   "hull_09.obj",
+   "hull_10.obj",
+   "hull_11.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 408.7,
+  "convex_hull_volume_cm3": 357.4,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999997,
+    -1e-06,
+    -0.002571,
+    0.009466
+   ],
+   [
+    -1e-06,
+    1.0,
+    -0.000771,
+    -0.083958
+   ],
+   [
+    0.002571,
+    0.000771,
+    0.999996,
+    0.000271
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.15,
+  "stable_pose_probability": 0.072
+ },
+ "006_mustard_bottle": {
+  "id": "006_mustard_bottle",
+  "name": "mustard_bottle",
+  "material": "plastic",
+  "mass_kg": 0.603,
+  "friction": 0.6,
+  "extents": [
+   0.099,
+   0.0685,
+   0.1932
+  ],
+  "bounds": [
+   [
+    -0.0495,
+    -0.0343,
+    0.0
+   ],
+   [
+    0.0495,
+    0.0343,
+    0.1932
+   ]
+  ],
+  "com": [
+   0.00034,
+   0.00035,
+   0.07737
+  ],
+  "inertia_full": [
+   0.001573,
+   0.0017255,
+   0.0004496,
+   7.83e-05,
+   -6.5e-06,
+   -7.6e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 688.2,
+  "convex_hull_volume_cm3": 698.7,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999999,
+    -0.0,
+    0.001016,
+    0.015329
+   ],
+   [
+    -0.0,
+    1.0,
+    4.8e-05,
+    0.023471
+   ],
+   [
+    -0.001016,
+    -4.8e-05,
+    0.999999,
+    0.004118
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.06,
+  "stable_pose_probability": 0.041
+ },
+ "007_tuna_fish_can": {
+  "id": "007_tuna_fish_can",
+  "name": "tuna_fish_can",
+  "material": "metal",
+  "mass_kg": 0.171,
+  "friction": 0.5,
+  "extents": [
+   0.0863,
+   0.0863,
+   0.0342
+  ],
+  "bounds": [
+   [
+    -0.0431,
+    -0.0432,
+    0.0
+   ],
+   [
+    0.0431,
+    0.0432,
+    0.0342
+   ]
+  ],
+  "com": [
+   -0.00042,
+   -0.00061,
+   0.01561
+  ],
+  "inertia_full": [
+   9.95e-05,
+   9.5e-05,
+   0.0001636,
+   -2.9e-06,
+   -3e-07,
+   -2e-07
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_06.obj",
+   "hull_07.obj",
+   "hull_08.obj",
+   "hull_09.obj",
+   "hull_10.obj",
+   "hull_11.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 226.2,
+  "convex_hull_volume_cm3": 186.9,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999997,
+    -1e-06,
+    -0.002562,
+    0.026119
+   ],
+   [
+    -1e-06,
+    1.0,
+    -0.000968,
+    0.022174
+   ],
+   [
+    0.002562,
+    0.000968,
+    0.999996,
+    0.003611
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.16,
+  "stable_pose_probability": 0.336
+ },
+ "008_pudding_box": {
+  "id": "008_pudding_box",
+  "name": "pudding_box",
+  "material": "cardboard",
+  "mass_kg": 0.187,
+  "friction": 0.7,
+  "extents": [
+   0.1389,
+   0.1298,
+   0.0404
+  ],
+  "bounds": [
+   [
+    -0.0695,
+    -0.0649,
+    0.0
+   ],
+   [
+    0.0695,
+    0.0649,
+    0.0404
+   ]
+  ],
+  "com": [
+   0.00086,
+   -0.00024,
+   0.0184
+  ],
+  "inertia_full": [
+   0.0001621,
+   0.0001987,
+   0.0003126,
+   -2.82e-05,
+   -4.4e-06,
+   -1.2e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 400.1,
+  "convex_hull_volume_cm3": 352.1,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999994,
+    2e-06,
+    -0.003574,
+    -0.000496
+   ],
+   [
+    2e-06,
+    1.0,
+    0.000852,
+    -0.019152
+   ],
+   [
+    0.003574,
+    -0.000852,
+    0.999993,
+    0.001146
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.21,
+  "stable_pose_probability": 0.368
+ },
+ "009_gelatin_box": {
+  "id": "009_gelatin_box",
+  "name": "gelatin_box",
+  "material": "cardboard",
+  "mass_kg": 0.097,
+  "friction": 0.7,
+  "extents": [
+   0.0901,
+   0.102,
+   0.031
+  ],
+  "bounds": [
+   [
+    -0.0451,
+    -0.051,
+    0.0
+   ],
+   [
+    0.0451,
+    0.051,
+    0.031
+   ]
+  ],
+  "com": [
+   0.0003,
+   0.00025,
+   0.01355
+  ],
+  "inertia_full": [
+   6.89e-05,
+   5.13e-05,
+   0.000105,
+   4.4e-06,
+   -1e-07,
+   -1e-07
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 206.6,
+  "convex_hull_volume_cm3": 179.2,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999992,
+    6e-06,
+    -0.004069,
+    0.022949
+   ],
+   [
+    6e-06,
+    0.999996,
+    0.002965,
+    0.008153
+   ],
+   [
+    0.004069,
+    -0.002965,
+    0.999987,
+    0.000973
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.29,
+  "stable_pose_probability": 0.371
+ },
+ "010_potted_meat_can": {
+  "id": "010_potted_meat_can",
+  "name": "potted_meat_can",
+  "material": "metal",
+  "mass_kg": 0.37,
+  "friction": 0.5,
+  "extents": [
+   0.1031,
+   0.0611,
+   0.0842
+  ],
+  "bounds": [
+   [
+    -0.0516,
+    -0.0306,
+    0.0
+   ],
+   [
+    0.0516,
+    0.0306,
+    0.0842
+   ]
+  ],
+  "com": [
+   4e-05,
+   3e-05,
+   0.04143
+  ],
+  "inertia_full": [
+   0.0003056,
+   0.0004922,
+   0.0003476,
+   -1.1e-05,
+   5e-07,
+   1.2e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_06.obj",
+   "hull_07.obj",
+   "hull_08.obj",
+   "hull_09.obj",
+   "hull_10.obj",
+   "hull_11.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 409.9,
+  "convex_hull_volume_cm3": 419.7,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.999997,
+    5e-06,
+    -0.002547,
+    0.032968
+   ],
+   [
+    5e-06,
+    0.999992,
+    0.00407,
+    0.026249
+   ],
+   [
+    0.002547,
+    -0.00407,
+    0.999988,
+    0.003575
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.28,
+  "stable_pose_probability": 0.121
+ },
+ "021_bleach_cleanser": {
+  "id": "021_bleach_cleanser",
+  "name": "bleach_cleanser",
+  "material": "plastic",
+  "mass_kg": 1.131,
+  "friction": 0.6,
+  "extents": [
+   0.105,
+   0.0703,
+   0.2532
+  ],
+  "bounds": [
+   [
+    -0.0525,
+    -0.0351,
+    0.0
+   ],
+   [
+    0.0525,
+    0.0351,
+    0.2532
+   ]
+  ],
+  "com": [
+   0.00436,
+   4e-05,
+   0.10029
+  ],
+  "inertia_full": [
+   0.0052743,
+   0.0056689,
+   0.0009725,
+   2.9e-06,
+   -0.0003007,
+   -6.8e-06
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 1094.0,
+  "convex_hull_volume_cm3": 1067.5,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    1.0,
+    1e-06,
+    -0.000965,
+    0.021725
+   ],
+   [
+    1e-06,
+    0.999998,
+    0.002077,
+    -0.011737
+   ],
+   [
+    0.000965,
+    -0.002077,
+    0.999997,
+    0.00171
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 0.13,
+  "stable_pose_probability": 0.034
+ },
+ "022_windex_bottle": {
+  "id": "022_windex_bottle",
+  "name": "windex_bottle",
+  "material": "plastic",
+  "mass_kg": 1.022,
+  "friction": 0.6,
+  "extents": [
+   0.0961,
+   0.0986,
+   0.2701
+  ],
+  "bounds": [
+   [
+    -0.048,
+    -0.0493,
+    -0.0
+   ],
+   [
+    0.048,
+    0.0493,
+    0.2701
+   ]
+  ],
+  "com": [
+   0.00079,
+   -0.00261,
+   0.10269
+  ],
+  "inertia_full": [
+   0.0055345,
+   0.005479,
+   0.0009031,
+   -2.57e-05,
+   -0.00068,
+   0.0001716
+  ],
+  "hulls": [
+   "hull_00.obj",
+   "hull_01.obj",
+   "hull_02.obj",
+   "hull_03.obj",
+   "hull_04.obj",
+   "hull_05.obj",
+   "hull_06.obj",
+   "hull_07.obj",
+   "hull_08.obj",
+   "hull_09.obj",
+   "hull_10.obj",
+   "hull_11.obj",
+   "hull_base.obj"
+  ],
+  "hull_volume_cm3": 895.2,
+  "convex_hull_volume_cm3": 1216.9,
+  "faces": 16384,
+  "visual": "visual.obj",
+  "texture": "texture_map.png",
+  "decomposition_seconds": 0.0,
+  "scan_to_item": [
+   [
+    0.990191,
+    0.00173,
+    0.139711,
+    -0.027851
+   ],
+   [
+    0.00173,
+    0.999695,
+    -0.024641,
+    -0.009014
+   ],
+   [
+    -0.139711,
+    0.024641,
+    0.989886,
+    0.003187
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "scan_tilt_removed_deg": 8.16,
+  "stable_pose_probability": 0.006
+ }
+}

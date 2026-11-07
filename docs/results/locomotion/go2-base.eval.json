@@ -1,0 +1,59 @@
+{
+ "video": "runs/go2-base/eval.mp4",
+ "ckpt": 100,
+ "frames": 650,
+ "fps": 50,
+ "falls": 0,
+ "segments": [
+  {
+   "seconds": 4.0,
+   "cmd": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.071,
+   "err_vy": 0.019,
+   "err_wz": 0.064,
+   "height": 0.309
+  },
+  {
+   "seconds": 3.0,
+   "cmd": [
+    0.3,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.198,
+   "err_vy": 0.02,
+   "err_wz": 0.074,
+   "height": 0.304
+  },
+  {
+   "seconds": 3.0,
+   "cmd": [
+    0.8,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.229,
+   "err_vy": 0.037,
+   "err_wz": 0.059,
+   "height": 0.308
+  },
+  {
+   "seconds": 3.0,
+   "cmd": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "err_vx": 0.046,
+   "err_vy": 0.019,
+   "err_wz": 0.051,
+   "height": 0.307
+  }
+ ],
+ "mean_err_vx": 0.136,
+ "render_seconds": 9.4
+}

@@ -1,0 +1,97 @@
+{
+ "date": "2026-11-02 22:52",
+ "scenes": 60,
+ "seed": 7,
+ "belt_speed": 0.3,
+ "reports": 1662,
+ "resolution": [
+  424,
+  240
+ ],
+ "identity_accuracy": 1.0,
+ "position_err_mm": {
+  "mean": 2.4,
+  "p95": 9.0
+ },
+ "per_item": {
+  "master_chef_can": {
+   "pos_mm": 1.1,
+   "yaw_deg": null,
+   "yaw360_deg": null,
+   "identity": 1.0,
+   "reports": 161
+  },
+  "cracker_box": {
+   "pos_mm": 2.9,
+   "yaw_deg": 0.5,
+   "yaw360_deg": 80.7,
+   "identity": 1.0,
+   "reports": 205
+  },
+  "sugar_box": {
+   "pos_mm": 7.7,
+   "yaw_deg": 3.0,
+   "yaw360_deg": 144.2,
+   "identity": 1.0,
+   "reports": 90
+  },
+  "tomato_soup_can": {
+   "pos_mm": 1.1,
+   "yaw_deg": null,
+   "yaw360_deg": null,
+   "identity": 1.0,
+   "reports": 196
+  },
+  "mustard_bottle": {
+   "pos_mm": 4.0,
+   "yaw_deg": 24.3,
+   "yaw360_deg": 109.9,
+   "identity": 1.0,
+   "reports": 157
+  },
+  "tuna_fish_can": {
+   "pos_mm": 0.7,
+   "yaw_deg": null,
+   "yaw360_deg": null,
+   "identity": 1.0,
+   "reports": 176
+  },
+  "pudding_box": {
+   "pos_mm": 0.8,
+   "yaw_deg": 27.7,
+   "yaw360_deg": 102.3,
+   "identity": 1.0,
+   "reports": 147
+  },
+  "gelatin_box": {
+   "pos_mm": 0.9,
+   "yaw_deg": 13.3,
+   "yaw360_deg": 82.4,
+   "identity": 1.0,
+   "reports": 209
+  },
+  "potted_meat_can": {
+   "pos_mm": 0.8,
+   "yaw_deg": 2.8,
+   "yaw360_deg": 89.5,
+   "identity": 1.0,
+   "reports": 142
+  },
+  "bleach_cleanser": {
+   "pos_mm": 8.0,
+   "yaw_deg": 8.9,
+   "yaw360_deg": 8.9,
+   "identity": 1.0,
+   "reports": 67
+  },
+  "windex_bottle": {
+   "pos_mm": 5.1,
+   "yaw_deg": 33.3,
+   "yaw360_deg": 45.3,
+   "identity": 1.0,
+   "reports": 112
+  }
+ },
+ "ms_per_frame": 27.9,
+ "frames": 900
+}

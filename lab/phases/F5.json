@@ -1,0 +1,172 @@
+{
+ "id": "F5",
+ "title": "F5 · The factory",
+ "summary": "The whole cell running a production shift: random arrivals, touching items, the vision-only cell and the learned carry, with an operator dashboard of live KPIs and a one-page operations report.",
+ "disciplines": [
+  "9 · Scheduling",
+  "12 · Safety and reliability",
+  "15 · Operations and economics",
+  "11 · Software architecture"
+ ],
+ "highlight": [
+  "ops",
+  "scheduler",
+  "camera",
+  "perception",
+  "robot",
+  "chutes"
+ ],
+ "blurb": [
+  {
+   "h": "What is this?",
+   "p": [
+    "A <b>shift</b>: the line runs without stopping for ten minutes while items arrive at random, a quarter of them as <b>two items touching</b> (clutter, level L3 of the difficulty ladder in docs/sorting-cell-spec.md). Everything is on: the overhead camera is the only source of where things are (F4), the hybrid gripper uses its suction cup for flat boxes, the carry is the learned vision-only student, and the safety layer stops and recovers the robot when something goes wrong.",
+    "Every simulated second the cell writes its <b>KPIs</b> (key performance indicators), and the <a href=\"/dashboard\">operator dashboard</a> shows them live next to the camera stream: throughput, sort rate, where every item went, and <b>OEE</b>.",
+    "<b>OEE</b> (overall equipment effectiveness) is the number factories run on: <i>availability</i> (was the machine running?) x <i>performance</i> (did it keep up with the demand?) x <i>quality</i> (was the output good?). For a sorter: availability = share of time not stopped or recovering; performance = items the robot handled out of all that arrived; quality = of those, the share in the right chute."
+   ]
+  },
+  {
+   "h": "Why does a robotics engineer care?",
+   "p": [
+    "<b>A demo is one pick; a factory is ten thousand.</b> Over a shift the rare things happen: two items arrive together, a bottle tips, a burst of arrivals outruns the arm. The KPIs say which loss is the big one, and that decides what to engineer next.",
+    "<b>Splitting touching items</b> is a classic perception problem. Two items touching become one depth blob that looks like no single item. The fix here is classical: when a blob is unlike every item the identity model knows, cut it at its separate top surfaces (markers where the height is within 6 mm of its local maximum, then a watershed on the height map) and keep the cut only if every part now looks like an item.",
+    "<b>Operations is a trade-off, not a maximum.</b> A faster belt or more arrivals raise throughput until the arm saturates, then only add misses. Which point to run at depends on what a sorted item is worth and what a missed one costs: that is the operations report's job."
+   ]
+  },
+  {
+   "h": "What did we measure?",
+   "p": [
+    "Touching pairs on a stopped belt: both items named in 59 of 60 pairs with the split, 41 of 60 without; 0 wrong names with the split, 1 without (factory/vision/results/f5-clutter-perception.json).",
+    "The shift and the operating envelope (belt 0.15, 0.3 and the fast 0.5 m/s, 8-16 arrivals per minute, with and without clutter): see the tables below and the operations report."
+   ]
+  },
+  {
+   "h": "What could you try?",
+   "p": [
+    "Start a short shift with the button below and watch the <a href=\"/dashboard\">dashboard</a> fill in. Push the arrival rate to 20 per minute and watch performance (not quality) collapse: the arm is the bottleneck.",
+    "Set clutter to 100%: every arrival is a touching pair. Then try the privileged perception to see how much of the loss is perception and how much is one arm facing two items.",
+    "Harder: a second arm downstream (F8 in docs/sorting-cell-spec.md) would take what the first one lets pass. Where would you put it, and how would the scheduler share the work?"
+   ]
+  }
+ ],
+ "live": {
+  "base": "http://127.0.0.1:8804",
+  "job": "f5-shift",
+  "kind": "shift",
+  "note": "The shift's stream (pick camera, the overhead camera's view inset). The KPIs are on the dashboard."
+ },
+ "media": [
+  {
+   "kind": "image",
+   "src": "docs/media/F5-dashboard.png",
+   "caption": "The operator dashboard at the end of the 10-minute shift."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F5-operations-report.png",
+   "caption": "The operations report's figure: throughput and OEE over the shift, where the items went, the operating envelope."
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/hero.gif",
+   "caption": "The 10-minute shift (12.5 frames per second of simulated time). (In the repository: a 12 s excerpt at 205-217 s.)"
+  },
+  {
+   "kind": "image",
+   "src": "docs/media/F5-shift-sheet.png",
+   "caption": "Contact sheet of the shift."
+  }
+ ],
+ "numbers": [
+  {
+   "label": "The recorded shift: final KPIs",
+   "file": "factory/ops/results/f5-shift.json",
+   "table": "final",
+   "rowLabel": "KPI"
+  },
+  {
+   "label": "Operating envelope: vision + student carry, 180 s per point",
+   "file": "factory/ops/results/f5-sweep.json",
+   "table": "table",
+   "rowLabel": "belt · arrivals · clutter",
+   "cols": [
+    "sorted_per_min",
+    "sort_rate",
+    "arrivals_per_min",
+    "attempt_success",
+    "cycle_s",
+    "protective_stops"
+   ],
+   "colLabels": {
+    "sorted_per_min": "sorted/min",
+    "sort_rate": "sort rate",
+    "arrivals_per_min": "arrived/min",
+    "attempt_success": "attempt success",
+    "cycle_s": "cycle s",
+    "protective_stops": "protective stops"
+   }
+  }
+ ],
+ "jobs": [
+  {
+   "id": "f5-shift",
+   "label": "Run a shift",
+   "help": "The whole cell for N minutes of simulated time, paced to real time, KPIs live on the dashboard (http://127.0.0.1:8800/dashboard) and the stream on port 8804. Writes runs/f5-shift-lab/.",
+   "button": "Start shift",
+   "knobs": [
+    {
+     "name": "minutes",
+     "type": "number",
+     "default": 3,
+     "min": 1,
+     "max": 60
+    },
+    {
+     "name": "speed",
+     "label": "belt m/s",
+     "type": "number",
+     "default": 0.3,
+     "min": 0.05,
+     "max": 0.6,
+     "step": 0.05
+    },
+    {
+     "name": "rate",
+     "label": "arrivals/min",
+     "type": "number",
+     "default": 12,
+     "min": 1,
+     "max": 30
+    },
+    {
+     "name": "clutter",
+     "label": "touching pairs (0-1)",
+     "type": "number",
+     "default": 0.25,
+     "min": 0,
+     "max": 1,
+     "step": 0.05
+    },
+    {
+     "name": "perception",
+     "type": "select",
+     "options": [
+      "vision",
+      "privileged"
+     ],
+     "default": "vision"
+    },
+    {
+     "name": "carry",
+     "type": "select",
+     "options": [
+      "student",
+      "learned",
+      "f2"
+     ],
+     "default": "student"
+    }
+   ]
+  }
+ ]
+}

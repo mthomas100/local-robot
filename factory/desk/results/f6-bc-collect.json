@@ -1,0 +1,297 @@
+{
+ "demos_requested": 3000,
+ "kept": 2661,
+ "seconds": 294.5,
+ "workers": [
+  {
+   "worker": 0,
+   "demos": 225,
+   "outcomes": {
+    "ok": 225,
+    "knocked": 20,
+    "miss": 4,
+    "off_target": 1
+   },
+   "calibration": {
+    "ok": true,
+    "n": 55,
+    "skipped": {
+     "ik": 0,
+     "unseen": 5
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.49,
+    "after_mm": 1.65,
+    "after_deg": 0.276,
+    "residual_before_mm": 19.95,
+    "residual_after_mm": 3.2
+   }
+  },
+  {
+   "worker": 1,
+   "demos": 223,
+   "outcomes": {
+    "ok": 223,
+    "knocked": 23,
+    "drop": 1,
+    "miss": 2,
+    "off_target": 1
+   },
+   "calibration": {
+    "ok": true,
+    "n": 58,
+    "skipped": {
+     "ik": 0,
+     "unseen": 2
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.499,
+    "after_mm": 1.38,
+    "after_deg": 0.093,
+    "residual_before_mm": 21.65,
+    "residual_after_mm": 3.14
+   }
+  },
+  {
+   "worker": 2,
+   "demos": 220,
+   "outcomes": {
+    "ok": 220,
+    "miss": 1,
+    "knocked": 26,
+    "off_target": 1,
+    "drop": 2
+   },
+   "calibration": {
+    "ok": true,
+    "n": 57,
+    "skipped": {
+     "ik": 0,
+     "unseen": 3
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.501,
+    "after_mm": 1.07,
+    "after_deg": 0.191,
+    "residual_before_mm": 11.07,
+    "residual_after_mm": 3.15
+   }
+  },
+  {
+   "worker": 3,
+   "demos": 229,
+   "outcomes": {
+    "ok": 229,
+    "miss": 4,
+    "knocked": 17
+   },
+   "calibration": {
+    "ok": true,
+    "n": 56,
+    "skipped": {
+     "ik": 0,
+     "unseen": 4
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.508,
+    "after_mm": 1.07,
+    "after_deg": 0.114,
+    "residual_before_mm": 18.06,
+    "residual_after_mm": 3.18
+   }
+  },
+  {
+   "worker": 4,
+   "demos": 223,
+   "outcomes": {
+    "ok": 223,
+    "knocked": 27
+   },
+   "calibration": {
+    "ok": true,
+    "n": 54,
+    "skipped": {
+     "ik": 0,
+     "unseen": 6
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.504,
+    "after_mm": 1.03,
+    "after_deg": 0.176,
+    "residual_before_mm": 6.81,
+    "residual_after_mm": 3.24
+   }
+  },
+  {
+   "worker": 5,
+   "demos": 220,
+   "outcomes": {
+    "ok": 220,
+    "knocked": 27,
+    "miss": 3
+   },
+   "calibration": {
+    "ok": true,
+    "n": 57,
+    "skipped": {
+     "ik": 0,
+     "unseen": 3
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.492,
+    "after_mm": 1.11,
+    "after_deg": 0.165,
+    "residual_before_mm": 12.92,
+    "residual_after_mm": 3.17
+   }
+  },
+  {
+   "worker": 6,
+   "demos": 222,
+   "outcomes": {
+    "ok": 222,
+    "knocked": 27,
+    "miss": 1
+   },
+   "calibration": {
+    "ok": true,
+    "n": 55,
+    "skipped": {
+     "ik": 0,
+     "unseen": 5
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.49,
+    "after_mm": 1.71,
+    "after_deg": 0.249,
+    "residual_before_mm": 8.72,
+    "residual_after_mm": 3.14
+   }
+  },
+  {
+   "worker": 7,
+   "demos": 219,
+   "outcomes": {
+    "ok": 219,
+    "miss": 5,
+    "knocked": 22,
+    "off_target": 2,
+    "drop": 2
+   },
+   "calibration": {
+    "ok": true,
+    "n": 58,
+    "skipped": {
+     "ik": 0,
+     "unseen": 2
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.501,
+    "after_mm": 1.8,
+    "after_deg": 0.22,
+    "residual_before_mm": 9.29,
+    "residual_after_mm": 3.15
+   }
+  },
+  {
+   "worker": 8,
+   "demos": 217,
+   "outcomes": {
+    "ok": 217,
+    "knocked": 27,
+    "drop": 2,
+    "off_target": 1,
+    "miss": 3
+   },
+   "calibration": {
+    "ok": true,
+    "n": 57,
+    "skipped": {
+     "ik": 0,
+     "unseen": 3
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.5,
+    "after_mm": 1.14,
+    "after_deg": 0.18,
+    "residual_before_mm": 15.15,
+    "residual_after_mm": 3.19
+   }
+  },
+  {
+   "worker": 9,
+   "demos": 227,
+   "outcomes": {
+    "ok": 227,
+    "miss": 4,
+    "knocked": 17,
+    "off_target": 1,
+    "drop": 1
+   },
+   "calibration": {
+    "ok": true,
+    "n": 58,
+    "skipped": {
+     "ik": 0,
+     "unseen": 2
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.503,
+    "after_mm": 1.73,
+    "after_deg": 0.22,
+    "residual_before_mm": 11.83,
+    "residual_after_mm": 3.15
+   }
+  },
+  {
+   "worker": 10,
+   "demos": 217,
+   "outcomes": {
+    "ok": 217,
+    "drop": 3,
+    "knocked": 23,
+    "miss": 3,
+    "off_target": 4
+   },
+   "calibration": {
+    "ok": true,
+    "n": 56,
+    "skipped": {
+     "ik": 0,
+     "unseen": 4
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.492,
+    "after_mm": 1.54,
+    "after_deg": 0.176,
+    "residual_before_mm": 13.62,
+    "residual_after_mm": 3.15
+   }
+  },
+  {
+   "worker": 11,
+   "demos": 219,
+   "outcomes": {
+    "ok": 219,
+    "knocked": 22,
+    "miss": 7,
+    "off_target": 2
+   },
+   "calibration": {
+    "ok": true,
+    "n": 55,
+    "skipped": {
+     "ik": 0,
+     "unseen": 5
+    },
+    "before_mm": 8.0,
+    "before_deg": 2.51,
+    "after_mm": 0.97,
+    "after_deg": 0.295,
+    "residual_before_mm": 13.91,
+    "residual_after_mm": 3.16
+   }
+  }
+ ],
+ "dart_sigma": 0.015
+}

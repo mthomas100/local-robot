@@ -1,0 +1,47 @@
+[
+ {
+  "chute": "plastic",
+  "item": "gelatin_box",
+  "com": [
+   -0.5,
+   0.27,
+   0.314
+  ],
+  "lowest_point_z": 0.3,
+  "chute_floor_top_z": 0.3,
+  "rim_z": 0.6,
+  "tilt_deg": 0.0,
+  "penetration_mm": 0.01,
+  "inside": true
+ },
+ {
+  "chute": "metal",
+  "item": "gelatin_box",
+  "com": [
+   -0.0,
+   0.27,
+   0.314
+  ],
+  "lowest_point_z": 0.3,
+  "chute_floor_top_z": 0.3,
+  "rim_z": 0.6,
+  "tilt_deg": 0.0,
+  "penetration_mm": 0.01,
+  "inside": true
+ },
+ {
+  "chute": "cardboard",
+  "item": "gelatin_box",
+  "com": [
+   0.5,
+   0.27,
+   0.314
+  ],
+  "lowest_point_z": 0.3,
+  "chute_floor_top_z": 0.3,
+  "rim_z": 0.6,
+  "tilt_deg": 0.0,
+  "penetration_mm": 0.01,
+  "inside": true
+ }
+]

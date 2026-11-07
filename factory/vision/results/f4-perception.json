@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-02 22:11",
+ "scenes": {
+  "train": 120,
+  "test": 60
+ },
+ "detections": {
+  "train": 361,
+  "test": 180
+ },
+ "position_err_mm": {
+  "mean": 6.6,
+  "p95": 28.6,
+  "max": 37.9
+ },
+ "yaw_err_deg_boxes_mod90": {
+  "pca": 18.0,
+  "min_area_rect": 12.1,
+  "min_area_rect_p95": 28.0,
+  "n": 73,
+  "per_item": {
+   "cracker_box": 0.4,
+   "sugar_box": 2.0,
+   "pudding_box": 27.0,
+   "gelatin_box": 15.0
+  }
+ },
+ "yaw_err_deg_mod90": {
+  "mean": 18.5,
+  "p95": 41.9
+ },
+ "identity_accuracy": 0.833,
+ "confusion": {
+  "tuna_fish_can -> potted_meat_can": 5,
+  "sugar_box -> bleach_cleanser": 4,
+  "tomato_soup_can -> potted_meat_can": 3,
+  "bleach_cleanser -> sugar_box": 4,
+  "windex_bottle -> cracker_box": 5,
+  "cracker_box -> windex_bottle": 2,
+  "sugar_box -> master_chef_can": 1,
+  "tuna_fish_can -> pudding_box": 2,
+  "master_chef_can -> sugar_box": 2,
+  "potted_meat_can -> sugar_box": 1,
+  "potted_meat_can -> tomato_soup_can": 1
+ },
+ "identity_accuracy_knn_hist": 1.0,
+ "ms_per_frame": {
+  "render_rgb_depth_seg": 18.9,
+  "perception": 16.2
+ },
+ "note": "items standing apart on a stopped belt (no clutter); yaw error modulo 90 degrees (a box's long axis is ambiguous from PCA on round items)",
+ "wall_s": 16.0
+}

@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-02 23:16",
+ "config": {
+  "minutes": 10.0,
+  "speed": 0.3,
+  "rate": 12.0,
+  "clutter": 0.25,
+  "perception": "vision",
+  "carry": "student",
+  "port": 8804,
+  "pace": 1.0,
+  "name": "f5-shift",
+  "seed": 0,
+  "video_fps": 12.5,
+  "no_video": false
+ },
+ "sim_s": 600.0,
+ "wall_s": 1035.8,
+ "kpi_rows": 600,
+ "final": {
+  "t": 600.0,
+  "arrived": 140,
+  "sorted": 58,
+  "sorted_per_min": 5.8,
+  "sorted_last_min": 6,
+  "sort_rate": 0.414,
+  "availability": 0.983,
+  "performance": 0.479,
+  "quality": 0.866,
+  "oee": 0.407,
+  "losses": {
+   "missed": 72,
+   "late": 6,
+   "wrong_chute": 0,
+   "dropped": 3,
+   "knocked_off": 1
+  },
+  "events": {
+   "ok": 60,
+   "drop": 5,
+   "knocked": 2
+  },
+  "protective_stops": 0,
+  "cycle_s": 3.42,
+  "sorted_by_material": {
+   "cardboard": 25,
+   "plastic": 14,
+   "metal": 19
+  },
+  "robot": "waiting",
+  "vision_ms": 30.9
+ },
+ "summary": {
+  "speed": 0.3,
+  "rate_per_min": 12.0,
+  "scheduler": "lookahead",
+  "seconds": 600.0,
+  "wall_s": 1025.7,
+  "items_done": 140,
+  "outcomes": {
+   "sorted": 58,
+   "missed": 72,
+   "knocked_off": 1,
+   "dropped": 3,
+   "late": 6
+  },
+  "sorted_per_min": 5.8,
+  "arrivals_per_min": 14.0,
+  "sort_rate": 0.414,
+  "miss_rate": 0.586,
+  "attempts": {
+   "ok": 60,
+   "drop": 5,
+   "knocked": 2
+  },
+  "attempt_success": 0.896,
+  "cycle_s": 3.42,
+  "grasp_err_mm": {
+   "mean": 4.0,
+   "max": 54.2
+  },
+  "collisions": 0,
+  "max_track_err_rad": 0.0746
+ },
+ "clutter_items": {
+  "sorted": 8,
+  "missed": 43,
+  "knocked_off": 1,
+  "late": 5,
+  "dropped": 1
+ },
+ "per_item": {
+  "bleach_cleanser": {
+   "sorted": 6,
+   "dropped": 1,
+   "missed": 4,
+   "late": 1
+  },
+  "cracker_box": {
+   "sorted": 4,
+   "missed": 9,
+   "knocked_off": 1,
+   "dropped": 1
+  },
+  "gelatin_box": {
+   "missed": 6,
+   "sorted": 9
+  },
+  "master_chef_can": {
+   "missed": 6,
+   "sorted": 1
+  },
+  "mustard_bottle": {
+   "missed": 7,
+   "sorted": 3,
+   "dropped": 1
+  },
+  "potted_meat_can": {
+   "sorted": 9,
+   "missed": 6
+  },
+  "pudding_box": {
+   "missed": 8,
+   "sorted": 8,
+   "late": 2
+  },
+  "sugar_box": {
+   "sorted": 4,
+   "missed": 5
+  },
+  "tomato_soup_can": {
+   "missed": 6,
+   "sorted": 5
+  },
+  "tuna_fish_can": {
+   "missed": 7,
+   "late": 2,
+   "sorted": 4
+  },
+  "windex_bottle": {
+   "missed": 8,
+   "sorted": 5,
+   "late": 1
+  }
+ }
+}

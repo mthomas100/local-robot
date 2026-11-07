@@ -1,0 +1,326 @@
+{
+ "date": "2026-11-03 17:05",
+ "stream": {
+  "rate": 12.0,
+  "clutter": 0.25
+ },
+ "seconds": 180.0,
+ "seeds": [
+  7100,
+  7105
+ ],
+ "perception": "vision",
+ "carry": "student",
+ "table": {
+  "0.30 m/s \u00b7 v1": {
+   "speed": 0.3,
+   "v2": [],
+   "runs": 6,
+   "sorted_per_min": 6.0,
+   "sort_rate": 0.453,
+   "attempt_success": 0.912,
+   "cycle_s": 3.522,
+   "protective_stops": 2,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 108,
+    "dropped": 9,
+    "missed": 121,
+    "late": 10
+   },
+   "attempts": {
+    "ok": 116,
+    "collision": 2,
+    "drop": 8,
+    "miss": 1,
+    "knocked": 1
+   },
+   "stop_details": [
+    "tracking error 0.150 rad (contact force)",
+    "tracking error 0.151 rad (contact force)"
+   ]
+  },
+  "0.30 m/s \u00b7 fast": {
+   "speed": 0.3,
+   "v2": [
+    "fast"
+   ],
+   "runs": 6,
+   "sorted_per_min": 6.61,
+   "sort_rate": 0.504,
+   "attempt_success": 0.906,
+   "cycle_s": 3.152,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 119,
+    "missed": 109,
+    "dropped": 8,
+    "late": 11
+   },
+   "attempts": {
+    "ok": 127,
+    "knocked": 4,
+    "drop": 9,
+    "miss": 1
+   },
+   "stop_details": []
+  },
+  "0.30 m/s \u00b7 early": {
+   "speed": 0.3,
+   "v2": [
+    "early"
+   ],
+   "runs": 6,
+   "sorted_per_min": 6.387,
+   "sort_rate": 0.484,
+   "attempt_success": 0.925,
+   "cycle_s": 3.428,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 115,
+    "missed": 116,
+    "dropped": 11,
+    "late": 7
+   },
+   "attempts": {
+    "ok": 122,
+    "drop": 7,
+    "miss": 1,
+    "carry_ik": 1,
+    "knocked": 2
+   },
+   "stop_details": []
+  },
+  "0.30 m/s \u00b7 deadline": {
+   "speed": 0.3,
+   "v2": [
+    "deadline"
+   ],
+   "runs": 6,
+   "sorted_per_min": 6.0,
+   "sort_rate": 0.453,
+   "attempt_success": 0.912,
+   "cycle_s": 3.522,
+   "protective_stops": 2,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 108,
+    "dropped": 9,
+    "missed": 121,
+    "late": 10
+   },
+   "attempts": {
+    "ok": 116,
+    "collision": 2,
+    "drop": 8,
+    "miss": 1,
+    "knocked": 1
+   },
+   "stop_details": [
+    "tracking error 0.150 rad (contact force)",
+    "tracking error 0.151 rad (contact force)"
+   ]
+  },
+  "0.30 m/s \u00b7 fast+early+deadline": {
+   "speed": 0.3,
+   "v2": [
+    "fast",
+    "early",
+    "deadline"
+   ],
+   "runs": 6,
+   "sorted_per_min": 7.167,
+   "sort_rate": 0.541,
+   "attempt_success": 0.927,
+   "cycle_s": 3.005,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 129,
+    "dropped": 12,
+    "missed": 99,
+    "late": 9
+   },
+   "attempts": {
+    "ok": 138,
+    "knocked": 3,
+    "miss": 1,
+    "drop": 8
+   },
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 v1": {
+   "speed": 0.5,
+   "v2": [],
+   "runs": 6,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "missed": 257
+   },
+   "attempts": {},
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 fast": {
+   "speed": 0.5,
+   "v2": [
+    "fast"
+   ],
+   "runs": 6,
+   "sorted_per_min": 0.055,
+   "sort_rate": 0.003,
+   "attempt_success": 0.083,
+   "cycle_s": 2.78,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "missed": 255,
+    "sorted": 1,
+    "late": 1
+   },
+   "attempts": {
+    "ok": 1,
+    "drop": 1
+   },
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 early": {
+   "speed": 0.5,
+   "v2": [
+    "early"
+   ],
+   "runs": 6,
+   "sorted_per_min": 0.388,
+   "sort_rate": 0.025,
+   "attempt_success": 0.833,
+   "cycle_s": 2.588,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "missed": 250,
+    "sorted": 7
+   },
+   "attempts": {
+    "ok": 7
+   },
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 deadline": {
+   "speed": 0.5,
+   "v2": [
+    "deadline"
+   ],
+   "runs": 6,
+   "sorted_per_min": 0.0,
+   "sort_rate": 0.0,
+   "attempt_success": 0.0,
+   "cycle_s": null,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "missed": 257
+   },
+   "attempts": {},
+   "stop_details": []
+  },
+  "0.50 m/s \u00b7 fast+early+deadline": {
+   "speed": 0.5,
+   "v2": [
+    "fast",
+    "early",
+    "deadline"
+   ],
+   "runs": 6,
+   "sorted_per_min": 3.778,
+   "sort_rate": 0.271,
+   "attempt_success": 0.858,
+   "cycle_s": 2.662,
+   "protective_stops": 0,
+   "wrong_chute": 0,
+   "outcomes": {
+    "sorted": 68,
+    "missed": 177,
+    "late": 12
+   },
+   "attempts": {
+    "ok": 68,
+    "knocked": 3,
+    "drop": 9
+   },
+   "stop_details": []
+  }
+ },
+ "vs_v1": {
+  "fast": {
+   "0.30": {
+    "mean": 0.61,
+    "lo": 0.065,
+    "hi": 1.155,
+    "sd": 0.681,
+    "n": 6
+   },
+   "0.50": {
+    "mean": 0.055,
+    "lo": -0.053,
+    "hi": 0.163,
+    "sd": 0.135,
+    "n": 6
+   }
+  },
+  "early": {
+   "0.30": {
+    "mean": 0.387,
+    "lo": -0.185,
+    "hi": 0.958,
+    "sd": 0.714,
+    "n": 6
+   },
+   "0.50": {
+    "mean": 0.388,
+    "lo": 0.186,
+    "hi": 0.591,
+    "sd": 0.253,
+    "n": 6
+   }
+  },
+  "deadline": {
+   "0.30": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "sd": 0.0,
+    "n": 6
+   },
+   "0.50": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "sd": 0.0,
+    "n": 6
+   }
+  },
+  "fast+early+deadline": {
+   "0.30": {
+    "mean": 1.167,
+    "lo": 0.479,
+    "hi": 1.855,
+    "sd": 0.86,
+    "n": 6
+   },
+   "0.50": {
+    "mean": 3.778,
+    "lo": 3.067,
+    "hi": 4.49,
+    "sd": 0.889,
+    "n": 6
+   }
+  }
+ },
+ "wall_s": 760.2
+}

@@ -1,0 +1,2995 @@
+{
+ "date": "2026-11-03",
+ "phase": "F6",
+ "discipline": 14,
+ "tolerance": 0.1,
+ "all_within_tolerance": true,
+ "ablated": null,
+ "experiment": {
+  "host_hz": 250.0,
+  "host_jitter_s": 0.001,
+  "physics_dt": 0.002,
+  "joints": [
+   "shoulder_pan",
+   "shoulder_lift",
+   "elbow_flex",
+   "wrist_flex",
+   "wrist_roll",
+   "gripper"
+  ],
+  "poses": {
+   "shoulder_pan": [
+    0.0,
+    -0.6,
+    0.6,
+    0.8,
+    0.0,
+    0.6
+   ],
+   "shoulder_lift": [
+    0.0,
+    -0.6,
+    0.6,
+    0.8,
+    0.0,
+    0.6
+   ],
+   "elbow_flex": [
+    0.0,
+    -1.57,
+    1.57,
+    0.0,
+    0.0,
+    0.6
+   ],
+   "wrist_flex": [
+    0.0,
+    -0.6,
+    0.6,
+    0.8,
+    0.0,
+    0.6
+   ],
+   "wrist_roll": [
+    0.0,
+    -0.6,
+    0.6,
+    0.8,
+    0.0,
+    0.6
+   ],
+   "gripper": [
+    0.0,
+    -0.6,
+    0.6,
+    0.8,
+    0.0,
+    0.6
+   ]
+  },
+  "centres": {
+   "shoulder_pan": 0.0,
+   "shoulder_lift": -0.6,
+   "elbow_flex": 0.84,
+   "wrist_flex": 0.8,
+   "wrist_roll": 0.0,
+   "gripper": 0.68
+  },
+  "creep_net_torque": [
+   0.08,
+   0.16,
+   0.32
+  ],
+  "creep_half_rad": 0.4,
+  "coasts": [
+   {
+    "torque_off_after_s": 0.06,
+    "torque_off_for_s": 0.25,
+    "step_rad": 1.2
+   },
+   {
+    "torque_off_after_s": 0.12,
+    "torque_off_for_s": 0.2,
+    "step_rad": 1.2
+   },
+   {
+    "torque_off_after_s": 0.04,
+    "torque_off_for_s": 0.35,
+    "step_rad": 1.2
+   },
+   {
+    "torque_off_after_s": 0.09,
+    "torque_off_for_s": 0.3,
+    "step_rad": 1.2
+   }
+  ],
+  "steps_rad": [
+   0.02,
+   0.2,
+   0.6,
+   1.2
+  ],
+  "chirps": [
+   {
+    "amplitude_rad": 0.2,
+    "f0_hz": 0.2,
+    "f1_hz": 3.0,
+    "seconds": 8.0
+   },
+   {
+    "amplitude_rad": 0.04,
+    "f0_hz": 1.0,
+    "f1_hz": 12.0,
+    "seconds": 6.0
+   }
+  ],
+  "segments": {
+   "shoulder_pan": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.04489795918367347,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.04489795918367347,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.07210884353741497,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.07210884353741497,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.12653061224489795,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.12653061224489795,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ],
+   "shoulder_lift": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.1794080902365944,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.1794080902365944,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.2066189745903359,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.2066189745903359,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.2610407432978189,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.2610407432978189,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ],
+   "elbow_flex": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.2010548306246383,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.2010548306246383,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.2282657149783798,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.2282657149783798,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.2826874836858628,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.2826874836858628,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ],
+   "wrist_flex": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.08679264823336744,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.08679264823336744,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.11400353258710894,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.11400353258710894,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.1684253012945919,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.1684253012945919,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ],
+   "wrist_roll": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.046799719907768635,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.046799719907768635,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.07401060426151014,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.07401060426151014,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.12843237296899312,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.12843237296899312,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ],
+   "gripper": [
+    {
+     "name": "settle",
+     "t0": 0.0,
+     "t1": 0.5,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08+",
+     "t0": 0.5,
+     "t1": 5.5,
+     "torque_limit": 0.04610111073118503,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.08-",
+     "t0": 5.5,
+     "t1": 10.5,
+     "torque_limit": 0.04610111073118503,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16+",
+     "t0": 10.5,
+     "t1": 14.620000000000001,
+     "torque_limit": 0.07331199508492653,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.16-",
+     "t0": 14.620000000000001,
+     "t1": 18.740000000000002,
+     "torque_limit": 0.07331199508492653,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32+",
+     "t0": 18.740000000000002,
+     "t1": 21.052000000000003,
+     "torque_limit": 0.12773376379240953,
+     "torque_off": null
+    },
+    {
+     "name": "creep 0.32-",
+     "t0": 21.052000000000003,
+     "t1": 23.364000000000004,
+     "torque_limit": 0.12773376379240953,
+     "torque_off": null
+    },
+    {
+     "name": "recentre",
+     "t0": 23.364000000000004,
+     "t1": 23.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02+",
+     "t0": 23.964000000000006,
+     "t1": 24.564000000000007,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.02-",
+     "t0": 24.564000000000007,
+     "t1": 25.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20+",
+     "t0": 25.16400000000001,
+     "t1": 25.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.20-",
+     "t0": 25.76400000000001,
+     "t1": 26.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60+",
+     "t0": 26.36400000000001,
+     "t1": 26.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 0.60-",
+     "t0": 26.964000000000013,
+     "t1": 27.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20+",
+     "t0": 27.564000000000014,
+     "t1": 28.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "step 1.20-",
+     "t0": 28.164000000000016,
+     "t1": 28.764000000000017,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 28.764000000000017,
+     "t1": 29.164000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "pre-coast",
+     "t0": 29.164000000000016,
+     "t1": 29.664000000000016,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 +",
+     "t0": 29.664000000000016,
+     "t1": 30.564000000000014,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 30.564000000000014,
+     "t1": 31.064000000000014,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.06/0.25 -",
+     "t0": 31.064000000000014,
+     "t1": 31.964000000000013,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.06,
+      0.31
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 31.964000000000013,
+     "t1": 32.46400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 +",
+     "t0": 32.46400000000001,
+     "t1": 33.36400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 33.36400000000001,
+     "t1": 33.86400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.12/0.20 -",
+     "t0": 33.86400000000001,
+     "t1": 34.76400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.12,
+      0.32
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 34.76400000000001,
+     "t1": 35.26400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 +",
+     "t0": 35.26400000000001,
+     "t1": 36.16400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 36.16400000000001,
+     "t1": 36.66400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.04/0.35 -",
+     "t0": 36.66400000000001,
+     "t1": 37.56400000000001,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.04,
+      0.38999999999999996
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 37.56400000000001,
+     "t1": 38.06400000000001,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 +",
+     "t0": 38.06400000000001,
+     "t1": 38.964000000000006,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "pre-coast",
+     "t0": 38.964000000000006,
+     "t1": 39.464000000000006,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "coast 0.09/0.30 -",
+     "t0": 39.464000000000006,
+     "t1": 40.364000000000004,
+     "torque_limit": 1.0,
+     "torque_off": [
+      0.09,
+      0.39
+     ]
+    },
+    {
+     "name": "hold",
+     "t0": 40.364000000000004,
+     "t1": 40.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.20 rad 0.2-3 Hz",
+     "t0": 40.764,
+     "t1": 48.764,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 48.764,
+     "t1": 49.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "chirp 0.04 rad 1-12 Hz",
+     "t0": 49.164,
+     "t1": 55.164,
+     "torque_limit": 1.0,
+     "torque_off": null
+    },
+    {
+     "name": "hold",
+     "t0": 55.164,
+     "t1": 55.564,
+     "torque_limit": 1.0,
+     "torque_off": null
+    }
+   ]
+  },
+  "seconds_per_joint": {
+   "shoulder_pan": 55.56,
+   "shoulder_lift": 55.56,
+   "elbow_flex": 55.56,
+   "wrist_flex": 55.56,
+   "wrist_roll": 55.56,
+   "gripper": 55.56
+  },
+  "reads_per_joint": {
+   "shoulder_pan": 13891,
+   "shoulder_lift": 13891,
+   "elbow_flex": 13891,
+   "wrist_flex": 13891,
+   "wrist_roll": 13891,
+   "gripper": 13891
+  },
+  "measured": "present position (12-bit, bus_delay_s old) at each host cycle; goals, torque-limit and torque-enable writes logged with host time",
+  "not_identified": "kp, kv, deadband, encoder resolution (servo registers), link inertias (CAD), backlash (beyond the encoder: unobservable from servo data)"
+ },
+ "nominal": {
+  "armature": 0.028,
+  "damping": 0.1,
+  "frictionloss": 0.052,
+  "bus_delay_s": 0.004,
+  "no_load_speed": 4.71
+ },
+ "seeds": [
+  {
+   "seed": 1,
+   "ok": true,
+   "fit_s": 168.1,
+   "planted": {
+    "armature": [
+     0.040806276542145456,
+     0.034240068527849644,
+     0.03528915805334157,
+     0.01710715160526624,
+     0.03442792192157619,
+     0.021121483002113483
+    ],
+    "damping": [
+     0.057045403664571816,
+     0.07239596255778358,
+     0.13471862951368496,
+     0.0736675179541632,
+     0.13081456354783355,
+     0.1473937588435392
+    ],
+    "frictionloss": [
+     0.026681233165349434,
+     0.029371040245341637,
+     0.06409297681033706,
+     0.02772785454580486,
+     0.06832859792441115,
+     0.03646695520588083
+    ],
+    "bus_delay_s": 0.005244780083218295,
+    "no_load_speed": 2.386387196559995
+   },
+   "recovered": {
+    "armature": [
+     0.04024194416738618,
+     0.0341495336237601,
+     0.035249096524503754,
+     0.017188268315309226,
+     0.034808946142214116,
+     0.02128019701856833
+    ],
+    "damping": [
+     0.059359689759894564,
+     0.07352126827778745,
+     0.13514589570163751,
+     0.07413869049221532,
+     0.13383972105263683,
+     0.14911978196802264
+    ],
+    "frictionloss": [
+     0.026456699353745214,
+     0.02918096054954282,
+     0.06376091131717344,
+     0.027849995080098885,
+     0.06781392287028387,
+     0.03677813170196419
+    ],
+    "bus_delay_s": 0.0052,
+    "no_load_speed": 2.390176422165631
+   },
+   "rows": [
+    {
+     "param": "armature",
+     "joint": "shoulder_pan",
+     "planted": 0.040806276542145456,
+     "recovered": 0.04024194416738618,
+     "nominal": 0.028,
+     "rel_err": -0.013829548358238967
+    },
+    {
+     "param": "armature",
+     "joint": "shoulder_lift",
+     "planted": 0.034240068527849644,
+     "recovered": 0.0341495336237601,
+     "nominal": 0.028,
+     "rel_err": -0.0026441215798357624
+    },
+    {
+     "param": "armature",
+     "joint": "elbow_flex",
+     "planted": 0.03528915805334157,
+     "recovered": 0.035249096524503754,
+     "nominal": 0.028,
+     "rel_err": -0.0011352361758605715
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_flex",
+     "planted": 0.01710715160526624,
+     "recovered": 0.017188268315309226,
+     "nominal": 0.028,
+     "rel_err": 0.004741684174822797
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_roll",
+     "planted": 0.03442792192157619,
+     "recovered": 0.034808946142214116,
+     "nominal": 0.028,
+     "rel_err": 0.011067302334014387
+    },
+    {
+     "param": "armature",
+     "joint": "gripper",
+     "planted": 0.021121483002113483,
+     "recovered": 0.02128019701856833,
+     "nominal": 0.028,
+     "rel_err": 0.007514340562117122
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_pan",
+     "planted": 0.057045403664571816,
+     "recovered": 0.059359689759894564,
+     "nominal": 0.1,
+     "rel_err": 0.040569194828224894
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_lift",
+     "planted": 0.07239596255778358,
+     "recovered": 0.07352126827778745,
+     "nominal": 0.1,
+     "rel_err": 0.015543763495176886
+    },
+    {
+     "param": "damping",
+     "joint": "elbow_flex",
+     "planted": 0.13471862951368496,
+     "recovered": 0.13514589570163751,
+     "nominal": 0.1,
+     "rel_err": 0.003171544941445158
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_flex",
+     "planted": 0.0736675179541632,
+     "recovered": 0.07413869049221532,
+     "nominal": 0.1,
+     "rel_err": 0.006395933392859683
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_roll",
+     "planted": 0.13081456354783355,
+     "recovered": 0.13383972105263683,
+     "nominal": 0.1,
+     "rel_err": 0.023125540633685684
+    },
+    {
+     "param": "damping",
+     "joint": "gripper",
+     "planted": 0.1473937588435392,
+     "recovered": 0.14911978196802264,
+     "nominal": 0.1,
+     "rel_err": 0.011710286365080392
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_pan",
+     "planted": 0.026681233165349434,
+     "recovered": 0.026456699353745214,
+     "nominal": 0.052,
+     "rel_err": -0.008415421064413897
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_lift",
+     "planted": 0.029371040245341637,
+     "recovered": 0.02918096054954282,
+     "nominal": 0.052,
+     "rel_err": -0.00647167053706804
+    },
+    {
+     "param": "frictionloss",
+     "joint": "elbow_flex",
+     "planted": 0.06409297681033706,
+     "recovered": 0.06376091131717344,
+     "nominal": 0.052,
+     "rel_err": -0.005180996572311762
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_flex",
+     "planted": 0.02772785454580486,
+     "recovered": 0.027849995080098885,
+     "nominal": 0.052,
+     "rel_err": 0.004404976017609157
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_roll",
+     "planted": 0.06832859792441115,
+     "recovered": 0.06781392287028387,
+     "nominal": 0.052,
+     "rel_err": -0.0075323520423562626
+    },
+    {
+     "param": "frictionloss",
+     "joint": "gripper",
+     "planted": 0.03646695520588083,
+     "recovered": 0.03677813170196419,
+     "nominal": 0.052,
+     "rel_err": 0.008533108791961235
+    },
+    {
+     "param": "bus_delay_s",
+     "joint": null,
+     "planted": 0.005244780083218295,
+     "recovered": 0.0052,
+     "nominal": 0.004,
+     "rel_err": -0.008538028765320041
+    },
+    {
+     "param": "no_load_speed",
+     "joint": null,
+     "planted": 2.386387196559995,
+     "recovered": 2.390176422165631,
+     "nominal": 4.71,
+     "rel_err": 0.001587850291477606
+    }
+   ],
+   "steps": [
+    {
+     "stage": "fit",
+     "cost_counts2": 393168.6588432699,
+     "rms_counts": 2.1719362042827517,
+     "sims": 444,
+     "s": 18.5,
+     "delay_ms": 6.834,
+     "no_load_speed": 2.421
+    },
+    {
+     "stage": "coarse delay profile",
+     "cost_counts2": 107320.32892842211,
+     "rms_counts": 1.1347458854787378,
+     "sims": 2040,
+     "s": 97.2,
+     "delay_ms": 5.0,
+     "no_load_speed": 2.3902,
+     "profile_ms_cost": [
+      [
+       1.0,
+       1115521.2999332277
+      ],
+      [
+       1.5,
+       1011760.6568969485
+      ],
+      [
+       2.0,
+       881640.2086435988
+      ],
+      [
+       2.5,
+       688542.8989310509
+      ],
+      [
+       3.0,
+       411473.68689369335
+      ],
+      [
+       3.5,
+       311101.364708403
+      ],
+      [
+       4.0,
+       324128.96491361735
+      ],
+      [
+       4.5,
+       260975.72326040966
+      ],
+      [
+       5.0,
+       107320.32892842211
+      ],
+      [
+       5.5,
+       128867.41811948908
+      ],
+      [
+       6.0,
+       233902.61900170273
+      ],
+      [
+       6.5,
+       423491.18127329997
+      ],
+      [
+       7.0,
+       291171.2934753663
+      ],
+      [
+       7.5,
+       443279.1807443225
+      ],
+      [
+       8.0,
+       609183.4116971516
+      ]
+     ]
+    },
+    {
+     "stage": "fine delay profile",
+     "cost_counts2": 87732.3102206345,
+     "rms_counts": 1.025976473041016,
+     "sims": 888,
+     "s": 46.2,
+     "delay_ms": 5.2,
+     "no_load_speed": 2.3902,
+     "profile_ms_cost": [
+      [
+       4.6,
+       245149.80140303393
+      ],
+      [
+       4.7,
+       195484.05144751674
+      ],
+      [
+       4.8,
+       155981.5240748561
+      ],
+      [
+       4.9,
+       125265.8784639385
+      ],
+      [
+       5.0,
+       105026.65752267311
+      ],
+      [
+       5.1,
+       93655.40301616478
+      ],
+      [
+       5.2,
+       87732.3102206345
+      ],
+      [
+       5.3,
+       94493.94215664318
+      ],
+      [
+       5.4,
+       108762.02992373818
+      ]
+     ]
+    },
+    {
+     "stage": "final fit",
+     "cost_counts2": 87732.3102206345,
+     "rms_counts": 1.025976473041016,
+     "sims": 60,
+     "s": 3.5,
+     "delay_ms": 5.2,
+     "no_load_speed": 2.3902
+    }
+   ],
+   "max_abs_rel_err": 0.040569194828224894
+  },
+  {
+   "seed": 2,
+   "ok": true,
+   "fit_s": 165.9,
+   "planted": {
+    "armature": [
+     0.03687173212048126,
+     0.01956809803088389,
+     0.03826111404804884,
+     0.02082736542601752,
+     0.03460507998390978,
+     0.040658938526514005
+    ],
+    "damping": [
+     0.1309786121841756,
+     0.05030741933575083,
+     0.07150770318606935,
+     0.12096212495357886,
+     0.07991523347740412,
+     0.05548669737327683
+    ],
+    "frictionloss": [
+     0.07421505959005067,
+     0.0364096960567231,
+     0.0627406732432422,
+     0.04043065190642272,
+     0.032326710389989535,
+     0.04122935833422274
+    ],
+    "bus_delay_s": 0.0049604827382959266,
+    "no_load_speed": 3.469130978287518
+   },
+   "recovered": {
+    "armature": [
+     0.037076596733759584,
+     0.01972074308124754,
+     0.03828772954797576,
+     0.020901602753094568,
+     0.03498018678744294,
+     0.04014642415300769
+    ],
+    "damping": [
+     0.13131884697104432,
+     0.05115815441879629,
+     0.06918629498166344,
+     0.12091840912503334,
+     0.07935156406770198,
+     0.05667194472688222
+    ],
+    "frictionloss": [
+     0.07435707296642842,
+     0.036462037350601044,
+     0.06324755396403489,
+     0.04083070382769337,
+     0.03276058379787312,
+     0.041101761632658156
+    ],
+    "bus_delay_s": 0.005,
+    "no_load_speed": 3.4766670615978517
+   },
+   "rows": [
+    {
+     "param": "armature",
+     "joint": "shoulder_pan",
+     "planted": 0.03687173212048126,
+     "recovered": 0.037076596733759584,
+     "nominal": 0.028,
+     "rel_err": 0.005556142917531292
+    },
+    {
+     "param": "armature",
+     "joint": "shoulder_lift",
+     "planted": 0.01956809803088389,
+     "recovered": 0.01972074308124754,
+     "nominal": 0.028,
+     "rel_err": 0.007800709610240652
+    },
+    {
+     "param": "armature",
+     "joint": "elbow_flex",
+     "planted": 0.03826111404804884,
+     "recovered": 0.03828772954797576,
+     "nominal": 0.028,
+     "rel_err": 0.0006956279394660557
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_flex",
+     "planted": 0.02082736542601752,
+     "recovered": 0.020901602753094568,
+     "nominal": 0.028,
+     "rel_err": 0.003564412759777582
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_roll",
+     "planted": 0.03460507998390978,
+     "recovered": 0.03498018678744294,
+     "nominal": 0.028,
+     "rel_err": 0.010839645615833744
+    },
+    {
+     "param": "armature",
+     "joint": "gripper",
+     "planted": 0.040658938526514005,
+     "recovered": 0.04014642415300769,
+     "nominal": 0.028,
+     "rel_err": -0.012605207909500643
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_pan",
+     "planted": 0.1309786121841756,
+     "recovered": 0.13131884697104432,
+     "nominal": 0.1,
+     "rel_err": 0.002597636218578058
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_lift",
+     "planted": 0.05030741933575083,
+     "recovered": 0.05115815441879629,
+     "nominal": 0.1,
+     "rel_err": 0.01691072796574332
+    },
+    {
+     "param": "damping",
+     "joint": "elbow_flex",
+     "planted": 0.07150770318606935,
+     "recovered": 0.06918629498166344,
+     "nominal": 0.1,
+     "rel_err": -0.03246375007130906
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_flex",
+     "planted": 0.12096212495357886,
+     "recovered": 0.12091840912503334,
+     "nominal": 0.1,
+     "rel_err": -0.0003614009638331025
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_roll",
+     "planted": 0.07991523347740412,
+     "recovered": 0.07935156406770198,
+     "nominal": 0.1,
+     "rel_err": -0.007053341211366323
+    },
+    {
+     "param": "damping",
+     "joint": "gripper",
+     "planted": 0.05548669737327683,
+     "recovered": 0.05667194472688222,
+     "nominal": 0.1,
+     "rel_err": 0.021360928109162017
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_pan",
+     "planted": 0.07421505959005067,
+     "recovered": 0.07435707296642842,
+     "nominal": 0.052,
+     "rel_err": 0.0019135385346612753
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_lift",
+     "planted": 0.0364096960567231,
+     "recovered": 0.036462037350601044,
+     "nominal": 0.052,
+     "rel_err": 0.0014375647024464045
+    },
+    {
+     "param": "frictionloss",
+     "joint": "elbow_flex",
+     "planted": 0.0627406732432422,
+     "recovered": 0.06324755396403489,
+     "nominal": 0.052,
+     "rel_err": 0.00807898121889036
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_flex",
+     "planted": 0.04043065190642272,
+     "recovered": 0.04083070382769337,
+     "nominal": 0.052,
+     "rel_err": 0.009894768014044741
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_roll",
+     "planted": 0.032326710389989535,
+     "recovered": 0.03276058379787312,
+     "nominal": 0.052,
+     "rel_err": 0.013421514365344701
+    },
+    {
+     "param": "frictionloss",
+     "joint": "gripper",
+     "planted": 0.04122935833422274,
+     "recovered": 0.041101761632658156,
+     "nominal": 0.052,
+     "rel_err": -0.0030948020226323108
+    },
+    {
+     "param": "bus_delay_s",
+     "joint": null,
+     "planted": 0.0049604827382959266,
+     "recovered": 0.005,
+     "nominal": 0.004,
+     "rel_err": 0.007966414518287165
+    },
+    {
+     "param": "no_load_speed",
+     "joint": null,
+     "planted": 3.469130978287518,
+     "recovered": 3.4766670615978517,
+     "nominal": 4.71,
+     "rel_err": 0.0021723259679442253
+    }
+   ],
+   "steps": [
+    {
+     "stage": "fit",
+     "cost_counts2": 487881.29592928,
+     "rms_counts": 2.419439148007476,
+     "sims": 444,
+     "s": 17.9,
+     "delay_ms": 6.567,
+     "no_load_speed": 3.5014
+    },
+    {
+     "stage": "coarse delay profile",
+     "cost_counts2": 135534.0352286974,
+     "rms_counts": 1.2752102753016623,
+     "sims": 1830,
+     "s": 85.4,
+     "delay_ms": 5.0,
+     "no_load_speed": 3.4767,
+     "profile_ms_cost": [
+      [
+       1.0,
+       1367889.8380686385
+      ],
+      [
+       1.5,
+       1199675.6384954369
+      ],
+      [
+       2.0,
+       1126151.9594329498
+      ],
+      [
+       2.5,
+       845591.3559068013
+      ],
+      [
+       3.0,
+       491167.90792870324
+      ],
+      [
+       3.5,
+       415561.31175347883
+      ],
+      [
+       4.0,
+       390794.9609032046
+      ],
+      [
+       4.5,
+       347534.59422772867
+      ],
+      [
+       5.0,
+       135534.0352286974
+      ],
+      [
+       5.5,
+       273223.6569794259
+      ],
+      [
+       6.0,
+       421312.7130265269
+      ],
+      [
+       6.5,
+       537709.097659707
+      ],
+      [
+       7.0,
+       528971.3964158676
+      ],
+      [
+       7.5,
+       826182.0983735273
+      ],
+      [
+       8.0,
+       1129011.1379954643
+      ]
+     ]
+    },
+    {
+     "stage": "fine delay profile",
+     "cost_counts2": 135534.0352286974,
+     "rms_counts": 1.2752102753016623,
+     "sims": 1140,
+     "s": 56.5,
+     "delay_ms": 5.0,
+     "no_load_speed": 3.4767,
+     "profile_ms_cost": [
+      [
+       4.6,
+       291038.6475038962
+      ],
+      [
+       4.7,
+       220149.89714485276
+      ],
+      [
+       4.8,
+       160641.33855863893
+      ],
+      [
+       4.9,
+       146234.8249965108
+      ],
+      [
+       5.0,
+       135534.0352286974
+      ],
+      [
+       5.1,
+       166531.64468817133
+      ],
+      [
+       5.2,
+       226677.12091238698
+      ],
+      [
+       5.3,
+       228630.5828325742
+      ],
+      [
+       5.4,
+       222878.85826428834
+      ]
+     ]
+    },
+    {
+     "stage": "final fit",
+     "cost_counts2": 135534.0352286974,
+     "rms_counts": 1.2752102753016623,
+     "sims": 60,
+     "s": 3.4,
+     "delay_ms": 5.0,
+     "no_load_speed": 3.4767
+    }
+   ],
+   "max_abs_rel_err": 0.03246375007130906
+  },
+  {
+   "seed": 3,
+   "ok": true,
+   "fit_s": 160.6,
+   "planted": {
+    "armature": [
+     0.016849350917132844,
+     0.01608225196192096,
+     0.039674022092373286,
+     0.019540327524165728,
+     0.01738065905661549,
+     0.014247152254898589
+    ],
+    "damping": [
+     0.05878407513118209,
+     0.14588672313510254,
+     0.1316857715553423,
+     0.07655718265566704,
+     0.06393249648207862,
+     0.06415939318062129
+    ],
+    "frictionloss": [
+     0.030502630076354086,
+     0.0637258188900238,
+     0.07546514857053688,
+     0.03415237801377808,
+     0.03042363730513107,
+     0.07030339256065522
+    ],
+    "bus_delay_s": 0.0021203499990659178,
+    "no_load_speed": 3.543254034871223
+   },
+   "recovered": {
+    "armature": [
+     0.01764381906693422,
+     0.015886575566260115,
+     0.03971520088012665,
+     0.019719087630383204,
+     0.01709767920665123,
+     0.014715107355740243
+    ],
+    "damping": [
+     0.05864197901890677,
+     0.14722812311164402,
+     0.13225339016419152,
+     0.07731622002363175,
+     0.06390086695341807,
+     0.0659640364455873
+    ],
+    "frictionloss": [
+     0.030742943830661194,
+     0.06378248044130776,
+     0.0754586178634935,
+     0.03422082867826086,
+     0.03100174012849989,
+     0.0708173158707559
+    ],
+    "bus_delay_s": 0.0021,
+    "no_load_speed": 3.5587585331733598
+   },
+   "rows": [
+    {
+     "param": "armature",
+     "joint": "shoulder_pan",
+     "planted": 0.016849350917132844,
+     "recovered": 0.01764381906693422,
+     "nominal": 0.028,
+     "rel_err": 0.047151261417052004
+    },
+    {
+     "param": "armature",
+     "joint": "shoulder_lift",
+     "planted": 0.01608225196192096,
+     "recovered": 0.015886575566260115,
+     "nominal": 0.028,
+     "rel_err": -0.012167226090236584
+    },
+    {
+     "param": "armature",
+     "joint": "elbow_flex",
+     "planted": 0.039674022092373286,
+     "recovered": 0.03971520088012665,
+     "nominal": 0.028,
+     "rel_err": 0.001037928235697619
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_flex",
+     "planted": 0.019540327524165728,
+     "recovered": 0.019719087630383204,
+     "nominal": 0.028,
+     "rel_err": 0.009148265605906621
+    },
+    {
+     "param": "armature",
+     "joint": "wrist_roll",
+     "planted": 0.01738065905661549,
+     "recovered": 0.01709767920665123,
+     "nominal": 0.028,
+     "rel_err": -0.016281307230208427
+    },
+    {
+     "param": "armature",
+     "joint": "gripper",
+     "planted": 0.014247152254898589,
+     "recovered": 0.014715107355740243,
+     "nominal": 0.028,
+     "rel_err": 0.0328455183512731
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_pan",
+     "planted": 0.05878407513118209,
+     "recovered": 0.05864197901890677,
+     "nominal": 0.1,
+     "rel_err": -0.0024172552167950534
+    },
+    {
+     "param": "damping",
+     "joint": "shoulder_lift",
+     "planted": 0.14588672313510254,
+     "recovered": 0.14722812311164402,
+     "nominal": 0.1,
+     "rel_err": 0.009194805035816989
+    },
+    {
+     "param": "damping",
+     "joint": "elbow_flex",
+     "planted": 0.1316857715553423,
+     "recovered": 0.13225339016419152,
+     "nominal": 0.1,
+     "rel_err": 0.004310401967844077
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_flex",
+     "planted": 0.07655718265566704,
+     "recovered": 0.07731622002363175,
+     "nominal": 0.1,
+     "rel_err": 0.009914646041491074
+    },
+    {
+     "param": "damping",
+     "joint": "wrist_roll",
+     "planted": 0.06393249648207862,
+     "recovered": 0.06390086695341807,
+     "nominal": 0.1,
+     "rel_err": -0.0004947332014387619
+    },
+    {
+     "param": "damping",
+     "joint": "gripper",
+     "planted": 0.06415939318062129,
+     "recovered": 0.0659640364455873,
+     "nominal": 0.1,
+     "rel_err": 0.028127498960060157
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_pan",
+     "planted": 0.030502630076354086,
+     "recovered": 0.030742943830661194,
+     "nominal": 0.052,
+     "rel_err": 0.007878460110015306
+    },
+    {
+     "param": "frictionloss",
+     "joint": "shoulder_lift",
+     "planted": 0.0637258188900238,
+     "recovered": 0.06378248044130776,
+     "nominal": 0.052,
+     "rel_err": 0.0008891459108865645
+    },
+    {
+     "param": "frictionloss",
+     "joint": "elbow_flex",
+     "planted": 0.07546514857053688,
+     "recovered": 0.0754586178634935,
+     "nominal": 0.052,
+     "rel_err": -8.653937833659292e-05
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_flex",
+     "planted": 0.03415237801377808,
+     "recovered": 0.03422082867826086,
+     "nominal": 0.052,
+     "rel_err": 0.002004272278058177
+    },
+    {
+     "param": "frictionloss",
+     "joint": "wrist_roll",
+     "planted": 0.03042363730513107,
+     "recovered": 0.03100174012849989,
+     "nominal": 0.052,
+     "rel_err": 0.019001765553894573
+    },
+    {
+     "param": "frictionloss",
+     "joint": "gripper",
+     "planted": 0.07030339256065522,
+     "recovered": 0.0708173158707559,
+     "nominal": 0.052,
+     "rel_err": 0.0073100783814562895
+    },
+    {
+     "param": "bus_delay_s",
+     "joint": null,
+     "planted": 0.0021203499990659178,
+     "recovered": 0.0021,
+     "nominal": 0.004,
+     "rel_err": -0.009597471679148598
+    },
+    {
+     "param": "no_load_speed",
+     "joint": null,
+     "planted": 3.543254034871223,
+     "recovered": 3.5587585331733598,
+     "nominal": 4.71,
+     "rel_err": 0.004375779481106369
+    }
+   ],
+   "steps": [
+    {
+     "stage": "fit",
+     "cost_counts2": 559797.7290166742,
+     "rms_counts": 2.591631114244768,
+     "sims": 360,
+     "s": 14.4,
+     "delay_ms": 3.951,
+     "no_load_speed": 3.6099
+    },
+    {
+     "stage": "coarse delay profile",
+     "cost_counts2": 185728.52911300433,
+     "rms_counts": 1.4927838530758522,
+     "sims": 2040,
+     "s": 92.8,
+     "delay_ms": 2.0,
+     "no_load_speed": 3.5518,
+     "profile_ms_cost": [
+      [
+       1.0,
+       422103.92222778924
+      ],
+      [
+       1.5,
+       326825.8201363875
+      ],
+      [
+       2.0,
+       185728.52911300433
+      ],
+      [
+       2.5,
+       245752.53132861952
+      ],
+      [
+       3.0,
+       395960.3189364078
+      ],
+      [
+       3.5,
+       406200.1877771289
+      ],
+      [
+       4.0,
+       433852.9160070894
+      ],
+      [
+       4.5,
+       651408.8815643492
+      ],
+      [
+       5.0,
+       880317.5424868915
+      ],
+      [
+       5.5,
+       1112728.3922248036
+      ],
+      [
+       6.0,
+       1276460.5544383558
+      ],
+      [
+       6.5,
+       1709325.431510305
+      ],
+      [
+       7.0,
+       2030850.8728485694
+      ],
+      [
+       7.5,
+       2339220.616014827
+      ],
+      [
+       8.0,
+       2791576.0057158032
+      ]
+     ]
+    },
+    {
+     "stage": "fine delay profile",
+     "cost_counts2": 109554.30862630768,
+     "rms_counts": 1.1464954892304875,
+     "sims": 888,
+     "s": 45.6,
+     "delay_ms": 2.1,
+     "no_load_speed": 3.5534,
+     "profile_ms_cost": [
+      [
+       1.6,
+       296944.2917431216
+      ],
+      [
+       1.7,
+       247481.56982541937
+      ],
+      [
+       1.8,
+       282387.3450398974
+      ],
+      [
+       1.9,
+       274117.8058529068
+      ],
+      [
+       2.0,
+       140434.1839032888
+      ],
+      [
+       2.1,
+       109554.30862630768
+      ],
+      [
+       2.2,
+       129926.0170789132
+      ],
+      [
+       2.3,
+       141681.535771426
+      ],
+      [
+       2.4,
+       197546.17696288196
+      ]
+     ]
+    },
+    {
+     "stage": "final fit",
+     "cost_counts2": 94072.75388428268,
+     "rms_counts": 1.062403635152773,
+     "sims": 96,
+     "s": 5.1,
+     "delay_ms": 2.1,
+     "no_load_speed": 3.5588
+    }
+   ],
+   "max_abs_rel_err": 0.047151261417052004
+  }
+ ],
+ "total_s": 494.6
+}

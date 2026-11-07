@@ -1,0 +1,323 @@
+{
+ "date": "2026-11-02 21:33",
+ "seconds": 180.0,
+ "seeds": 10,
+ "held_out": [
+  "windex_bottle",
+  "sugar_box",
+  "tuna_fish_can"
+ ],
+ "policy_iter": 60,
+ "rates": {
+  "held-out": 8.0,
+  "mixed": 16.0
+ },
+ "table": {
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 f2": {
+   "sorted_per_min": 5.8,
+   "sorted_per_min_sd": 0.599,
+   "held_out_sorted_per_min": 5.8,
+   "held_out_sort_rate": 0.88,
+   "miss_rate": 0.12,
+   "attempt_success": 0.985,
+   "cycle_s": 5.767,
+   "protective_stops": 0,
+   "dropped": 1,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 prior": {
+   "sorted_per_min": 6.533,
+   "sorted_per_min_sd": 1.138,
+   "held_out_sorted_per_min": 6.533,
+   "held_out_sort_rate": 0.956,
+   "miss_rate": 0.044,
+   "attempt_success": 0.989,
+   "cycle_s": 4.02,
+   "protective_stops": 2,
+   "dropped": 4,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 learned": {
+   "sorted_per_min": 6.401,
+   "sorted_per_min_sd": 1.072,
+   "held_out_sorted_per_min": 6.4,
+   "held_out_sort_rate": 0.951,
+   "miss_rate": 0.049,
+   "attempt_success": 0.996,
+   "cycle_s": 4.13,
+   "protective_stops": 1,
+   "dropped": 6,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 f2": {
+   "sorted_per_min": 4.399,
+   "sorted_per_min_sd": 0.594,
+   "held_out_sorted_per_min": 4.4,
+   "held_out_sort_rate": 0.66,
+   "miss_rate": 0.34,
+   "attempt_success": 1.0,
+   "cycle_s": 5.413,
+   "protective_stops": 0,
+   "dropped": 0,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 prior": {
+   "sorted_per_min": 5.333,
+   "sorted_per_min_sd": 1.155,
+   "held_out_sorted_per_min": 5.333,
+   "held_out_sort_rate": 0.721,
+   "miss_rate": 0.279,
+   "attempt_success": 1.0,
+   "cycle_s": 3.791,
+   "protective_stops": 0,
+   "dropped": 3,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 learned": {
+   "sorted_per_min": 5.401,
+   "sorted_per_min_sd": 1.043,
+   "held_out_sorted_per_min": 5.4,
+   "held_out_sort_rate": 0.724,
+   "miss_rate": 0.276,
+   "attempt_success": 0.994,
+   "cycle_s": 3.78,
+   "protective_stops": 0,
+   "dropped": 0,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 f2": {
+   "sorted_per_min": 8.034,
+   "sorted_per_min_sd": 0.875,
+   "held_out_sorted_per_min": 2.633,
+   "held_out_sort_rate": 0.634,
+   "miss_rate": 0.379,
+   "attempt_success": 0.944,
+   "cycle_s": 5.752,
+   "protective_stops": 3,
+   "dropped": 3,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 prior": {
+   "sorted_per_min": 9.934,
+   "sorted_per_min_sd": 1.365,
+   "held_out_sorted_per_min": 3.267,
+   "held_out_sort_rate": 0.748,
+   "miss_rate": 0.247,
+   "attempt_success": 0.984,
+   "cycle_s": 4.172,
+   "protective_stops": 1,
+   "dropped": 22,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 learned": {
+   "sorted_per_min": 10.667,
+   "sorted_per_min_sd": 1.238,
+   "held_out_sorted_per_min": 3.433,
+   "held_out_sort_rate": 0.832,
+   "miss_rate": 0.193,
+   "attempt_success": 0.978,
+   "cycle_s": 4.057,
+   "protective_stops": 2,
+   "dropped": 8,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 f2": {
+   "sorted_per_min": 6.534,
+   "sorted_per_min_sd": 0.54,
+   "held_out_sorted_per_min": 2.1,
+   "held_out_sort_rate": 0.451,
+   "miss_rate": 0.54,
+   "attempt_success": 0.955,
+   "cycle_s": 5.489,
+   "protective_stops": 0,
+   "dropped": 6,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 prior": {
+   "sorted_per_min": 7.599,
+   "sorted_per_min_sd": 0.905,
+   "held_out_sorted_per_min": 2.467,
+   "held_out_sort_rate": 0.567,
+   "miss_rate": 0.469,
+   "attempt_success": 0.975,
+   "cycle_s": 3.929,
+   "protective_stops": 1,
+   "dropped": 19,
+   "wrong_chute": 0,
+   "runs": 10
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 learned": {
+   "sorted_per_min": 8.233,
+   "sorted_per_min_sd": 0.943,
+   "held_out_sorted_per_min": 2.4,
+   "held_out_sort_rate": 0.528,
+   "miss_rate": 0.427,
+   "attempt_success": 0.976,
+   "cycle_s": 3.791,
+   "protective_stops": 1,
+   "dropped": 5,
+   "wrong_chute": 1,
+   "runs": 10
+  }
+ },
+ "paired": {
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 prior \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 0.733,
+    "lo": 0.069,
+    "hi": 1.397,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.733,
+    "lo": 0.071,
+    "hi": 1.396,
+    "n": 10
+   }
+  },
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 learned \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 0.601,
+    "lo": -0.021,
+    "hi": 1.223,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.6,
+    "lo": -0.023,
+    "hi": 1.223,
+    "n": 10
+   }
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 prior \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 0.934,
+    "lo": 0.291,
+    "hi": 1.577,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.933,
+    "lo": 0.29,
+    "hi": 1.577,
+    "n": 10
+   }
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 learned \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 1.002,
+    "lo": 0.474,
+    "hi": 1.53,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 1.0,
+    "lo": 0.473,
+    "hi": 1.527,
+    "n": 10
+   }
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 prior \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 1.9,
+    "lo": 1.107,
+    "hi": 2.693,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.633,
+    "lo": -0.063,
+    "hi": 1.33,
+    "n": 10
+   }
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 learned \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 2.633,
+    "lo": 1.805,
+    "hi": 3.461,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.8,
+    "lo": 0.037,
+    "hi": 1.563,
+    "n": 10
+   }
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 prior \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 1.065,
+    "lo": 0.631,
+    "hi": 1.499,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.367,
+    "lo": -0.075,
+    "hi": 0.808,
+    "n": 10
+   }
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 learned \u2212 f2": {
+   "sorted_per_min": {
+    "mean": 1.699,
+    "lo": 1.191,
+    "hi": 2.207,
+    "n": 10
+   },
+   "held_out_sorted_per_min": {
+    "mean": 0.3,
+    "lo": -0.255,
+    "hi": 0.855,
+    "n": 10
+   }
+  }
+ },
+ "verdict": {
+  "held-out \u00b7 0.15 m/s \u00b7 8/min \u00b7 learned \u2212 f2": {
+   "held_out_gain": 0.6,
+   "ci95": [
+    -0.023,
+    1.223
+   ],
+   "beats_f2": false
+  },
+  "held-out \u00b7 0.30 m/s \u00b7 8/min \u00b7 learned \u2212 f2": {
+   "held_out_gain": 1.0,
+   "ci95": [
+    0.473,
+    1.527
+   ],
+   "beats_f2": true
+  },
+  "mixed \u00b7 0.15 m/s \u00b7 16/min \u00b7 learned \u2212 f2": {
+   "held_out_gain": 0.8,
+   "ci95": [
+    0.037,
+    1.563
+   ],
+   "beats_f2": true
+  },
+  "mixed \u00b7 0.30 m/s \u00b7 16/min \u00b7 learned \u2212 f2": {
+   "held_out_gain": 0.3,
+   "ci95": [
+    -0.255,
+    0.855
+   ],
+   "beats_f2": false
+  }
+ },
+ "accepted": false,
+ "wall_s": 466.7
+}

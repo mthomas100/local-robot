@@ -1,0 +1,279 @@
+{
+ "date": "2026-11-02 21:06",
+ "name": "f3-ars",
+ "iters": 80,
+ "best_iter": 60,
+ "episodes": 25600,
+ "wall_s": 720.3,
+ "history": [
+  {
+   "iter": 0,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9073,
+     "t_free": 1.068,
+     "reward": 21.343,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 30,
+      "timeout": 1,
+      "drop": 2
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 1.0,
+     "t_free": 1.085,
+     "reward": 23.915,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {}
+    }
+   }
+  },
+  {
+   "iter": 10,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9242,
+     "t_free": 1.016,
+     "reward": 21.861,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 25,
+      "drop": 2
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9921,
+     "t_free": 1.032,
+     "reward": 23.748,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "timeout": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 20,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9382,
+     "t_free": 1.019,
+     "reward": 22.252,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 19,
+      "drop": 3
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9843,
+     "t_free": 1.027,
+     "reward": 23.532,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 2
+     }
+    }
+   }
+  },
+  {
+   "iter": 30,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.8989,
+     "t_free": 0.94,
+     "reward": 21.222,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 32,
+      "timeout": 2,
+      "ik": 1,
+      "drop": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9764,
+     "t_free": 1.006,
+     "reward": 23.333,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 3
+     }
+    }
+   }
+  },
+  {
+   "iter": 40,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9354,
+     "t_free": 0.933,
+     "reward": 22.254,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 21,
+      "timeout": 1,
+      "drop": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9685,
+     "t_free": 0.984,
+     "reward": 23.134,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 4
+     }
+    }
+   }
+  },
+  {
+   "iter": 50,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9438,
+     "t_free": 0.923,
+     "reward": 22.499,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 18,
+      "drop": 2
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9685,
+     "t_free": 0.992,
+     "reward": 23.126,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 3,
+      "ik": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 60,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9747,
+     "t_free": 0.914,
+     "reward": 23.376,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 6,
+      "timeout": 1,
+      "ik": 1,
+      "drop": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9843,
+     "t_free": 1.039,
+     "reward": 23.521,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 2
+     }
+    }
+   }
+  },
+  {
+   "iter": 70,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9719,
+     "t_free": 0.905,
+     "reward": 23.306,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 8,
+      "ik": 1,
+      "drop": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9764,
+     "t_free": 1.024,
+     "reward": 23.315,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 2,
+      "ik": 1
+     }
+    }
+   }
+  },
+  {
+   "iter": 80,
+   "eval": {
+    "train": {
+     "n": 356,
+     "success": 0.9719,
+     "t_free": 0.885,
+     "reward": 23.325,
+     "f2_t_free": 2.633,
+     "f2_success": 0.9607,
+     "failures": {
+      "off_target": 8,
+      "drop": 1,
+      "ik": 1
+     }
+    },
+    "held_out": {
+     "n": 127,
+     "success": 0.9685,
+     "t_free": 0.996,
+     "reward": 23.122,
+     "f2_t_free": 2.746,
+     "f2_success": 0.9764,
+     "failures": {
+      "off_target": 2,
+      "ik": 2
+     }
+    }
+   }
+  }
+ ],
+ "config": {
+  "dirs": 16,
+  "top": 8,
+  "noise": 0.05,
+  "step": 0.03,
+  "per_dir": 10,
+  "workers": 14
+ }
+}

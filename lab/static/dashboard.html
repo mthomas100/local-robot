@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cell Dashboard</title><link rel="stylesheet" href="/static/lab.css">
+<style>
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel)}
+.kpi .v{font-size:26px;font-weight:650;font-variant-numeric:tabular-nums}.kpi .l{color:var(--mute);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.kpi .s{color:var(--mute);font-size:12px}
+.two{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:14px}@media (max-width:860px){.two{grid-template-columns:1fr}}
+#live{width:100%;border-radius:10px;background:#000;display:block;aspect-ratio:16/9}
+table.t{border-collapse:collapse;width:100%;font-size:14px}table.t td{padding:3px 6px;border-bottom:1px solid var(--line)}table.t td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+svg text{fill:var(--mute);font-size:11px}.bar{height:10px;border-radius:5px;background:var(--acc)}
+.state{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--acc2);font-size:12px}
+</style></head><body>
+<header><h1>Sorting cell · operator dashboard</h1><span class="sub"><a href="/">lab</a> · <a href="/phase/F5">F5 page</a> · shift <select id="pick"></select> <span id="status" class="state">…</span></span></header>
+<main>
+<section class="panel"><div class="kpis" id="kpis"></div></section>
+<section class="two">
+  <div class="panel"><h2>The cell, live</h2><img id="live" alt="live stream of the cell (starts with the shift)"><p class="small" id="streamnote"></p></div>
+  <div class="panel"><h2>Where the items went</h2><table class="t" id="losses"></table><h3>Sorted by material</h3><div id="mats"></div><h3>Robot events</h3><table class="t" id="events"></table></div>
+</section>
+<section class="panel"><h2>Throughput over the shift</h2><svg id="chart" viewBox="0 0 1000 220" width="100%" height="220" role="img" aria-label="sorted items per minute over the shift"></svg>
+<p class="small">Blue: items sorted in the last minute. Grey: overall effectiveness (OEE, right axis, 0-1). The shift's KPIs are written every simulated second by <code>factory/ops/shift.py</code> to <code>runs/&lt;shift&gt;/kpis.jsonl</code>; this page polls <code>/api/shift</code>.</p></section>
+<section class="panel"><h2>What the numbers mean</h2><p class="small"><b>Availability</b>: share of the shift the robot was not stopped or recovering. <b>Performance</b>: items the robot handled (picked at least once) out of all that arrived; the rest passed while it was busy (capacity). <b>Quality</b>: of the items it handled, the share that ended in the right chute. <b>OEE</b> = availability × performance × quality, the factory's standard one-number summary. The <a href="/media/docs/media/F5-operations-report.png">operations report</a> puts these against belt speed, arrival rate and the cell's versions.</p></section>
+</main>
+<script>
+const $ = s => document.querySelector(s); let name = new URLSearchParams(location.search).get("name") || ""; let streamSet = "";
+const pct = x => x == null ? "–" : (100 * x).toFixed(0) + "%";
+function tile(l, v, s) { return `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s || ""}</div></div>`; }
+function chart(rows, minutes) {
+  const W = 1000, H = 220, L = 40, R = 40, T = 10, B = 24, tmax = Math.max(60 * (minutes || 10), rows.length ? rows[rows.length - 1].t : 60);
+  const ymax = Math.max(10, ...rows.map(r => r.sorted_last_min || 0)) * 1.15;
+  const x = t => L + (W - L - R) * t / tmax, y = v => H - B - (H - T - B) * v / ymax, y2 = v => H - B - (H - T - B) * v;
+  let g = `<line x1="${L}" y1="${H - B}" x2="${W - R}" y2="${H - B}" stroke="currentColor" opacity=".25"/>`;
+  for (let m = 0; m <= tmax / 60; m += Math.max(1, Math.round(tmax / 600))) g += `<text x="${x(m * 60)}" y="${H - 6}" text-anchor="middle">${m} min</text>`;
+  for (let v = 0; v <= ymax; v += 5) g += `<text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="currentColor" opacity=".07"/>`;
+  g += `<text x="${W - R + 6}" y="${y2(1) + 4}">1.0</text><text x="${W - R + 6}" y="${y2(0.5) + 4}">0.5</text>`;
+  if (rows.length > 1) {
+    g += `<polyline fill="none" stroke="#94a3b8" stroke-width="1.5" points="${rows.map(r => `${x(r.t)},${y2(r.oee || 0)}`).join(" ")}"/>`;
+    g += `<polyline fill="none" stroke="var(--acc)" stroke-width="2.5" points="${rows.map(r => `${x(r.t)},${y(r.sorted_last_min || 0)}`).join(" ")}"/>`;
+  }
+  $("#chart").innerHTML = g;
+}
+async function tick() {
+  let d; try { d = await (await fetch("/api/shift?name=" + encodeURIComponent(name))).json(); } catch (e) { $("#status").textContent = "lab server not reachable"; return; }
+  if (d.error) { $("#status").textContent = d.error; return; }
+  const k = d.live; name = name || d.name;
+  $("#pick").innerHTML = d.shifts.map(s => `<option ${s === d.name ? "selected" : ""}>${s}</option>`).join("");
+  const live = k.running && k.stale_s < 10;
+  $("#status").textContent = live ? `running · ${(k.t / 60).toFixed(1)} / ${k.minutes} min` : `finished · ${(k.t / 60).toFixed(1)} min`;
+  const c = k.config || {};
+  $("#kpis").innerHTML = [
+    tile("Sorted / min", (k.sorted_per_min ?? 0).toFixed(1), `last minute: ${k.sorted_last_min}`), tile("Sorted", `${k.sorted} / ${k.arrived}`, `sort rate ${pct(k.sort_rate)}`),
+    tile("OEE", pct(k.oee), `A ${pct(k.availability)} · P ${pct(k.performance)} · Q ${pct(k.quality)}`), tile("Cycle", k.cycle_s ? k.cycle_s.toFixed(1) + " s" : "–", "per successful pick"),
+    tile("Protective stops", k.protective_stops ?? 0, "collisions / contact force"), tile("Robot", k.robot || "–", k.vision_ms ? `vision ${k.vision_ms} ms/frame` : ""),
+    tile("Setup", `${c.speed} m/s`, `${c.rate}/min · clutter ${pct(c.clutter)} · ${c.perception} + ${c.carry}`)].join("");
+  const lo = k.losses || {}; $("#losses").innerHTML = `<tr><td>sorted</td><td>${k.sorted}</td></tr>` + Object.entries(lo).map(([a, b]) => `<tr><td>${a.replace("_", " ")}</td><td>${b}</td></tr>`).join("");
+  const m = k.sorted_by_material || {}, mm = Math.max(1, ...Object.values(m));
+  $("#mats").innerHTML = ["plastic", "metal", "cardboard"].map(x => `<div class="small">${x} ${m[x] || 0}</div><div class="bar" style="width:${100 * (m[x] || 0) / mm}%"></div>`).join("");
+  $("#events").innerHTML = Object.entries(k.events || {}).map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join("");
+  if (live && k.stream && streamSet !== k.stream) {
+    if ($("#live").tagName !== "IMG") { const im = document.createElement("img"); im.id = "live"; $("#live").replaceWith(im); }
+    $("#live").src = k.stream + "stream.mjpg"; streamSet = k.stream; $("#streamnote").textContent = "MJPEG from " + k.stream;
+  }
+  if (!live && streamSet !== "video:" + d.name) {
+    streamSet = "video:" + d.name; const v = document.createElement("video"); v.id = "live"; v.controls = true; v.muted = true; v.src = `/media/runs/${d.name}/shift.mp4`;
+    $("#live").replaceWith(v); $("#streamnote").innerHTML = `The shift is over: its recording, <a href="/media/runs/${d.name}/shift.mp4">runs/${d.name}/shift.mp4</a>.`;
+  }
+  chart(d.series, k.minutes);
+}
+$("#pick").onchange = e => { name = e.target.value; tick(); };
+tick(); setInterval(tick, 2000);
+</script></body></html>
